@@ -257,8 +257,8 @@ export default {
   },
   methods: {
     async loadData () {
-      const dataPath = 'https://ocha-dap.github.io/hdx-scraper-iati-viz/flows.json'
       const filePath = (config.dev) ? '' : '/viz-iati-c19-dashboard/'
+      const dataPath = filePath + 'flows.json'
       await axios.get(filePath + 'tooltips.csv')
         .then((response) => {
           return csvtojson().fromString(response.data).then((jsonData) => {
