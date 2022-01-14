@@ -542,7 +542,7 @@ export default {
 
     // const dataPath = (this.isProd) ? 'https://ocha-dap.github.io/hdx-scraper-iati-viz/reporting_orgs.json' : 'https://mcarans.github.io/hdx-scraper-iati-viz/reporting_orgs.json'
 
-    const filePath = (config.dev) ? '' : '/viz-iati-c19-dashboard/'
+    const filePath = (config.dev) ? '' : '/viz-iati-c19-dashboard/' // https://ocha-dap.github.io/hdx-scraper-iati-viz/
     const dataPath = filePath + 'reporting_orgs.json'
     axios.get(dataPath)
       .then((response) => {
