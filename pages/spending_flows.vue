@@ -233,7 +233,9 @@ export default {
     this.filterParams['#org+id+reporting'] = this.selectedFilter
 
     // const dataPath = (this.isProd) ? 'https://ocha-dap.github.io/hdx-scraper-iati-viz/reporting_orgs.json' : 'https://mcarans.github.io/hdx-scraper-iati-viz/reporting_orgs.json'
-    const dataPath = 'https://ocha-dap.github.io/hdx-scraper-iati-viz/reporting_orgs.json'
+
+    const filePath = (config.dev) ? '' : '/viz-iati-south-sudan/'
+    const dataPath = filePath + 'reporting_orgs.json'
     axios.get(dataPath)
       .then((response) => {
         this.orgNameIndex = response.data.data
@@ -257,7 +259,7 @@ export default {
   },
   methods: {
     async loadData () {
-      const filePath = (config.dev) ? '' : '/viz-iati-c19-dashboard/'
+      const filePath = (config.dev) ? '' : '/viz-iati-south-sudan/'
       const dataPath = filePath + 'flows.json'
       await axios.get(filePath + 'tooltips.csv')
         .then((response) => {
@@ -358,12 +360,12 @@ export default {
         this.selectedFilterLabel = 'all reporting organizations'
       }
       this.updateFilteredData()
-      this.$mixpanelTrackAction('change content', 'Spending Flows Breakdown select filter', value)
+      // this.$mixpanelTrackAction('change content', 'Spending Flows Breakdown select filter', value)
     },
     onToggle (event) {
       this.filterParams[event.target.parentElement.id] = event.target.value
       this.updateFilteredData()
-      this.$mixpanelTrackAction('change content', 'Spending Flows Breakdown toggle filter', event.target.parentElement.id + ' ' + event.target.value)
+      // this.$mixpanelTrackAction('change content', 'Spending Flows Breakdown toggle filter', event.target.parentElement.id + ' ' + event.target.value)
     },
     onQuickFilter (event) {
       event.preventDefault()

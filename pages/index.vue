@@ -542,7 +542,7 @@ export default {
 
     // const dataPath = (this.isProd) ? 'https://ocha-dap.github.io/hdx-scraper-iati-viz/reporting_orgs.json' : 'https://mcarans.github.io/hdx-scraper-iati-viz/reporting_orgs.json'
 
-    const filePath = (config.dev) ? '' : '/viz-iati-c19-dashboard/' // https://ocha-dap.github.io/hdx-scraper-iati-viz/
+    const filePath = (config.dev) ? '' : '/viz-iati-south-sudan/'
     const dataPath = filePath + 'reporting_orgs.json'
     axios.get(dataPath)
       .then((response) => {
@@ -581,7 +581,7 @@ export default {
   },
   methods: {
     async loadData () {
-      const filePath = (config.dev) ? '' : '/viz-iati-c19-dashboard/'
+      const filePath = (config.dev) ? '' : '/viz-iati-south-sudan/'
       const dataPath = filePath + 'transactions.json'
       await axios.get(filePath + 'tooltips.csv')
         .then((response) => {
@@ -651,7 +651,7 @@ export default {
       this.resetParams()
       this.setDefaultFilterLabel(selected)
       this.updateFilteredData()
-      this.$mixpanelTrackAction('change content', 'Commitments and Spending Breakdown radio filter', selected)
+      // this.$mixpanelTrackAction('change content', 'Commitments and Spending Breakdown radio filter', selected)
     },
     onSelect (value) {
       this.selectedFilter = value
@@ -662,22 +662,22 @@ export default {
         this.setDefaultFilterLabel(this.selectedFilterDimension)
       }
       this.updateFilteredData()
-      this.$mixpanelTrackAction('change content', 'Commitments and Spending Breakdown select filter', value)
+      // this.$mixpanelTrackAction('change content', 'Commitments and Spending Breakdown select filter', value)
     },
     onToggle (event) {
       this.filterParams[event.target.parentElement.id] = event.target.value
       this.updateFilteredData()
-      this.$mixpanelTrackAction('change content', 'Commitments and Spending Breakdown toggle filter', event.target.parentElement.id + ' ' + event.target.value)
+      // this.$mixpanelTrackAction('change content', 'Commitments and Spending Breakdown toggle filter', event.target.parentElement.id + ' ' + event.target.value)
     },
     onQuickFilter (event) {
       event.preventDefault()
       this.onSelect(event.target.id)
     },
     onSelectRanking (value) {
-      this.$mixpanelTrackAction('change content', 'Commitments and Spending Ranking select filter', value)
+      // this.$mixpanelTrackAction('change content', 'Commitments and Spending Ranking select filter', value)
     },
     onSelectTimeline (value) {
-      this.$mixpanelTrackAction('change content', 'Commitments and Spending Timeline select filter', value)
+      // this.$mixpanelTrackAction('change content', 'Commitments and Spending Timeline select filter', value)
     },
     setDefaultFilterLabel (dimension) {
       const filterOption = this.filterOptions.filter(option => option.value === dimension)

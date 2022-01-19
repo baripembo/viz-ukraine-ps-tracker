@@ -119,7 +119,7 @@
 </style>
 
 <script>
-import mixpanel from 'mixpanel-browser'
+// import mixpanel from 'mixpanel-browser'
 import config from '../nuxt.config'
 import OchaHeader from '~/components/OchaHeader'
 
@@ -143,13 +143,13 @@ export default {
     }
   },
   mounted () {
-    const MIXPANEL_TOKEN = this.$store.state.isProd ? process.env.NUXT_ENV_MIXPANEL_TOKEN_PROD : process.env.NUXT_ENV_MIXPANEL_TOKEN_DEV
-    mixpanel.init(MIXPANEL_TOKEN)
-    this.$mixpanelTrackView()
+    // const MIXPANEL_TOKEN = this.$store.state.isProd ? process.env.NUXT_ENV_MIXPANEL_TOKEN_PROD : process.env.NUXT_ENV_MIXPANEL_TOKEN_DEV
+    // mixpanel.init(MIXPANEL_TOKEN)
+    // this.$mixpanelTrackView()
   },
   methods: {
     onClick (page) {
-      this.$mixpanelTrackAction('switch viz', config.head.title, page)
+      // this.$mixpanelTrackAction('switch viz', config.head.title, page)
     }
   }
 }

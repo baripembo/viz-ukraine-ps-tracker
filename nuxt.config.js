@@ -1,7 +1,7 @@
 const routerBase = process.env.DEPLOY_ENV === 'WITH_SUBFOLDER'
   ? {
       router: {
-        base: '/viz-iati-c19-dashboard/'
+        base: '/viz-iati-south-sudan'
       }
     }
   : {}
