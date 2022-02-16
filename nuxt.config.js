@@ -10,17 +10,17 @@ export default {
   ** Headers of the page
   */
   head: {
-    title: 'IATI COVID-19 Funding Dashboard',
+    title: 'IATI Funding Dashboard (South Sudan HRP 2021/22 data)',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'This site allows you to explore all of the published International Aid Transparency Initiative (IATI) data that is related to the coronavirus pandemic.' },
+      { hid: 'description', name: 'description', content: 'This site allows you to explore all of the published International Aid Transparency Initiative (IATI) data that is related to South Sudan HRP 2021/22 data.' },
       { name: 'twitter:card', content: 'summary' },
       { name: 'twitter:site', content: '@humdata' },
-      { name: 'twitter:title', content: 'IATI COVID-19 Funding Dashboard' },
-      { name: 'twitter:description', content: 'This site allows you to explore all of the published International Aid Transparency Initiative (IATI) data that is related to the coronavirus pandemic.' },
+      { name: 'twitter:title', content: 'IATI Funding Dashboard (South Sudan HRP 2021/22 data)' },
+      { name: 'twitter:description', content: 'This site allows you to explore all of the published International Aid Transparency Initiative (IATI) data that is related to South Sudan HRP 2021/22 data.' },
       { name: 'twitter:image', content: 'https://ocha-dap.github.io/viz-iati-c19-dashboard/preview.png' },
-      { name: 'twitter:image:alt', content: 'Contributions to the Covid-19 emergency.' }
+      { name: 'twitter:image:alt', content: 'Contributions to South Sudan HRP 2021/22 data.' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: 'https://data.humdata.org/images/icons/hdx.ico' },
