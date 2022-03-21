@@ -234,7 +234,8 @@ export default {
 
     // const dataPath = (this.isProd) ? 'https://ocha-dap.github.io/hdx-scraper-iati-viz/reporting_orgs.json' : 'https://mcarans.github.io/hdx-scraper-iati-viz/reporting_orgs.json'
 
-    const dataPath = 'https://raw.githubusercontent.com/mcarans/iati_test_results/main/southsudan/reporting_orgs.json'
+    const filePath = (config.dev) ? '' : '/viz-ukraine-ps-tracker/'
+    const dataPath = filePath + 'reporting_orgs.json'
     axios.get(dataPath)
       .then((response) => {
         this.orgNameIndex = response.data.data
@@ -258,8 +259,8 @@ export default {
   },
   methods: {
     async loadData () {
-      const filePath = (config.dev) ? '' : '/viz-iati-south-sudan/'
-      const dataPath = 'https://raw.githubusercontent.com/mcarans/iati_test_results/main/southsudan/flows.json'
+      const filePath = (config.dev) ? '' : '/viz-ukraine-ps-tracker/'
+      const dataPath = filePath + 'flows.json'
       await axios.get(filePath + 'tooltips.csv')
         .then((response) => {
           return csvtojson().fromString(response.data).then((jsonData) => {
@@ -303,6 +304,7 @@ export default {
       let result = this.fullData.map(i => ({ ...i }))
       const params = this.filterParams
       const filterDimension = this.selectedFilterDimension
+      console.log('flows', filterDimension)
 
       if (params[filterDimension] && params[filterDimension] !== '*') {
         result = result.filter(item => item[filterDimension] === params[filterDimension])

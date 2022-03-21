@@ -13,12 +13,6 @@
             <b-nav-item :to="{name: 'index'}" exact-active-class="active" class="nav-index" no-prefetch @click="onClick('Commitments and Spending')">
               Commitments and Spending
             </b-nav-item>
-            <b-nav-item :to="{name: 'spending_flows'}" active-class="active" class="nav-flows" no-prefetch @click="onClick('Spending Flows')">
-              Spending Flows
-            </b-nav-item>
-            <b-nav-item href="https://data.humdata.org/visualization/iati-c19-datastory" target="_blank">
-              Data Story
-            </b-nav-item>
           </b-navbar-nav>
           <b-navbar-nav class="ml-auto">
             <b-nav-item :to="{name: 'about'}" active-class="active" class="ml-lg-auto nav-about" no-prefetch @click="onClick('About this Dashboard')">
@@ -33,10 +27,8 @@
         <b-row>
           <b-col cols="12">
             <div class="logo-container">
-              <a href="https://www.usaid.gov" target="_blank"><img src="~@/assets/logos/usaid.png" alt="USAID" height="60"></a>
               <a href="https://www.unocha.org" target="_blank"><img src="~@/assets/logos//ocha.png" alt="UN OCHA" height="50"></a>
               <a href="https://centre.humdata.org" target="_blank"><img src="~@/assets/logos/centrehumdata.png" alt="Centre for Humanitarian Data" height="45"></a>
-              <a href="https://iatistandard.org" target="_blank"><img src="~@/assets/logos/iati.png" alt="Powered by IATI" height="50"></a>
             </div>
           </b-col>
         </b-row>
@@ -79,8 +71,8 @@
   .logo-container {
     align-items: center;
     display: flex;
-    justify-content: space-between;
     img {
+      margin-right: 30px;
       width: auto;
     }
   }
@@ -139,7 +131,7 @@ export default {
         isProd = !!(window.location.host.includes('ocha-dap')) || !!(window.location.host.includes('humdata'))
         this.$store.commit('setProd', isProd)
       }
-      return (isProd) ? 'IATI Funding Dashboard (South Sudan HRP 2021/22 data)' : '*STAGE* IATI Funding Dashboard (South Sudan HRP 2021/22 data)'
+      return (isProd) ? 'Ukraine Private Sector Contributions Tracker' : '*STAGE* Ukraine Private Sector Contributions Tracker'
     }
   },
   mounted () {

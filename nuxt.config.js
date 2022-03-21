@@ -1,7 +1,7 @@
 const routerBase = process.env.DEPLOY_ENV === 'WITH_SUBFOLDER'
   ? {
       router: {
-        base: '/viz-iati-south-sudan'
+        base: '/viz-ukraine-ps-tracker'
       }
     }
   : {}
@@ -10,14 +10,14 @@ export default {
   ** Headers of the page
   */
   head: {
-    title: 'IATI Funding Dashboard (South Sudan HRP 2021/22 data)',
+    title: 'Ukraine Private Sector Contributions Tracker',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'This site allows you to explore all of the published International Aid Transparency Initiative (IATI) data that is related to South Sudan HRP 2021/22 data.' },
       { name: 'twitter:card', content: 'summary' },
       { name: 'twitter:site', content: '@humdata' },
-      { name: 'twitter:title', content: 'IATI Funding Dashboard (South Sudan HRP 2021/22 data)' },
+      { name: 'twitter:title', content: 'Ukraine Private Sector Contributions Tracker' },
       { name: 'twitter:description', content: 'This site allows you to explore all of the published International Aid Transparency Initiative (IATI) data that is related to South Sudan HRP 2021/22 data.' },
       { name: 'twitter:image', content: 'https://ocha-dap.github.io/viz-iati-c19-dashboard/preview.png' },
       { name: 'twitter:image:alt', content: 'Contributions to South Sudan HRP 2021/22 data.' }

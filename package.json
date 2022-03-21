@@ -1,7 +1,7 @@
 {
-  "name": "covid19-visualisation",
+  "name": "ukraine-ps-tracker-visualisation",
   "version": "1.0.0",
-  "description": "A simple visualisation of COVID-19 response data.",
+  "description": "A simple visualisation of Ukraine Private Sector Contributions.",
   "author": "Centre for Humanitarian Data",
   "private": true,
   "scripts": {

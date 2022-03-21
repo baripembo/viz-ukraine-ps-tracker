@@ -35,7 +35,7 @@
                 :title="tooltips['filterPublishingOrg']">
                 ?
               </b-badge><br>
-              <b-form-radio v-model="initFilterOption" name="filterOptionGroup" :value="filterOptions[1].value" @change="onFilterOptionSelect">
+              <!--               <b-form-radio v-model="initFilterOption" name="filterOptionGroup" :value="filterOptions[1].value" @change="onFilterOptionSelect">
                 {{ filterOptions[1].text }}
               </b-form-radio>
               <b-badge
@@ -45,7 +45,7 @@
                 pill
                 :title="tooltips['filterCountry']">
                 ?
-              </b-badge><br>
+              </b-badge><br> -->
               <b-form-radio v-model="initFilterOption" name="filterOptionGroup" :value="filterOptions[2].value" @change="onFilterOptionSelect">
                 {{ filterOptions[2].text }}
               </b-form-radio>
@@ -79,7 +79,7 @@
               </template>
             </v-select>
 
-            <v-select
+            <!--             <v-select
               v-if="selectedFilterDimension==='#country'"
               :value="selectedFilter"
               class="filter-select filter-select-country mb-3"
@@ -97,7 +97,7 @@
                   v-on="events"
                 >
               </template>
-            </v-select>
+            </v-select> -->
 
             <v-select
               v-if="selectedFilterDimension==='#sector'"
@@ -118,71 +118,8 @@
                 >
               </template>
             </v-select>
-
-            <div class="quick-filter-list">
-              Quick filters:
-              <ul class="horizontal-list d-inline">
-                <li v-for="filter in quickFilters[getFilterID(selectedFilterDimension)]" :key="filter.id">
-                  <a :id="filter.id" href="#" :title="filter.name" @click="onQuickFilter">{{ filter.name }}</a>
-                </li>
-              </ul>
-            </div>
           </b-col>
           <b-col>
-            <b-row>
-              <b-col>
-                Filter for COVID-19 related transactions
-                <b-badge
-                  v-b-tooltip.hover
-                  class="info-icon p-0"
-                  variant="dark"
-                  pill
-                  :title="tooltips['activitiesCOVID']">
-                  ?
-                </b-badge>:
-              </b-col>
-              <b-col>
-                <b-button-group id="strict">
-                  <b-button
-                    v-for="(btn, id) in strictToggleOptions"
-                    :key="id"
-                    :value="btn.value"
-                    :class="{ 'active': btn.value===filterParams.strict }"
-                    @click="onToggle($event)"
-                  >
-                    {{ btn.label }}
-                  </b-button>
-                </b-button-group>
-              </b-col>
-            </b-row>
-            <hr class="my-3">
-            <b-row>
-              <b-col>
-                Only show humanitarian transactions
-                <b-badge
-                  v-b-tooltip.hover
-                  class="info-icon p-0"
-                  variant="dark"
-                  pill
-                  :title="tooltips['activitiesHumanitarian']">
-                  ?
-                </b-badge>:
-              </b-col>
-              <b-col>
-                <b-button-group id="humanitarian">
-                  <b-button
-                    v-for="(btn, id) in humanitarianToggleOptions"
-                    :key="id"
-                    :value="btn.value"
-                    :class="{ 'active': btn.value===filterParams.humanitarian }"
-                    @click="onToggle($event)"
-                  >
-                    {{ btn.label }}
-                  </b-button>
-                </b-button-group>
-              </b-col>
-            </b-row>
-            <hr class="my-3">
             <b-row>
               <b-col cols="12" md="8" class="mt-3">
                 <DownloadDataButton
@@ -285,36 +222,21 @@
           </b-col>
         </b-row>
 
-        <h2 class="header">
-          Outgoing Commitments and Spending Over Time&nbsp;
+        <h2 class="header mt-3">
+          Spending Flows&nbsp;
           <b-badge
             v-b-tooltip.hover
             class="info-icon p-0"
             variant="dark"
             pill
-            :title="tooltips['timelineHeader']">
+            :title="tooltips['sankeyHeader']">
             ?
           </b-badge>
         </h2>
 
-        <b-row>
-          <b-col cols="12" lg="6">
-            <b-form-select
-              v-model="timeseriesSelect"
-              class="form-select pl-2 pr-4 ml-3 mt-0 mb-4"
-              :options="timeseriesSelectOptions"
-              @input="onSelectTimeline"
-            />
-          </b-col>
-          <b-col />
-        </b-row>
+        <SankeyChart :items="filteredFlowsData" :params="filterParams" />
 
-        <TimeseriesChart
-          :timeseries-chart-data="timeseriesData"
-          :chart-type="timeseriesSelect"
-        />
-
-        <div class="small text-muted mt-4 ml-4">
+        <div class="small text-muted mt-5 ml-4">
           {{ lastUpdatedDate }} | IATI
         </div>
         <hr>
@@ -329,15 +251,15 @@ import csvtojson from 'csvtojson'
 import numeral from 'numeral'
 import config from '../nuxt.config'
 import DoughnutChart from '~/components/DoughnutChart'
-import TimeseriesChart from '~/components/TimeseriesChart'
+import SankeyChart from '~/components/FinancialSankey.vue'
 import DownloadDataButton from '~/components/DownloadDataButton'
 import RankedList from '~/components/RankedList'
 
 export default {
   components: {
     DoughnutChart,
-    TimeseriesChart,
     DownloadDataButton,
+    SankeyChart,
     RankedList
   },
   data () {
@@ -366,50 +288,16 @@ export default {
           { text: 'By Publishing Org', value: '#org+id' }
         ]
       ],
-      timeseriesSelect: 'Cumulative and Monthly Commitments/Spending',
-      timeseriesSelectOptions: [
-        'Cumulative and Monthly Commitments/Spending',
-        'Cumulative Commitments/Spending',
-        'Monthly Commitments/Spending'
-      ],
-      quickFilters: [
-        [
-          { name: 'Asian Development Bank', id: 'xm-dac-46004' },
-          { name: 'Inter-American Development Bank', id: 'xi-iati-iadb' },
-          { name: 'UNOCHA - Central Emergency Response Fund (CERF)', id: 'xm-ocha-cerf' },
-          { name: 'United Nations Development Programme', id: 'xm-dac-41114' },
-          { name: 'United States Agency for International Development (USAID)', id: 'us-gov-1' },
-          { name: 'World Food Programme', id: 'xm-dac-41140' }
-        ],
-        [
-          { name: 'India', id: 'India' },
-          { name: 'Brazil', id: 'Brazil' },
-          { name: 'Afghanistan', id: 'Afghanistan' },
-          { name: 'Bangladesh', id: 'Bangladesh' },
-          { name: 'South Sudan', id: 'South Sudan' }
-        ],
-        [
-          { name: 'Emergency Response', id: 'Emergency Response' },
-          { name: 'Health', id: 'Health' },
-          { name: 'Education', id: 'Education' },
-          { name: 'Reconstruction Relief & Rehabilitation', id: 'Reconstruction Relief & Rehabilitation' },
-          { name: 'Transport & Storage', id: 'Transport & Storage' }
-        ]
-      ],
-      strictToggleOptions: [
-        { label: 'Loose', value: 'off' },
-        { label: 'Strict', value: 'on' }
-      ],
-      humanitarianToggleOptions: [
-        { label: 'No', value: 'off' },
-        { label: 'Yes', value: 'on' }
-      ],
       commitmentColors: ['#007CE1', '#3393E2', '#65ABE3', '#98C3E4', '#CADAE5', '#EEE'],
       spendingColors: ['#C6382E', '#DC4E44', '#F2645A', '#F0948F', '#EDC4C3', '#EEE'],
       months: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
       fullData: [],
       filteredData: [],
       filterParams: {},
+      flowsActivityCount: 0,
+      fullFlowsData: [],
+      filteredFlowsData: [],
+      filterFlowsParams: {},
       orgNameIndex: [],
       lastUpdatedDate: '',
       skippedTransactions: 0,
@@ -497,36 +385,6 @@ export default {
     },
     spendingDonut () {
       return this.populateDonut(this.totalSpending, this.spendingRanked)
-    },
-    timeseriesData () {
-      const ref = this
-      const dates = [...new Set(this.filteredData.map(item => item['#date+month']))]
-
-      const monthlyCommitments = Object.values(this.commitments.reduce((acc, item) => {
-        let val = Number(item[ref.tagPattern])
-        val = (val < 0) ? 0 : val
-        acc[item['#date+month']] = acc[item['#date+month']] + val || val
-        return acc
-      }, []))
-
-      const monthlySpending = Object.values(this.spending.reduce((acc, item) => {
-        let val = Number(item[ref.tagPattern])
-        val = (val < 0) ? 0 : val
-        acc[item['#date+month']] = acc[item['#date+month']] + val || val
-        return acc
-      }, []))
-
-      return {
-        dates,
-        monthly: {
-          commitments: monthlyCommitments,
-          spending: monthlySpending
-        },
-        cumulative: {
-          commitments: this.getCumulativeSeries(monthlyCommitments),
-          spending: this.getCumulativeSeries(monthlySpending)
-        }
-      }
     }
   },
   mounted () {
@@ -537,12 +395,10 @@ export default {
       strict: 'off'
     }
     this.filterParams['#org+id'] = '*'
-    this.filterParams['#country'] = '*'
     this.filterParams['#sector'] = '*'
 
-    // const dataPath = (this.isProd) ? 'https://ocha-dap.github.io/hdx-scraper-iati-viz/reporting_orgs.json' : 'https://mcarans.github.io/hdx-scraper-iati-viz/reporting_orgs.json'
-
-    const dataPath = 'https://raw.githubusercontent.com/mcarans/iati_test_results/main/southsudan/reporting_orgs.json'
+    const filePath = (config.dev) ? '' : '/viz-ukraine-ps-tracker/'
+    const dataPath = filePath + 'reporting_orgs.json'
     axios.get(dataPath)
       .then((response) => {
         this.orgNameIndex = response.data.data
@@ -552,10 +408,6 @@ export default {
           if ('org' in this.$route.query) {
             this.filterParams['#org+id'] = this.$route.query.org
             this.querySetup('#org+id')
-          }
-          if ('country' in this.$route.query) {
-            this.filterParams['#country'] = this.$route.query.country
-            this.querySetup('#country')
           }
           if ('sector' in this.$route.query) {
             this.filterParams['#sector'] = this.$route.query.sector
@@ -580,8 +432,7 @@ export default {
   },
   methods: {
     async loadData () {
-      const filePath = (config.dev) ? '' : '/viz-iati-south-sudan/'
-      const dataPath = 'https://raw.githubusercontent.com/mcarans/iati_test_results/main/southsudan/transactions.json'
+      const filePath = (config.dev) ? '' : '/viz-ukraine-ps-tracker/'
       await axios.get(filePath + 'tooltips.csv')
         .then((response) => {
           return csvtojson().fromString(response.data).then((jsonData) => {
@@ -589,7 +440,8 @@ export default {
           })
         })
 
-      await axios.get(dataPath)
+      // get transaction data
+      await axios.get(filePath + 'transactions.json')
         .then((response) => {
           // process the metadata
           const metadata = response.data.metadata
@@ -602,14 +454,18 @@ export default {
 
           this.filteredData = this.filterData()
         })
+
+      // get flows data
+      await axios.get(filePath + 'flows.json')
+        .then((response) => {
+          this.fullFlowsData = response.data.data
+          this.updateFilteredFlowsData()
+        })
     },
     urlQuery () {
       const _query = {}
       if (this.filterParams['#org+id'] !== '*') {
         _query.org = this.filterParams['#org+id']
-      }
-      if (this.filterParams['#country'] !== '*') {
-        _query.country = this.filterParams['#country']
       }
       if (this.filterParams['#sector'] !== '*') {
         _query.sector = this.filterParams['#sector']
@@ -689,7 +545,9 @@ export default {
     filterData () {
       let result = this.fullData
       const params = this.filterParams
+
       const filterDimension = this.selectedFilterDimension
+      console.log('transactions', filterDimension)
 
       if (params[filterDimension] && params[filterDimension] !== '*') {
         result = result.filter(item => item[filterDimension] === params[filterDimension])
@@ -701,6 +559,61 @@ export default {
         result = result.filter(item => item['#indicator+bool+strict'] === 1)
       }
       return result
+    },
+    updateFilteredFlowsData () {
+      this.filteredFlowsData = this.filterFlowsData()
+      this.updateRouter()
+    },
+    filterFlowsData () {
+      let result = this.fullFlowsData.map(i => ({ ...i }))
+      const params = { '#org+id+reporting': '*', humanitarian: 'off', strict: 'off' }// this.filterParams
+      const filterDimension = '#org+id+reporting'// this.selectedFilterDimension
+
+      if (params[filterDimension] && params[filterDimension] !== '*') {
+        result = result.filter(item => item[filterDimension] === params[filterDimension])
+      }
+      if (params['humanitarian'] === 'on') {
+        result = result.filter(item => item['#indicator+bool+humanitarian'] === 1)
+      }
+      if (params['strict'] === 'on') {
+        result = result.filter(item => item['#indicator+bool+strict'] === 1)
+      }
+      if (params['humanitarian'] === 'off' || params['strict'] === 'off') {
+        result = this.aggregateFlows(result)
+      }
+
+      // get total count before partioning data into incoming/outgoing
+      this.flowsActivityCount = result.length
+      result = this.partitionData(result)
+      return result
+    },
+    aggregateFlows (data) {
+      const aggregated = data.reduce((acc, item) => {
+        const pattern = (item['#x_transaction_direction'] === 'incoming') ? '#org+name+provider' : '#org+name+receiver'
+        const match = acc.find(a => a[pattern] !== '' && a['#org+id+reporting'] === item['#org+id+reporting'] && a[pattern] === item[pattern])
+
+        if (!match) {
+          acc.push(item)
+        } else {
+          match['#value+total'] += item['#value+total']
+        }
+        return acc
+      }, [])
+      return aggregated
+    },
+    partitionData (data) {
+      let [incoming, outgoing] = data.reduce((result, element) => {
+        result[element['#x_transaction_direction'] === 'incoming' ? 0 : 1].push(element)
+        return result
+      }, [[], []])
+      incoming = this.formatData(incoming)
+      outgoing = this.formatData(outgoing)
+      return incoming.concat(outgoing)
+    },
+    formatData (array) {
+      return array.sort((a, b) =>
+        a['#value+total'] > b['#value+total'] ? -1 : 1
+      ).slice(0, 10)
     },
     populateSelect (data, defaultValue) {
       const selectList = data.reduce((itemList, item) => {
