@@ -93,7 +93,7 @@
                 <input
                   class="vs__search"
                   v-bind="attributes"
-                  placeholder="Type country or region name here"
+                  placeholder="Type recipient name here"
                   v-on="events"
                 >
               </template>
@@ -270,7 +270,7 @@ export default {
       selectedFilterLabel: 'all private sector donors',
       filterOptions: [
         { text: 'By Private Sector Donor', value: '#org+id', label: 'all private sector donors' },
-        { text: 'By Recipient Country or Region', value: '#country', label: 'all recipient countries and regions' },
+        { text: 'By Recipient', value: '#country', label: 'all recipients' },
         { text: 'By Sector', value: '#sector', label: 'all sectors' }
       ],
       selectedRankingFilter: '#country',
@@ -284,7 +284,7 @@ export default {
           { text: 'By Sector', value: '#sector' }
         ],
         [
-          { text: 'By Recipient Country or Region', value: '#country' },
+          { text: 'By Recipient', value: '#country' },
           { text: 'By Publishing Org', value: '#org+id' }
         ]
       ],
