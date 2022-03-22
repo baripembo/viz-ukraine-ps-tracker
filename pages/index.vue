@@ -223,7 +223,7 @@
         </b-row>
 
         <h2 class="header mt-3">
-          Spending Flows&nbsp;
+          Cash Contribution Flows&nbsp;
           <b-badge
             v-b-tooltip.hover
             class="info-icon p-0"
