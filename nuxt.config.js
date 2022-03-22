@@ -14,11 +14,11 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'This site allows you to explore all of the published International Aid Transparency Initiative (IATI) data that is related to South Sudan HRP 2021/22 data.' },
+      { hid: 'description', name: 'description', content: 'This interactive dashboard from the OCHA/UNDP Connecting Business initiative showing cash and in-kind contributions from businesses around the world intended to respond to the humanitarian crisis in Ukraine.' },
       { name: 'twitter:card', content: 'summary' },
       { name: 'twitter:site', content: '@humdata' },
       { name: 'twitter:title', content: 'Ukraine Private Sector Contributions Tracker' },
-      { name: 'twitter:description', content: 'This site allows you to explore all of the published International Aid Transparency Initiative (IATI) data that is related to South Sudan HRP 2021/22 data.' },
+      { name: 'twitter:description', content: 'This interactive dashboard from the OCHA/UNDP Connecting Business initiative showing cash and in-kind contributions from businesses around the world intended to respond to the humanitarian crisis in Ukraine.' },
       { name: 'twitter:image', content: 'https://ocha-dap.github.io/viz-iati-c19-dashboard/preview.png' },
       { name: 'twitter:image:alt', content: 'Contributions to South Sudan HRP 2021/22 data.' }
     ],

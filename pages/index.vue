@@ -12,7 +12,7 @@
       <div class="header-sticky">
         <div class="container">
           <h2>
-            Transactions from <b>{{ numberFormatter(activityCount) }}</b> <span v-if="activityCount > 1 || activityCount===0">activities</span><span v-else>activity</span> by <b>{{ selectedFilterLabel }}</b>
+            <b>{{ numberFormatter(activityCount) }}</b> <span v-if="activityCount > 1 || activityCount===0">contributions</span><span v-else>contribution</span> by <b>{{ selectedFilterLabel }}</b>
           </h2>
           <a class="anchor" @click="scrollTo('filters')">Customize filters</a>
         </div>
@@ -73,7 +73,7 @@
                 <input
                   class="vs__search"
                   v-bind="attributes"
-                  placeholder="Type organization name here"
+                  placeholder="Type donor name here"
                   v-on="events"
                 >
               </template>
@@ -137,7 +137,7 @@
 
       <b-container>
         <h2 class="header">
-          Outgoing Commitments and Spending Ranking&nbsp;
+          Summmary of Cash and In-Kind Contributions&nbsp;
           <b-badge
             v-b-tooltip.hover
             class="info-icon p-0"
@@ -163,42 +163,12 @@
           <b-col>
             <div class="key-figure-container">
               <DoughnutChart
-                :doughnut-chart-data="commitmentsDonut"
-                :colors="commitmentColors"
-              />
-              <div class="key-figure-breakdown w-lg-100 mx-lg-4">
-                <h3>
-                  Total Outgoing Commitments (USD)
-                  <b-badge
-                    v-b-tooltip.hover
-                    class="info-icon p-0"
-                    variant="dark"
-                    pill
-                    :title="tooltips['totalCommitments']">
-                    ?
-                  </b-badge>
-                </h3>
-                <div class="key-figure-num">
-                  {{ currencyFormatter(totalCommitments) }}
-                </div>
-
-                <RankedList
-                  :items="commitmentsTable"
-                  :colors="commitmentColors"
-                  :last-updated-date="lastUpdatedDate"
-                />
-              </div>
-            </div>
-          </b-col>
-          <b-col>
-            <div class="key-figure-container">
-              <DoughnutChart
                 :doughnut-chart-data="spendingDonut"
                 :colors="spendingColors"
               />
               <div class="key-figure-breakdown w-lg-100 ml-lg-4 mr-lg-5">
                 <h3>
-                  Total Spending (USD)
+                  Total Cash Contributions (USD)
                   <b-badge
                     v-b-tooltip.hover
                     class="info-icon p-0"
@@ -215,6 +185,36 @@
                 <RankedList
                   :items="spendingTable"
                   :colors="spendingColors"
+                  :last-updated-date="lastUpdatedDate"
+                />
+              </div>
+            </div>
+          </b-col>
+          <b-col>
+            <div class="key-figure-container">
+              <DoughnutChart
+                :doughnut-chart-data="commitmentsDonut"
+                :colors="commitmentColors"
+              />
+              <div class="key-figure-breakdown w-lg-100 mx-lg-4">
+                <h3>
+                  Total In-Kind Contributions (USD)
+                  <b-badge
+                    v-b-tooltip.hover
+                    class="info-icon p-0"
+                    variant="dark"
+                    pill
+                    :title="tooltips['totalCommitments']">
+                    ?
+                  </b-badge>
+                </h3>
+                <div class="key-figure-num">
+                  {{ currencyFormatter(totalCommitments) }}
+                </div>
+
+                <RankedList
+                  :items="commitmentsTable"
+                  :colors="commitmentColors"
                   :last-updated-date="lastUpdatedDate"
                 />
               </div>
@@ -267,20 +267,20 @@ export default {
       initFilterOption: '#org+id',
       selectedFilterDimension: '#org+id',
       selectedFilter: '*',
-      selectedFilterLabel: 'all publishing organizations',
+      selectedFilterLabel: 'all private sector donors',
       filterOptions: [
-        { text: 'By Publishing Organization', value: '#org+id', label: 'all publishing organizations' },
+        { text: 'By Private Sector Donor', value: '#org+id', label: 'all private sector donors' },
         { text: 'By Recipient Country or Region', value: '#country', label: 'all recipient countries and regions' },
         { text: 'By Sector', value: '#sector', label: 'all sectors' }
       ],
       selectedRankingFilter: '#country',
       rankingFilter: [
         [
-          { text: 'By Recipient Country or Region', value: '#country' },
+          { text: 'By Recipient', value: '#country' },
           { text: 'By Sector', value: '#sector' }
         ],
         [
-          { text: 'By Publishing Org', value: '#org+id' },
+          { text: 'By Private Sector Donor', value: '#org+id' },
           { text: 'By Sector', value: '#sector' }
         ],
         [
@@ -306,7 +306,7 @@ export default {
   },
   head () {
     return {
-      title: config.head.title + ': Commitments and Spending'
+      title: config.head.title + ': Cash and In-Kind Contributions'
     }
   },
   computed: {
@@ -327,7 +327,7 @@ export default {
         org.text = this.getOrgName(item)
         return org
       })
-      return this.populateSelect(orgList, 'All publishing organizations')
+      return this.populateSelect(orgList, 'All private sector donors')
     },
     countries () {
       let countryList = [...new Set(this.fullData.map(item => item['#country']))]
