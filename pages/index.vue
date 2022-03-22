@@ -35,7 +35,7 @@
                 :title="tooltips['filterPublishingOrg']">
                 ?
               </b-badge><br>
-              <!--               <b-form-radio v-model="initFilterOption" name="filterOptionGroup" :value="filterOptions[1].value" @change="onFilterOptionSelect">
+              <b-form-radio v-model="initFilterOption" name="filterOptionGroup" :value="filterOptions[1].value" @change="onFilterOptionSelect">
                 {{ filterOptions[1].text }}
               </b-form-radio>
               <b-badge
@@ -45,7 +45,7 @@
                 pill
                 :title="tooltips['filterCountry']">
                 ?
-              </b-badge><br> -->
+              </b-badge><br>
               <b-form-radio v-model="initFilterOption" name="filterOptionGroup" :value="filterOptions[2].value" @change="onFilterOptionSelect">
                 {{ filterOptions[2].text }}
               </b-form-radio>
@@ -79,7 +79,7 @@
               </template>
             </v-select>
 
-            <!--             <v-select
+            <v-select
               v-if="selectedFilterDimension==='#country'"
               :value="selectedFilter"
               class="filter-select filter-select-country mb-3"
@@ -97,7 +97,7 @@
                   v-on="events"
                 >
               </template>
-            </v-select> -->
+            </v-select>
 
             <v-select
               v-if="selectedFilterDimension==='#sector'"
