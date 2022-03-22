@@ -547,7 +547,6 @@ export default {
       const params = this.filterParams
 
       const filterDimension = this.selectedFilterDimension
-      console.log('transactions', filterDimension)
 
       if (params[filterDimension] && params[filterDimension] !== '*') {
         result = result.filter(item => item[filterDimension] === params[filterDimension])
