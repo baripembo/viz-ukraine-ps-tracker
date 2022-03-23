@@ -237,7 +237,7 @@
         <SankeyChart :items="filteredFlowsData" :params="filterParams" />
 
         <div class="small text-muted mt-5 ml-4">
-          {{ lastUpdatedDate }} | IATI
+          {{ lastUpdatedDate }} | OCHA
         </div>
         <hr>
       </b-container>

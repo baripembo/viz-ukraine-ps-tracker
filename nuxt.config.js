@@ -19,7 +19,7 @@ export default {
       { name: 'twitter:site', content: '@humdata' },
       { name: 'twitter:title', content: 'Ukraine Private Sector Contributions Tracker' },
       { name: 'twitter:description', content: 'This interactive dashboard from the OCHA/UNDP Connecting Business initiative showing cash and in-kind contributions from businesses around the world intended to respond to the humanitarian crisis in Ukraine.' },
-      { name: 'twitter:image', content: 'https://ocha-dap.github.io/viz-iati-c19-dashboard/preview.png' },
+      { name: 'twitter:image', content: 'https://ocha-dap.github.io/viz-ukraine-ps-tracker/preview-img.png' },
       { name: 'twitter:image:alt', content: 'Contributions to South Sudan HRP 2021/22 data.' }
     ],
     link: [
@@ -27,11 +27,11 @@ export default {
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap' }
     ],
     script: [
-      {
-        src: 'https://apiv2.popupsmart.com/api/Bundle/368361',
-        body: true,
-        async: true
-      }
+      // {
+      //   src: 'https://apiv2.popupsmart.com/api/Bundle/368361',
+      //   body: true,
+      //   async: true
+      // }
       // {
       //   src: 'http://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js',
       //   body: true
