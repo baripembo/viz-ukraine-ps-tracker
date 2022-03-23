@@ -14,7 +14,7 @@
       <div class="scroll-list-overlay" />
     </div>
     <div class="scroll-list-footer mt-2">
-      <span class="small text-muted">{{ lastUpdatedDate }} | IATI</span>
+      <span class="small text-muted">{{ lastUpdatedDate }} | OCHA</span>
       <span>(USD)</span>
     </div>
   </div>
