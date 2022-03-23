@@ -304,7 +304,6 @@ export default {
       let result = this.fullData.map(i => ({ ...i }))
       const params = this.filterParams
       const filterDimension = this.selectedFilterDimension
-      console.log('flows', filterDimension)
 
       if (params[filterDimension] && params[filterDimension] !== '*') {
         result = result.filter(item => item[filterDimension] === params[filterDimension])

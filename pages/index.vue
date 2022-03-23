@@ -12,7 +12,7 @@
       <div class="header-sticky">
         <div class="container">
           <h2>
-            <b>{{ numberFormatter(activityCount) }}</b> <span v-if="activityCount > 1 || activityCount===0">contributions</span><span v-else>contribution</span> by <b>{{ selectedFilterLabel }}</b>
+            <b>{{ numberFormatter(activityCount) }}</b> <span v-if="activityCount > 1 || activityCount===0">contributions</span><span v-else>contribution</span> <span v-if="selectedFilterDimension==='#org+id'">by</span><span v-else>to</span> <b>{{ selectedFilterLabel }}</b>
           </h2>
           <a class="anchor" @click="scrollTo('filters')">Customize filters</a>
         </div>
@@ -46,7 +46,7 @@
                 :title="tooltips['filterCountry']">
                 ?
               </b-badge><br>
-              <b-form-radio v-model="initFilterOption" name="filterOptionGroup" :value="filterOptions[2].value" @change="onFilterOptionSelect">
+              <!-- <b-form-radio v-model="initFilterOption" name="filterOptionGroup" :value="filterOptions[2].value" @change="onFilterOptionSelect">
                 {{ filterOptions[2].text }}
               </b-form-radio>
               <b-badge
@@ -56,7 +56,7 @@
                 pill
                 :title="tooltips['filterSector']">
                 ?
-              </b-badge>
+              </b-badge> -->
             </b-form-group>
 
             <v-select
@@ -99,7 +99,7 @@
               </template>
             </v-select>
 
-            <v-select
+            <!-- <v-select
               v-if="selectedFilterDimension==='#sector'"
               :value="selectedFilter"
               class="filter-select filter-select-sector mb-3"
@@ -117,7 +117,7 @@
                   v-on="events"
                 >
               </template>
-            </v-select>
+            </v-select> -->
           </b-col>
           <b-col>
             <b-row>
@@ -267,23 +267,26 @@ export default {
       initFilterOption: '#org+id',
       selectedFilterDimension: '#org+id',
       selectedFilter: '*',
-      selectedFilterLabel: 'all private sector donors',
+      selectedFilterLabel: '',
       filterOptions: [
-        { text: 'By Private Sector Donor', value: '#org+id', label: 'all private sector donors' },
-        { text: 'By Recipient', value: '#country', label: 'all recipients' },
-        { text: 'By Sector', value: '#sector', label: 'all sectors' }
+        { text: 'By Private Sector Donor', value: '#org+id', label: ' private sector donors' },
+        { text: 'By Recipient', value: '#country', label: ' recipients' }
+        // { text: 'By Sector', value: '#sector', label: 'all sectors' }
       ],
-      selectedRankingFilter: '#country',
+      selectedRankingFilter: '#org+id',
       rankingFilter: [
         [
-          { text: 'By Recipient', value: '#country' },
-          { text: 'By Sector', value: '#sector' }
-        ],
-        [
           { text: 'By Private Sector Donor', value: '#org+id' },
-          { text: 'By Sector', value: '#sector' }
+          { text: 'By Recipient', value: '#country' }
+          // { text: 'By Sector', value: '#sector' }
         ],
         [
+          { text: 'By Recipient', value: '#country' },
+          { text: 'By Private Sector Donor', value: '#org+id' }
+          // { text: 'By Sector', value: '#sector' }
+        ],
+        [
+          // { text: 'By Sector', value: '#sector' },
           { text: 'By Recipient', value: '#country' },
           { text: 'By Publishing Org', value: '#org+id' }
         ]
@@ -337,7 +340,7 @@ export default {
         country.text = item
         return country
       })
-      return this.populateSelect(countryList, 'All recipient countries and regions')
+      return this.populateSelect(countryList, 'All recipients')
     },
     sectors () {
       let sectorList = [...new Set(this.fullData.map(item => item['#sector']))]
@@ -360,6 +363,14 @@ export default {
     },
     spendingRanked () {
       return this.getRankedList(this.spending)
+    },
+    donorCount () {
+      const donors = [...new Set(this.fullData.map(item => item['#org+id']))]
+      return donors.length
+    },
+    recipientCount () {
+      const recipient = [...new Set(this.fullData.map(item => item['#country']))]
+      return recipient.length
     },
     activityCount () {
       const activities = [...new Set(this.filteredData.map(item => item['#activity+code']))]
@@ -403,6 +414,8 @@ export default {
       .then((response) => {
         this.orgNameIndex = response.data.data
         this.$store.commit('setorgNameIndex', response.data.data)
+
+        this.selectedFilterLabel = this.orgNameIndex.length + ' private sector donors'
 
         this.$nextTick(() => {
           if ('org' in this.$route.query) {
@@ -451,7 +464,6 @@ export default {
 
           // process the transaction data
           this.fullData = response.data.data
-
           this.filteredData = this.filterData()
         })
 
@@ -506,18 +518,20 @@ export default {
       this.resetParams()
       this.setDefaultFilterLabel(selected)
       this.updateFilteredData()
+      this.updateFilteredFlowsData()
       // this.$mixpanelTrackAction('change content', 'Commitments and Spending Breakdown radio filter', selected)
     },
     onSelect (value) {
       this.selectedFilter = value
       this.filterParams[this.selectedFilterDimension] = value
+      this.filterParams['#org+id+reporting'] = (this.selectedFilterDimension === '#org+id') ? value : '*' // param for sankey
       if (value !== '*') {
         this.selectedFilterLabel = (this.selectedFilterDimension === '#org+id') ? this.getOrgName(value) : value
       } else {
         this.setDefaultFilterLabel(this.selectedFilterDimension)
       }
       this.updateFilteredData()
-      // this.$mixpanelTrackAction('change content', 'Commitments and Spending Breakdown select filter', value)
+      this.updateFilteredFlowsData()
     },
     onToggle (event) {
       this.filterParams[event.target.parentElement.id] = event.target.value
@@ -536,7 +550,8 @@ export default {
     },
     setDefaultFilterLabel (dimension) {
       const filterOption = this.filterOptions.filter(option => option.value === dimension)
-      this.selectedFilterLabel = filterOption[0].label.toLowerCase()
+      const count = (dimension === '#org+id') ? this.donorCount : this.recipientCount
+      this.selectedFilterLabel = count + ' ' + filterOption[0].label.toLowerCase()
     },
     updateFilteredData () {
       this.filteredData = this.filterData()
@@ -565,7 +580,7 @@ export default {
     },
     filterFlowsData () {
       let result = this.fullFlowsData.map(i => ({ ...i }))
-      const params = { '#org+id+reporting': '*', humanitarian: 'off', strict: 'off' }// this.filterParams
+      const params = this.filterParams
       const filterDimension = '#org+id+reporting'// this.selectedFilterDimension
 
       if (params[filterDimension] && params[filterDimension] !== '*') {
@@ -696,6 +711,7 @@ export default {
       if (this.selectedFilterDimension === '#sector') { return 2 } else if (this.selectedFilterDimension === '#country') { return 1 } else { return 0 }
     },
     resetParams () {
+      this.filterParams['#org+id+reporting'] = '*' // param for sankey
       this.filterParams['#org+id'] = '*'
       this.filterParams['#country'] = '*'
       this.filterParams['#sector'] = '*'
