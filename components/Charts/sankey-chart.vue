@@ -3,7 +3,7 @@
     <div class="badges">
       <div>
         <b-badge variant="dark">
-          Provider Org
+          Donor
         </b-badge>
         <b-badge
           v-b-tooltip.hover
@@ -16,7 +16,7 @@
       </div>
       <div>
         <b-badge v-if="maxNodeDepth>1" variant="dark">
-          Reporting Org
+          Recipient
         </b-badge>
       </div>
       <div>
