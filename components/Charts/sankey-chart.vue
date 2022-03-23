@@ -16,12 +16,12 @@
       </div>
       <div>
         <b-badge v-if="maxNodeDepth>1" variant="dark">
-          Recipient
+          Reporting Org
         </b-badge>
       </div>
       <div>
         <b-badge variant="dark">
-          Receiver Org
+          Recipient
         </b-badge>
         <b-badge
           v-b-tooltip.hover
