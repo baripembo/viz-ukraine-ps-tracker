@@ -27,11 +27,11 @@ export default {
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap' }
     ],
     script: [
-      {
-        src: 'https://apiv2.popupsmart.com/api/Bundle/368361',
-        body: true,
-        async: true
-      }
+      // {
+      //   src: 'https://apiv2.popupsmart.com/api/Bundle/368361',
+      //   body: true,
+      //   async: true
+      // }
       // {
       //   src: 'http://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js',
       //   body: true
