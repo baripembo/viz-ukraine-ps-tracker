@@ -13,9 +13,6 @@
             <b-nav-item :to="{name: 'index'}" exact-active-class="active" class="nav-index" no-prefetch @click="onClick('Commitments and Spending')">
               Cash and In-Kind Contributions
             </b-nav-item>
-            <b-nav-item :to="{name: 'spending_flows'}" active-class="active" class="nav-flows" no-prefetch @click="onClick('Spending Flows')">
-              Spending Flows
-            </b-nav-item>
           </b-navbar-nav>
           <b-navbar-nav class="ml-auto">
             <b-nav-item :to="{name: 'about'}" active-class="active" class="ml-lg-auto nav-about" no-prefetch @click="onClick('About this Dashboard')">
