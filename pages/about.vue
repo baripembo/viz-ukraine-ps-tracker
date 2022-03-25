@@ -2,7 +2,7 @@
   <div class="about">
     <b-container>
       <b-row>
-        <b-col cols="3" class="d-none d-lg-block d-xl-none">
+        <!-- <b-col cols="3" class="d-none d-lg-block d-xl-none">
           <ul class="jump-nav">
             <li>
               <nuxt-link :to="{ name: 'about', hash: '#methodology' }">
@@ -25,19 +25,31 @@
               </nuxt-link>
             </li>
           </ul>
-        </b-col>
+        </b-col> -->
         <b-col cols="12" lg="9">
           <section id="about" class="mb-5">
             <h2>About this Dashboard</h2>
 
-            <p>This dashboard was built by the <a href="https://centre.humdata.org" target="_blank">OCHA Centre for Humanitarian Data</a> based on data collected and maintained by the <a href="https://www.connectingbusiness.org" target="_blank">OCHA/UNDP Connecting Business initiative (CBi)</a>. The response of the business community to the humanitarian crisis in Ukraine is unprecedented, and the purpose of this dashboard is to make it easier to visualize, explore, and understand the scope and scale of private sector contributions.</p>
+            <p>This dashboard was built by the <a href="https://centre.humdata.org" target="_blank">OCHA Centre for Humanitarian Data</a> based on data collected and maintained by the <a href="https://www.connectingbusiness.org" target="_blank">OCHA/UNDP Connecting Business initiative (CBi)</a>.</p>
 
-            <p>For the purposes of this dashboard, the ‘private sector’ is defined as corporations and corporate-linked foundations, including individual and family foundations associated with prominent business leaders. CBi has made every effort to assure the accuracy of the data presented, but we cannot guarantee that each transaction has been verified by the donor and recipient. Data is sourced from <a href="https://www.unocha.org" target="_blank">United Nations Office for the Coordination of Humanitarian Affairs</a>; the <a href="https://unfoundation.org" target="_blank">United Nations Foundation</a>; UN agencies, funds, and programmes; corporate press releases; public reporting; and academic and non-profit sources including <a href="https://candid.org" target="_blank">Candid</a>, the <a href="https://www.uschamberfoundation.org" target="_blank">U.S. Chamber of Commerce Foundation</a>, and the <a href="https://ccc.bc.edu/content/ccc.html" target="_blank">Boston College Centre for Corporate Citizenship</a>.</p>
+            <p>The response of the business community to the humanitarian crisis in Ukraine is unprecedented, and the purpose of this dashboard is to make it easier to visualize, explore, and understand the scope and scale of private sector contributions.</p>
+
+            <p>For the purposes of this dashboard, the ‘private sector’ is defined as corporations and corporate-linked foundations, including individual and family foundations associated with prominent business leaders.</p>
+
+            <p>CBi has made every effort to assure the accuracy of the data presented, but we cannot guarantee that each transaction has been verified by the donor and recipient. Data is sourced from <a href="https://www.unocha.org" target="_blank">United Nations Office for the Coordination of Humanitarian Affairs</a>; the <a href="https://unfoundation.org" target="_blank">United Nations Foundation</a>; UN agencies, funds, and programmes; corporate press releases; public reporting; and academic and non-profit sources including <a href="https://candid.org" target="_blank">Candid</a>, the <a href="https://www.uschamberfoundation.org" target="_blank">U.S. Chamber of Commerce Foundation</a>, and the <a href="https://ccc.bc.edu/content/ccc.html" target="_blank">Boston College Centre for Corporate Citizenship</a>.</p>
+          </section>
+
+          <section id="donate" class="mb-5">
+            <h2>
+              Make a Donation
+            </h2>
+
+            <p>Want to learn how you can donate to the humanitarian response in Ukraine? Businesses should refer to the <a href="https://www.connectingbusiness.org/publications/ocha-business-guide-ukraine-humanitarian-crisis" target="_blank">OCHA Business Guide to the Ukraine Crisis</a> for more information about how to help. Individuals can contribute via the UN's <a href="https://crisisrelief.un.org/t/ukraine" target="_blank">Ukraine Humanitarian Fund</a>.</p>
           </section>
 
           <section id="methodology" class="mb-5">
             <h2>
-              Something Missing or Incorrect?
+              Questions? Want to report something missing or incorrect?
             </h2>
 
             <p>CBi is tracking over $1 billion of cash and in-kind contributions that have been pledged by private sector actors, but we are only making visible on this dashboard transactions that we have been able to clearly establish as paid. We welcome reports of any missing or incomplete information; please reach out to our team by emailing <a href="mailto:connectingbusiness@un.org">connectingbusiness@un.org</a>.</p>
