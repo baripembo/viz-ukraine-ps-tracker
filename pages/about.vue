@@ -32,7 +32,7 @@
 
             <p>This dashboard was built by the <a href="https://centre.humdata.org" target="_blank">OCHA Centre for Humanitarian Data</a> based on data collected and maintained by the <a href="https://www.connectingbusiness.org" target="_blank">OCHA/UNDP Connecting Business initiative (CBi)</a>.</p>
 
-            <p>The response of the business community to the humanitarian crisis in Ukraine is unprecedented, and the purpose of this dashboard is to make it easier to visualize, explore, and understand the scope and scale of private sector contributions.</p>
+            <p>The response of the business community to the humanitarian crisis in Ukraine is unprecedented, and the purpose of this dashboard is to make it easier to visualize, explore, and understand the scope and scale of private sector donations.</p>
 
             <p>For the purposes of this dashboard, the ‘private sector’ is defined as corporations and corporate-linked foundations, including individual and family foundations associated with prominent business leaders.</p>
 
@@ -52,7 +52,7 @@
               Questions? Want to report something missing or incorrect?
             </h2>
 
-            <p>CBi is tracking over $1 billion of cash and in-kind contributions that have been pledged by private sector actors, but we are only making visible on this dashboard transactions that we have been able to clearly establish as paid. We welcome reports of any missing or incomplete information; please reach out to our team by emailing <a href="mailto:connectingbusiness@un.org">connectingbusiness@un.org</a>.</p>
+            <p>CBi is tracking over $1 billion of cash and in-kind donations that have been pledged by private sector actors, but we are only making visible on this dashboard transactions that we have been able to clearly establish as paid. We welcome reports of any missing or incomplete information; please reach out to our team by emailing <a href="mailto:connectingbusiness@un.org">connectingbusiness@un.org</a>.</p>
           </section>
 
           <section id="methodology" class="mb-5">
