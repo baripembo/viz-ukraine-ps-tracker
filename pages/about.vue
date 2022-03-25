@@ -44,7 +44,7 @@
               Make a Donation
             </h2>
 
-            <p>Want to learn how you can donate to the humanitarian response in Ukraine? Businesses should refer to the <a href="https://www.connectingbusiness.org/publications/ocha-business-guide-ukraine-humanitarian-crisis" target="_blank">OCHA Business Guide to the Ukraine Crisis</a> for more information about how to help. Individuals can contribute via the UN's <a href="https://crisisrelief.un.org/t/ukraine" target="_blank">Ukraine Humanitarian Fund</a>.</p>
+            <p>Want to learn how you can donate to the humanitarian response in Ukraine? Businesses should refer to the <a href="https://www.connectingbusiness.org/publications/ocha-business-guide-ukraine-humanitarian-crisis" target="_blank">OCHA Business Guide to the Ukraine Crisis</a> for more information about how to help. Individuals can donate via the UN's <a href="https://crisisrelief.un.org/t/ukraine" target="_blank">Ukraine Humanitarian Fund</a>.</p>
           </section>
 
           <section id="methodology" class="mb-5">
