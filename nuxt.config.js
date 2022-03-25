@@ -14,13 +14,13 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'This interactive dashboard from the OCHA/UNDP Connecting Business initiative showing cash and in-kind contributions from businesses around the world intended to respond to the humanitarian crisis in Ukraine.' },
+      { hid: 'description', name: 'description', content: 'This interactive dashboard from the OCHA/UNDP Connecting Business initiative showing cash and in-kind donations from businesses around the world intended to respond to the humanitarian crisis in Ukraine.' },
       { name: 'twitter:card', content: 'summary' },
       { name: 'twitter:site', content: '@humdata' },
       { name: 'twitter:title', content: 'Ukraine Private Sector Donations Tracker' },
-      { name: 'twitter:description', content: 'This interactive dashboard from the OCHA/UNDP Connecting Business initiative showing cash and in-kind contributions from businesses around the world intended to respond to the humanitarian crisis in Ukraine.' },
+      { name: 'twitter:description', content: 'This interactive dashboard from the OCHA/UNDP Connecting Business initiative showing cash and in-kind donations from businesses around the world intended to respond to the humanitarian crisis in Ukraine.' },
       { name: 'twitter:image', content: 'https://ocha-dap.github.io/viz-ukraine-ps-tracker/preview-img.png' },
-      { name: 'twitter:image:alt', content: 'Contributions to the humanitarian crisis in Ukraine.' }
+      { name: 'twitter:image:alt', content: 'Private sector donations to the humanitarian crisis in Ukraine.' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: 'https://data.humdata.org/images/icons/hdx.ico' },
