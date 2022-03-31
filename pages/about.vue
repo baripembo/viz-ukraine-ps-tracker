@@ -27,43 +27,43 @@
           </ul>
         </b-col> -->
         <b-col cols="12" lg="9">
-          <section id="about" class="mb-5">
+          <section class="mb-5">
             <h2>About this Dashboard</h2>
 
-            <p>This dashboard was built by the <a href="https://centre.humdata.org" target="_blank">OCHA Centre for Humanitarian Data</a> based on data collected and maintained by the <a href="https://www.connectingbusiness.org" target="_blank">OCHA/UNDP Connecting Business initiative (CBi)</a>.</p>
+            <p>The response of the global business community to the ongoing humanitarian emergency in Ukraine has been unprecedented. The purpose of this dashboard is to make it easier to visualize, explore, and understand the scope and scale of private sector donations being made for the benefit of affected people. For the purposes of this dashboard, “private sector” is defined as corporations and corporate-linked foundations, including individual and family foundations associated with prominent business leaders.</p>
 
-            <p>The response of the business community to the humanitarian crisis in Ukraine is unprecedented, and the purpose of this dashboard is to make it easier to visualize, explore, and understand the scope and scale of private sector donations.</p>
+            <p>This dashboard was built by the <a href="https://centre.humdata.org" target="_blank">OCHA Centre for Humanitarian Data</a> based on data collected and maintained by the <a href="https://www.connectingbusiness.org" target="_blank">OCHA/UNDP Connecting Business initiative (CBi)</a>. CBi has made every effort to assure the accuracy of the data presented, but we cannot guarantee that each transaction has been verified by the donor and recipient. Data is sourced from <a href="https://www.unocha.org" target="_blank">United Nations Office for the Coordination of Humanitarian Affairs</a>; the <a href="https://fts.unocha.org" target="_blank">OCHA Financial Tracking Service</a>; the <a href="https://unfoundation.org" target="_blank">United Nations Foundation</a>; UN agencies, funds, and programmes; corporate press releases; public reporting; and academic and non-profit sources including <a href="https://candid.org" target="_blank">Candid</a>, the <a href="https://www.uschamberfoundation.org" target="_blank">U.S. Chamber of Commerce Foundation</a>, and the <a href="https://ccc.bc.edu/content/ccc.html" target="_blank">Boston College Centre for Corporate Citizenship</a>.</p></p>
 
-            <p>For the purposes of this dashboard, the ‘private sector’ is defined as corporations and corporate-linked foundations, including individual and family foundations associated with prominent business leaders.</p>
-
-            <p>CBi has made every effort to assure the accuracy of the data presented, but we cannot guarantee that each transaction has been verified by the donor and recipient. Data is sourced from <a href="https://www.unocha.org" target="_blank">United Nations Office for the Coordination of Humanitarian Affairs</a>; the <a href="https://unfoundation.org" target="_blank">United Nations Foundation</a>; UN agencies, funds, and programmes; corporate press releases; public reporting; and academic and non-profit sources including <a href="https://candid.org" target="_blank">Candid</a>, the <a href="https://www.uschamberfoundation.org" target="_blank">U.S. Chamber of Commerce Foundation</a>, and the <a href="https://ccc.bc.edu/content/ccc.html" target="_blank">Boston College Centre for Corporate Citizenship</a>.</p>
+            <p>CBi is grateful for the generous support of the <a href="https://www.usaid.gov" target="_blank">United States Agency for International Development (USAID)</a> Bureau for Humanitarian Affairs.</p>
           </section>
 
-          <section id="donate" class="mb-5">
-            <h2>
-              Make a Donation
-            </h2>
-
-            <p>Want to learn how you can donate to the humanitarian response in Ukraine? Businesses should refer to the <a href="https://www.connectingbusiness.org/publications/ocha-business-guide-ukraine-humanitarian-crisis" target="_blank">OCHA Business Guide to the Ukraine Crisis</a> for more information about how to help. Individuals can donate via the UN's <a href="https://crisisrelief.un.org/t/ukraine" target="_blank">Ukraine Humanitarian Fund</a>.</p>
-          </section>
-
-          <section id="methodology" class="mb-5">
+          <section class="mb-5">
             <h2>
               Questions? Want to report something missing or incorrect?
             </h2>
 
-            <p>CBi is tracking over $1 billion of cash and in-kind donations that have been pledged by private sector actors, but we are only making visible on this dashboard transactions that we have been able to clearly establish as paid. We welcome reports of any missing or incomplete information; please reach out to our team by emailing <a href="mailto:connectingbusiness@un.org">connectingbusiness@un.org</a>.</p>
+            <p>This dashboard substantially undercounts the total cash and in-kind donations made by the private sector. In general, we are listing contributions that we can establish as actually paid (not just committed) and for which breakdowns by recipient are available.</p>
+
+            <p>CBi welcomes questions, comments, or reports of missing or incomplete information. Please reach out to our team by emailing <a href="mailto:connectingbusiness@un.org">connectingbusiness@un.org</a>.</p>
           </section>
 
-          <section id="methodology" class="mb-5">
+          <section class="mb-5">
+            <h2>
+              Make a Donation
+            </h2>
+
+            <p>Want to learn how you can donate to the humanitarian response in Ukraine? Businesses should refer to the <a href="https://www.connectingbusiness.org/publications/ocha-business-guide-ukraine-humanitarian-crisis" target="_blank">OCHA Business Guide to the Ukraine Crisis</a> for more information about how to help. Individuals can make contributions through <a href="https://crisisrelief.un.org/t/ukraine" target="_blank">OCHA</a> or <a href="https://donate.unhcr.org/int/en/ukraine-emergency" target="_blank">UNHCR</a>.</p>
+          </section>
+
+          <section class="mb-5">
             <h2>
               Technical Details / Resources for Developers
             </h2>
 
-            <p>Everything developed for this dashboard is based on the IATI COVID-19 Funding Dashboard, which was shared as open-source software. Learn more and access GitHub repositories <a href="https://data.humdata.org/viz-iati-c19-dashboard/about#developers" target="_blank">here</a>.</p>
+            <p>Everything developed for this dashboard is based on the <a href="https://data.humdata.org/viz-iati-c19-dashboard/about" target="_blank">IATI COVID-19 Funding Dashboard</a>, which was shared as open-source software. Learn more and access GitHub repositories <a href="https://data.humdata.org/viz-iati-c19-dashboard/about#developers" target="_blank">here</a>.</p>
           </section>
 
-          <section id="tos" class="mb-5">
+          <section class="mb-5">
             <h2>
               Terms of Service / Privacy Notice
             </h2>
