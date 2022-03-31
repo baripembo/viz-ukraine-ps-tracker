@@ -27,9 +27,10 @@
         <b-row>
           <b-col cols="12">
             <div class="logo-container">
-              <a href="https://www.connectingbusiness.org" target="_blank"><img src="~@/assets/logos/CBi_logo_2021_horizontal_color_CMYK.svg" alt="Connecting Business Initiative (CBi)" height="70"></a>
-              <a href="https://www.unocha.org" target="_blank" class="ml-auto"><img src="~@/assets/logos//ocha.png" alt="UN OCHA" height="50"></a>
+              <a href="https://www.usaid.gov" target="_blank"><img src="~@/assets/logos/usaid.png" alt="USAID" height="60"></a>
+              <a href="https://www.unocha.org" target="_blank"><img src="~@/assets/logos//ocha.png" alt="UN OCHA" height="50"></a>
               <a href="https://centre.humdata.org" target="_blank"><img src="~@/assets/logos/centrehumdata.png" alt="Centre for Humanitarian Data" height="45"></a>
+              <a href="https://www.connectingbusiness.org" target="_blank"><img src="~@/assets/logos/CBi_logo_2021_horizontal_color_CMYK.svg" alt="Connecting Business Initiative (CBi)" height="70"></a>
             </div>
           </b-col>
         </b-row>
@@ -72,8 +73,8 @@
   .logo-container {
     align-items: center;
     display: flex;
+    justify-content: space-between;
     img {
-      margin-right: 30px;
       width: auto;
     }
   }
