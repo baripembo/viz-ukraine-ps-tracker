@@ -10,9 +10,9 @@
       <b-dropdown-item @click="downloadAllData()">
         View data on HDX
       </b-dropdown-item>
-      <b-dropdown-item @click="downloadFilteredData()">
+      <!--       <b-dropdown-item @click="downloadFilteredData()">
         View filtered data
-      </b-dropdown-item>
+      </b-dropdown-item> -->
     </b-dropdown>
 
     <!--     <div class="text-center pt-2">
@@ -38,7 +38,7 @@ export default {
   },
   computed: {
     filePath () {
-      return 'https://data.humdata.org/dataset/iati-covid19-funding'
+      return 'https://data.humdata.org/dataset/ukraine-private-sector-donations-tracker'
       // return 'https://ocha-dap.github.io/hdx-scraper-iati-viz/' + this.type + '.csv'
     },
     isProd () {

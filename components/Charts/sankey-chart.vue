@@ -5,14 +5,6 @@
         <b-badge variant="dark">
           Donor
         </b-badge>
-        <b-badge
-          v-b-tooltip.hover
-          class="info-icon p-0"
-          variant="dark"
-          pill
-          :title="tooltips['sankeyProviderLabel']">
-          ?
-        </b-badge>
       </div>
       <div>
         <b-badge v-if="maxNodeDepth>1" variant="dark">
@@ -22,14 +14,6 @@
       <div>
         <b-badge variant="dark">
           Recipient
-        </b-badge>
-        <b-badge
-          v-b-tooltip.hover
-          class="info-icon p-0"
-          variant="dark"
-          pill
-          :title="tooltips['sankeyReceiverLabel']">
-          ?
         </b-badge>
       </div>
     </div>

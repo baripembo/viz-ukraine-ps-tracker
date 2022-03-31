@@ -12,7 +12,7 @@
       <div class="header-sticky">
         <div class="container">
           <h2>
-            <b>{{ numberFormatter(activityCount) }}</b> <span v-if="activityCount > 1 || activityCount===0">contributions</span><span v-else>contribution</span> <span v-if="selectedFilterDimension==='#org+id'">by</span><span v-else>to</span> <b>{{ selectedFilterLabel }}</b>
+            <b>{{ numberFormatter(activityCount) }}</b> <span v-if="activityCount > 1 || activityCount===0">donations</span><span v-else>donation</span> <span v-if="selectedFilterDimension==='#org+id'">by</span><span v-else>to</span> <b>{{ selectedFilterLabel }}</b>
           </h2>
           <a class="anchor" @click="scrollTo('filters')">Customize filters</a>
         </div>
@@ -27,25 +27,11 @@
               <b-form-radio v-model="initFilterOption" name="filterOptionGroup" :value="filterOptions[0].value" @change="onFilterOptionSelect">
                 {{ filterOptions[0].text }}
               </b-form-radio>
-              <b-badge
-                v-b-tooltip.hover
-                class="info-icon p-0 ml-3 ml-md-0"
-                variant="dark"
-                pill
-                :title="tooltips['filterPublishingOrg']">
-                ?
-              </b-badge><br>
+              <br>
               <b-form-radio v-model="initFilterOption" name="filterOptionGroup" :value="filterOptions[1].value" @change="onFilterOptionSelect">
                 {{ filterOptions[1].text }}
               </b-form-radio>
-              <b-badge
-                v-b-tooltip.hover
-                class="info-icon p-0 ml-3 ml-md-0"
-                variant="dark"
-                pill
-                :title="tooltips['filterCountry']">
-                ?
-              </b-badge><br>
+              <br>
               <!-- <b-form-radio v-model="initFilterOption" name="filterOptionGroup" :value="filterOptions[2].value" @change="onFilterOptionSelect">
                 {{ filterOptions[2].text }}
               </b-form-radio>
@@ -93,7 +79,7 @@
                 <input
                   class="vs__search"
                   v-bind="attributes"
-                  placeholder="Type recipient name here"
+                  placeholder="Type humanitarian recipient name here"
                   v-on="events"
                 >
               </template>
@@ -137,15 +123,7 @@
 
       <b-container>
         <h2 class="header">
-          Summmary of Cash and In-Kind Contributions&nbsp;
-          <b-badge
-            v-b-tooltip.hover
-            class="info-icon p-0"
-            variant="dark"
-            pill
-            :title="tooltips['rankingHeader']">
-            ?
-          </b-badge>
+          Overview of Cash and In-Kind Donations
         </h2>
 
         <b-row>
@@ -168,15 +146,7 @@
               />
               <div class="key-figure-breakdown w-lg-100 ml-lg-4 mr-lg-5">
                 <h3>
-                  Total Cash Contributions (USD)
-                  <b-badge
-                    v-b-tooltip.hover
-                    class="info-icon p-0"
-                    variant="dark"
-                    pill
-                    :title="tooltips['totalSpending']">
-                    ?
-                  </b-badge>
+                  Total Cash Donations (USD)
                 </h3>
                 <div class="key-figure-num">
                   {{ currencyFormatter(totalSpending) }}
@@ -198,15 +168,7 @@
               />
               <div class="key-figure-breakdown w-lg-100 mx-lg-4">
                 <h3>
-                  Total In-Kind Contributions (USD)
-                  <b-badge
-                    v-b-tooltip.hover
-                    class="info-icon p-0"
-                    variant="dark"
-                    pill
-                    :title="tooltips['totalCommitments']">
-                    ?
-                  </b-badge>
+                  Total In-Kind Donations (USD)
                 </h3>
                 <div class="key-figure-num">
                   {{ currencyFormatter(totalCommitments) }}
@@ -223,21 +185,16 @@
         </b-row>
 
         <h2 class="header mt-3">
-          Cash Contribution Flows&nbsp;
-          <b-badge
-            v-b-tooltip.hover
-            class="info-icon p-0"
-            variant="dark"
-            pill
-            :title="tooltips['sankeyHeader']">
-            ?
-          </b-badge>
+          Donation Flows
         </h2>
+        <div class="footnote text-muted">
+          Please note that flows are only filtered by private sector donor and may not show all donations to a given humanitarian recipient.
+        </div>
 
         <SankeyChart :items="filteredFlowsData" :params="filterParams" />
 
         <div class="small text-muted mt-5 ml-4">
-          {{ lastUpdatedDate }} | OCHA
+          {{ lastUpdatedDate }} | CBi
         </div>
         <hr>
       </b-container>
@@ -270,24 +227,24 @@ export default {
       selectedFilterLabel: '',
       filterOptions: [
         { text: 'By Private Sector Donor', value: '#org+id', label: ' private sector donors' },
-        { text: 'By Recipient', value: '#country', label: ' recipients' }
+        { text: 'By Humanitarian Recipient', value: '#country', label: ' humanitarian recipients' }
         // { text: 'By Sector', value: '#sector', label: 'all sectors' }
       ],
-      selectedRankingFilter: '#org+id',
+      selectedRankingFilter: '#country',
       rankingFilter: [
         [
-          { text: 'By Private Sector Donor', value: '#org+id' },
-          { text: 'By Recipient', value: '#country' }
-          // { text: 'By Sector', value: '#sector' }
-        ],
-        [
-          { text: 'By Recipient', value: '#country' },
+          { text: 'By Humanitarian Recipient', value: '#country' },
           { text: 'By Private Sector Donor', value: '#org+id' }
           // { text: 'By Sector', value: '#sector' }
         ],
         [
+          { text: 'By Private Sector Donor', value: '#org+id' },
+          { text: 'By Humanitarian Recipient', value: '#country' }
+          // { text: 'By Sector', value: '#sector' }
+        ],
+        [
           // { text: 'By Sector', value: '#sector' },
-          { text: 'By Recipient', value: '#country' },
+          { text: 'By Humanitarian Recipient', value: '#country' },
           { text: 'By Publishing Org', value: '#org+id' }
         ]
       ],
@@ -309,7 +266,7 @@ export default {
   },
   head () {
     return {
-      title: config.head.title + ': Cash and In-Kind Contributions'
+      title: config.head.title + ': Dashboard'
     }
   },
   computed: {
@@ -340,7 +297,7 @@ export default {
         country.text = item
         return country
       })
-      return this.populateSelect(countryList, 'All recipients')
+      return this.populateSelect(countryList, 'All humanitarian recipients')
     },
     sectors () {
       let sectorList = [...new Set(this.fullData.map(item => item['#sector']))]
@@ -519,7 +476,7 @@ export default {
       this.setDefaultFilterLabel(selected)
       this.updateFilteredData()
       this.updateFilteredFlowsData()
-      // this.$mixpanelTrackAction('change content', 'Commitments and Spending Breakdown radio filter', selected)
+      this.$mixpanelTrackAction('change content', 'Dashboard Breakdown radio filter', selected)
     },
     onSelect (value) {
       this.selectedFilter = value
@@ -532,18 +489,19 @@ export default {
       }
       this.updateFilteredData()
       this.updateFilteredFlowsData()
+      this.$mixpanelTrackAction('change content', 'Dashboard Breakdown select filter', value)
     },
     onToggle (event) {
       this.filterParams[event.target.parentElement.id] = event.target.value
       this.updateFilteredData()
-      // this.$mixpanelTrackAction('change content', 'Commitments and Spending Breakdown toggle filter', event.target.parentElement.id + ' ' + event.target.value)
+      this.$mixpanelTrackAction('change content', 'Dashboard Breakdown toggle filter', event.target.parentElement.id + ' ' + event.target.value)
     },
     onQuickFilter (event) {
       event.preventDefault()
       this.onSelect(event.target.id)
     },
     onSelectRanking (value) {
-      // this.$mixpanelTrackAction('change content', 'Commitments and Spending Ranking select filter', value)
+      this.$mixpanelTrackAction('change content', 'Dashboard Ranking select filter', value)
     },
     onSelectTimeline (value) {
       // this.$mixpanelTrackAction('change content', 'Commitments and Spending Timeline select filter', value)
@@ -702,7 +660,7 @@ export default {
       const unspecified = Object.entries(unspecifiedObject)[0]
       if (unspecified !== undefined) {
         // replace text for recipient countries
-        if (unspecified[0] === '(Unspecified country)') { unspecified[0] = 'No country/region specified' }
+        if (unspecified[0] === '(Unspecified recipient)') { unspecified[0] = 'No recipient specified' }
         ranked.push(unspecified)
       }
       return ranked

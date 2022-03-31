@@ -7,7 +7,7 @@ export default ({ app }, inject) => {
       action,
       content,
       'current view': view,
-      'viz type': 'iati covid-19 dashboard'
+      'viz type': 'ukraine ps tracker dashboard'
     })
   })
 

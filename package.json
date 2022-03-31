@@ -1,7 +1,7 @@
 {
   "name": "ukraine-ps-tracker-visualisation",
   "version": "1.0.0",
-  "description": "A simple visualisation of Ukraine Private Sector Contributions.",
+  "description": "A simple visualisation of Ukraine Private Sector Donations.",
   "author": "Centre for Humanitarian Data",
   "private": true,
   "scripts": {
