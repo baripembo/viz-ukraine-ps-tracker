@@ -436,6 +436,9 @@ export default {
       if (this.filterParams['#org+id'] !== '*') {
         _query.org = this.filterParams['#org+id']
       }
+      if (this.filterParams['#country'] !== '*') {
+        _query.country = this.filterParams['#country']
+      }
       if (this.filterParams['#sector'] !== '*') {
         _query.sector = this.filterParams['#sector']
       }
