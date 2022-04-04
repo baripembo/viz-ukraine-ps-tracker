@@ -1,4 +1,4 @@
-{"metadata":{"#date+run":"2022-04-04T14:16:22.513500","#meta+flows+num":310},"data":[
+{"metadata":{"#date+run":"2022-04-04T14:16:22.513500","#meta+flows+num":308},"data":[
  {
    "#org+id+reporting": "CBi-PROVIDER-1",
    "#org+name+reporting": "AccelByte Inc.",
@@ -256,7 +256,7 @@
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-11",
-   "#org+name+reporting": "Armani Group ",
+   "#org+name+reporting": "Armani Group ",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
    "#org+name+provider": "",
@@ -457,7 +457,7 @@
    "#org+name+provider": "",
    "#org+type+provider": "",
    "#org+id+receiver": "CBi-RECEIVER-9",
-   "#org+name+receiver": "British Red Cross Society ",
+   "#org+name+receiver": "British Red Cross Society ",
    "#org+type+receiver": "",
    "#indicator+bool+humanitarian": 1,
    "#indicator+bool+strict": 1,
@@ -1102,7 +1102,7 @@
    "#org+name+provider": "",
    "#org+type+provider": "",
    "#org+id+receiver": "CBi-RECEIVER-9",
-   "#org+name+receiver": "British Red Cross Society ",
+   "#org+name+receiver": "British Red Cross Society ",
    "#org+type+receiver": "",
    "#indicator+bool+humanitarian": 1,
    "#indicator+bool+strict": 1,
@@ -1321,21 +1321,6 @@
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-66",
-   "#org+name+reporting": "Epic Games",
-   "#org+reporting+type": 70,
-   "#org+id+provider": "",
-   "#org+name+provider": "",
-   "#org+type+provider": "",
-   "#org+id+receiver": "CBi-RECEIVER-47",
-   "#org+name+receiver": "multiple or not specified",
-   "#org+type+receiver": "",
-   "#indicator+bool+humanitarian": 1,
-   "#indicator+bool+strict": 1,
-   "#x_transaction_direction": "outgoing",
-   "#value+total": 144000000
- },
- {
-   "#org+id+reporting": "CBi-PROVIDER-67",
    "#org+name+reporting": "Esmark, Inc.",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -1350,7 +1335,7 @@
    "#value+total": 25000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-68",
+   "#org+id+reporting": "CBi-PROVIDER-67",
    "#org+name+reporting": "Eurofins Scientific Foundation",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -1365,7 +1350,7 @@
    "#value+total": 27019
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-69",
+   "#org+id+reporting": "CBi-PROVIDER-68",
    "#org+name+reporting": "Eurol Foundation",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -1380,7 +1365,7 @@
    "#value+total": 8175
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-70",
+   "#org+id+reporting": "CBi-PROVIDER-69",
    "#org+name+reporting": "ExxonMobil",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -1395,7 +1380,7 @@
    "#value+total": 1000000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-70",
+   "#org+id+reporting": "CBi-PROVIDER-69",
    "#org+name+reporting": "ExxonMobil",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -1410,7 +1395,7 @@
    "#value+total": 750000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-70",
+   "#org+id+reporting": "CBi-PROVIDER-69",
    "#org+name+reporting": "ExxonMobil",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -1425,7 +1410,7 @@
    "#value+total": 250000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-71",
+   "#org+id+reporting": "CBi-PROVIDER-70",
    "#org+name+reporting": "Fashion Institute of Design & Merchandising",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -1440,7 +1425,7 @@
    "#value+total": 298000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-72",
+   "#org+id+reporting": "CBi-PROVIDER-71",
    "#org+name+reporting": "Fast Retailing Co., Ltd.",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -1455,7 +1440,7 @@
    "#value+total": 10000000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-73",
+   "#org+id+reporting": "CBi-PROVIDER-72",
    "#org+name+reporting": "Fidelity Investments",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -1470,7 +1455,7 @@
    "#value+total": 52850
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-74",
+   "#org+id+reporting": "CBi-PROVIDER-73",
    "#org+name+reporting": "Ford Motor Company Fund",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -1485,7 +1470,7 @@
    "#value+total": 100000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-75",
+   "#org+id+reporting": "CBi-PROVIDER-74",
    "#org+name+reporting": "Fortum Oyj",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -1500,7 +1485,7 @@
    "#value+total": 223091
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-76",
+   "#org+id+reporting": "CBi-PROVIDER-75",
    "#org+name+reporting": "FOX Corporation",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -1515,7 +1500,7 @@
    "#value+total": 1000000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-77",
+   "#org+id+reporting": "CBi-PROVIDER-76",
    "#org+name+reporting": "FreeWill Co.",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -1530,7 +1515,7 @@
    "#value+total": 10800
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-78",
+   "#org+id+reporting": "CBi-PROVIDER-77",
    "#org+name+reporting": "Fujitsu Group",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -1545,7 +1530,7 @@
    "#value+total": 1000000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-79",
+   "#org+id+reporting": "CBi-PROVIDER-78",
    "#org+name+reporting": "Fuller Giving Foundation",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -1560,7 +1545,7 @@
    "#value+total": 10000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-80",
+   "#org+id+reporting": "CBi-PROVIDER-79",
    "#org+name+reporting": "Fundación \"la Caixa\"",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -1575,7 +1560,7 @@
    "#value+total": 1649490
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-81",
+   "#org+id+reporting": "CBi-PROVIDER-80",
    "#org+name+reporting": "Fundación A.M.A.",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -1590,7 +1575,7 @@
    "#value+total": 1090000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-82",
+   "#org+id+reporting": "CBi-PROVIDER-81",
    "#org+name+reporting": "Fundación Aon España",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -1605,7 +1590,7 @@
    "#value+total": 21800
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-83",
+   "#org+id+reporting": "CBi-PROVIDER-82",
    "#org+name+reporting": "Fundacion MAPFRE",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -1620,7 +1605,7 @@
    "#value+total": 76300
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-84",
+   "#org+id+reporting": "CBi-PROVIDER-83",
    "#org+name+reporting": "Ganni",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -1635,7 +1620,7 @@
    "#value+total": 14700
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-85",
+   "#org+id+reporting": "CBi-PROVIDER-84",
    "#org+name+reporting": "GE Foundation",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -1650,7 +1635,7 @@
    "#value+total": 100000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-85",
+   "#org+id+reporting": "CBi-PROVIDER-84",
    "#org+name+reporting": "GE Foundation",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -1665,7 +1650,7 @@
    "#value+total": 400000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-86",
+   "#org+id+reporting": "CBi-PROVIDER-85",
    "#org+name+reporting": "General Motors",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -1680,7 +1665,7 @@
    "#value+total": 250000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-87",
+   "#org+id+reporting": "CBi-PROVIDER-86",
    "#org+name+reporting": "GlaxoSmithKline plc",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -1695,29 +1680,14 @@
    "#value+total": 3960000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-88",
-   "#org+name+reporting": "Google.org",
-   "#org+reporting+type": 70,
-   "#org+id+provider": "",
-   "#org+name+provider": "",
-   "#org+type+provider": "",
-   "#org+id+receiver": "CBi-RECEIVER-47",
-   "#org+name+receiver": "multiple or not specified",
-   "#org+type+receiver": "",
-   "#indicator+bool+humanitarian": 1,
-   "#indicator+bool+strict": 1,
-   "#x_transaction_direction": "outgoing",
-   "#value+total": 31400000
- },
- {
-   "#org+id+reporting": "CBi-PROVIDER-88",
+   "#org+id+reporting": "CBi-PROVIDER-87",
    "#org+name+reporting": "Google.org",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
    "#org+name+provider": "",
    "#org+type+provider": "",
    "#org+id+receiver": "CBi-RECEIVER-49",
-   "#org+name+receiver": "Polish Center for International Aid Foundation [NGO]",
+   "#org+name+receiver": "Polish Center for International Aid Foundation [NGO]",
    "#org+type+receiver": "",
    "#indicator+bool+humanitarian": 1,
    "#indicator+bool+strict": 1,
@@ -1725,7 +1695,7 @@
    "#value+total": 2600000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-88",
+   "#org+id+reporting": "CBi-PROVIDER-87",
    "#org+name+reporting": "Google.org",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -1740,7 +1710,7 @@
    "#value+total": 1000000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-89",
+   "#org+id+reporting": "CBi-PROVIDER-88",
    "#org+name+reporting": "Group 1001 Resources",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -1755,7 +1725,7 @@
    "#value+total": 20000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-90",
+   "#org+id+reporting": "CBi-PROVIDER-89",
    "#org+name+reporting": "Gucci",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -1770,7 +1740,7 @@
    "#value+total": 500000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-91",
+   "#org+id+reporting": "CBi-PROVIDER-90",
    "#org+name+reporting": "H. Lundbeck A/S",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -1785,7 +1755,7 @@
    "#value+total": 1500000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-92",
+   "#org+id+reporting": "CBi-PROVIDER-91",
    "#org+name+reporting": "H&M Hennes & Mauritz AB",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -1800,7 +1770,7 @@
    "#value+total": 930684
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-93",
+   "#org+id+reporting": "CBi-PROVIDER-92",
    "#org+name+reporting": "Heartland",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -1815,7 +1785,7 @@
    "#value+total": 1500000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-93",
+   "#org+id+reporting": "CBi-PROVIDER-92",
    "#org+name+reporting": "Heartland",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -1830,7 +1800,7 @@
    "#value+total": 1500000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-93",
+   "#org+id+reporting": "CBi-PROVIDER-92",
    "#org+name+reporting": "Heartland",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -1845,7 +1815,7 @@
    "#value+total": 1500000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-94",
+   "#org+id+reporting": "CBi-PROVIDER-93",
    "#org+name+reporting": "Helly Hansen",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -1860,7 +1830,7 @@
    "#value+total": 158000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-95",
+   "#org+id+reporting": "CBi-PROVIDER-94",
    "#org+name+reporting": "HELP Logistics",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -1875,7 +1845,7 @@
    "#value+total": 500000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-96",
+   "#org+id+reporting": "CBi-PROVIDER-95",
    "#org+name+reporting": "Hendrick Automotive",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -1890,7 +1860,7 @@
    "#value+total": 200000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-97",
+   "#org+id+reporting": "CBi-PROVIDER-96",
    "#org+name+reporting": "Hilco Global",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -1905,7 +1875,7 @@
    "#value+total": 37500
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-97",
+   "#org+id+reporting": "CBi-PROVIDER-96",
    "#org+name+reporting": "Hilco Global",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -1920,7 +1890,7 @@
    "#value+total": 37500
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-98",
+   "#org+id+reporting": "CBi-PROVIDER-97",
    "#org+name+reporting": "Home Capital Group",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -1935,7 +1905,7 @@
    "#value+total": 39500
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-99",
+   "#org+id+reporting": "CBi-PROVIDER-98",
    "#org+name+reporting": "Hotel Engine",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -1950,7 +1920,7 @@
    "#value+total": 35200
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-100",
+   "#org+id+reporting": "CBi-PROVIDER-99",
    "#org+name+reporting": "Hyundai Motor Company",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -1965,7 +1935,7 @@
    "#value+total": 1000000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-101",
+   "#org+id+reporting": "CBi-PROVIDER-100",
    "#org+name+reporting": "IBM",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -1980,7 +1950,7 @@
    "#value+total": 250000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-101",
+   "#org+id+reporting": "CBi-PROVIDER-100",
    "#org+name+reporting": "IBM",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -1995,14 +1965,14 @@
    "#value+total": 250000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-102",
+   "#org+id+reporting": "CBi-PROVIDER-101",
    "#org+name+reporting": "Iceland Foods Charitable Foundation",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
    "#org+name+provider": "",
    "#org+type+provider": "",
    "#org+id+receiver": "CBi-RECEIVER-9",
-   "#org+name+receiver": "British Red Cross Society ",
+   "#org+name+receiver": "British Red Cross Society ",
    "#org+type+receiver": "",
    "#indicator+bool+humanitarian": 1,
    "#indicator+bool+strict": 1,
@@ -2010,7 +1980,7 @@
    "#value+total": 198000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-103",
+   "#org+id+reporting": "CBi-PROVIDER-102",
    "#org+name+reporting": "ICR Touch",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -2025,7 +1995,7 @@
    "#value+total": 26440
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-104",
+   "#org+id+reporting": "CBi-PROVIDER-103",
    "#org+name+reporting": "Ikea Foundation",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -2040,7 +2010,7 @@
    "#value+total": 5500000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-104",
+   "#org+id+reporting": "CBi-PROVIDER-103",
    "#org+name+reporting": "Ikea Foundation",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -2055,7 +2025,7 @@
    "#value+total": 22471910
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-105",
+   "#org+id+reporting": "CBi-PROVIDER-104",
    "#org+name+reporting": "INFICON Holding AG",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -2070,7 +2040,7 @@
    "#value+total": 27019
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-106",
+   "#org+id+reporting": "CBi-PROVIDER-105",
    "#org+name+reporting": "James M. Cox Foundation",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -2085,7 +2055,7 @@
    "#value+total": 500000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-107",
+   "#org+id+reporting": "CBi-PROVIDER-106",
    "#org+name+reporting": "Japan Sporting Goods Industries Association",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -2100,7 +2070,7 @@
    "#value+total": 10000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-108",
+   "#org+id+reporting": "CBi-PROVIDER-107",
    "#org+name+reporting": "John Legere Family Foundation",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -2115,14 +2085,14 @@
    "#value+total": 25000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-109",
+   "#org+id+reporting": "CBi-PROVIDER-108",
    "#org+name+reporting": "John Lewis Partnership",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
    "#org+name+provider": "",
    "#org+type+provider": "",
    "#org+id+receiver": "CBi-RECEIVER-9",
-   "#org+name+receiver": "British Red Cross Society ",
+   "#org+name+receiver": "British Red Cross Society ",
    "#org+type+receiver": "",
    "#indicator+bool+humanitarian": 1,
    "#indicator+bool+strict": 1,
@@ -2130,7 +2100,7 @@
    "#value+total": 330000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-110",
+   "#org+id+reporting": "CBi-PROVIDER-109",
    "#org+name+reporting": "Jonathan Molot and Hattie Ruttenberg Foundation",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -2145,7 +2115,7 @@
    "#value+total": 43249
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-111",
+   "#org+id+reporting": "CBi-PROVIDER-110",
    "#org+name+reporting": "JPMorgan Chase & Co.",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -2160,7 +2130,7 @@
    "#value+total": 1000000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-112",
+   "#org+id+reporting": "CBi-PROVIDER-111",
    "#org+name+reporting": "JYSK",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -2175,7 +2145,7 @@
    "#value+total": 156078
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-113",
+   "#org+id+reporting": "CBi-PROVIDER-112",
    "#org+name+reporting": "Kansas City Southern Charitable Fund",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -2190,7 +2160,7 @@
    "#value+total": 500000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-114",
+   "#org+id+reporting": "CBi-PROVIDER-113",
    "#org+name+reporting": "Kerry Group plc",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -2205,7 +2175,7 @@
    "#value+total": 273823
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-115",
+   "#org+id+reporting": "CBi-PROVIDER-114",
    "#org+name+reporting": "KeyBank Foundation",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -2220,7 +2190,7 @@
    "#value+total": 100000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-115",
+   "#org+id+reporting": "CBi-PROVIDER-114",
    "#org+name+reporting": "KeyBank Foundation",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -2235,7 +2205,7 @@
    "#value+total": 50000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-116",
+   "#org+id+reporting": "CBi-PROVIDER-115",
    "#org+name+reporting": "Kikkoman",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -2250,7 +2220,7 @@
    "#value+total": 1000000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-117",
+   "#org+id+reporting": "CBi-PROVIDER-116",
    "#org+name+reporting": "Knockward Ltd",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -2265,7 +2235,7 @@
    "#value+total": 10849
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-118",
+   "#org+id+reporting": "CBi-PROVIDER-117",
    "#org+name+reporting": "KOEI TECMO",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -2280,7 +2250,7 @@
    "#value+total": 500000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-119",
+   "#org+id+reporting": "CBi-PROVIDER-118",
    "#org+name+reporting": "KPMG LLP",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -2295,7 +2265,7 @@
    "#value+total": 250000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-120",
+   "#org+id+reporting": "CBi-PROVIDER-119",
    "#org+name+reporting": "Kroger Co. Zero Hunger Zero Waste Foundation",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -2310,14 +2280,14 @@
    "#value+total": 250000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-121",
+   "#org+id+reporting": "CBi-PROVIDER-120",
    "#org+name+reporting": "Kurt Geiger",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
    "#org+name+provider": "",
    "#org+type+provider": "",
    "#org+id+receiver": "CBi-RECEIVER-9",
-   "#org+name+receiver": "British Red Cross Society ",
+   "#org+name+receiver": "British Red Cross Society ",
    "#org+type+receiver": "",
    "#indicator+bool+humanitarian": 1,
    "#indicator+bool+strict": 1,
@@ -2325,7 +2295,7 @@
    "#value+total": 66000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-122",
+   "#org+id+reporting": "CBi-PROVIDER-121",
    "#org+name+reporting": "LEGO Foundation",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -2340,7 +2310,7 @@
    "#value+total": 3700000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-123",
+   "#org+id+reporting": "CBi-PROVIDER-122",
    "#org+name+reporting": "Liebherr Foundation",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -2355,7 +2325,7 @@
    "#value+total": 215517
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-124",
+   "#org+id+reporting": "CBi-PROVIDER-123",
    "#org+name+reporting": "Lincoln Electric Holdings, Inc.",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -2370,7 +2340,7 @@
    "#value+total": 24958
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-125",
+   "#org+id+reporting": "CBi-PROVIDER-124",
    "#org+name+reporting": "Lindt & Sprüngli AG",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -2385,7 +2355,7 @@
    "#value+total": 1080762
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-126",
+   "#org+id+reporting": "CBi-PROVIDER-125",
    "#org+name+reporting": "Louis Vuitton",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -2400,7 +2370,7 @@
    "#value+total": 1090000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-127",
+   "#org+id+reporting": "CBi-PROVIDER-126",
    "#org+name+reporting": "LVMH Group",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -2415,7 +2385,7 @@
    "#value+total": 5450000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-128",
+   "#org+id+reporting": "CBi-PROVIDER-127",
    "#org+name+reporting": "Magna International",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -2430,7 +2400,7 @@
    "#value+total": 100000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-129",
+   "#org+id+reporting": "CBi-PROVIDER-128",
    "#org+name+reporting": "Marks & Spencer",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -2445,7 +2415,7 @@
    "#value+total": 660000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-129",
+   "#org+id+reporting": "CBi-PROVIDER-128",
    "#org+name+reporting": "Marks & Spencer",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -2460,7 +2430,7 @@
    "#value+total": 660000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-129",
+   "#org+id+reporting": "CBi-PROVIDER-128",
    "#org+name+reporting": "Marks & Spencer",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -2475,7 +2445,7 @@
    "#value+total": 660000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-130",
+   "#org+id+reporting": "CBi-PROVIDER-129",
    "#org+name+reporting": "Mars, Inc.",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -2490,7 +2460,7 @@
    "#value+total": 500000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-130",
+   "#org+id+reporting": "CBi-PROVIDER-129",
    "#org+name+reporting": "Mars, Inc.",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -2505,7 +2475,7 @@
    "#value+total": 1500000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-131",
+   "#org+id+reporting": "CBi-PROVIDER-130",
    "#org+name+reporting": "Mercedes-Benz",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -2520,7 +2490,7 @@
    "#value+total": 1090000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-132",
+   "#org+id+reporting": "CBi-PROVIDER-131",
    "#org+name+reporting": "Merck KGaA",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -2535,7 +2505,7 @@
    "#value+total": 2180000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-133",
+   "#org+id+reporting": "CBi-PROVIDER-132",
    "#org+name+reporting": "Meta",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -2550,8 +2520,8 @@
    "#value+total": 150000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-134",
-   "#org+name+reporting": "Meta Platforms, Inc.",
+   "#org+id+reporting": "CBi-PROVIDER-133",
+   "#org+name+reporting": "Meta Platforms, Inc.",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
    "#org+name+provider": "",
@@ -2565,7 +2535,7 @@
    "#value+total": 150000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-135",
+   "#org+id+reporting": "CBi-PROVIDER-134",
    "#org+name+reporting": "Metro AG",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -2580,7 +2550,7 @@
    "#value+total": 393258
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-136",
+   "#org+id+reporting": "CBi-PROVIDER-135",
    "#org+name+reporting": "Metro Supply Chain",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -2595,7 +2565,7 @@
    "#value+total": 39500
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-137",
+   "#org+id+reporting": "CBi-PROVIDER-136",
    "#org+name+reporting": "Micys Company S.p.A.",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -2610,7 +2580,7 @@
    "#value+total": 11236
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-138",
+   "#org+id+reporting": "CBi-PROVIDER-137",
    "#org+name+reporting": "Mitsubishi Electric",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -2625,7 +2595,7 @@
    "#value+total": 1099600
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-139",
+   "#org+id+reporting": "CBi-PROVIDER-138",
    "#org+name+reporting": "Mondi plc",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -2640,7 +2610,7 @@
    "#value+total": 1095290
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-140",
+   "#org+id+reporting": "CBi-PROVIDER-139",
    "#org+name+reporting": "Mondou",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -2655,7 +2625,7 @@
    "#value+total": 79000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-141",
+   "#org+id+reporting": "CBi-PROVIDER-140",
    "#org+name+reporting": "Moody's Foundation",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -2670,7 +2640,7 @@
    "#value+total": 250000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-142",
+   "#org+id+reporting": "CBi-PROVIDER-141",
    "#org+name+reporting": "Moose Toys",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -2685,7 +2655,7 @@
    "#value+total": 100000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-143",
+   "#org+id+reporting": "CBi-PROVIDER-142",
    "#org+name+reporting": "Morrison & Foerster Foundation",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -2700,7 +2670,7 @@
    "#value+total": 15000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-143",
+   "#org+id+reporting": "CBi-PROVIDER-142",
    "#org+name+reporting": "Morrison & Foerster Foundation",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -2715,7 +2685,7 @@
    "#value+total": 17000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-143",
+   "#org+id+reporting": "CBi-PROVIDER-142",
    "#org+name+reporting": "Morrison & Foerster Foundation",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -2730,7 +2700,7 @@
    "#value+total": 15000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-144",
+   "#org+id+reporting": "CBi-PROVIDER-143",
    "#org+name+reporting": "Morrison Supermarkets",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -2745,7 +2715,7 @@
    "#value+total": 330000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-145",
+   "#org+id+reporting": "CBi-PROVIDER-144",
    "#org+name+reporting": "MSA Safety",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -2760,7 +2730,7 @@
    "#value+total": 400000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-146",
+   "#org+id+reporting": "CBi-PROVIDER-145",
    "#org+name+reporting": "NanoTemper Technologies",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -2775,7 +2745,7 @@
    "#value+total": 13508
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-147",
+   "#org+id+reporting": "CBi-PROVIDER-146",
    "#org+name+reporting": "NCR Foundation",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -2790,7 +2760,7 @@
    "#value+total": 200000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-148",
+   "#org+id+reporting": "CBi-PROVIDER-147",
    "#org+name+reporting": "Neptune Energy",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -2805,7 +2775,7 @@
    "#value+total": 1000000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-148",
+   "#org+id+reporting": "CBi-PROVIDER-147",
    "#org+name+reporting": "Neptune Energy",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -2820,7 +2790,7 @@
    "#value+total": 1000000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-149",
+   "#org+id+reporting": "CBi-PROVIDER-148",
    "#org+name+reporting": "New York Life",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -2835,7 +2805,7 @@
    "#value+total": 150000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-149",
+   "#org+id+reporting": "CBi-PROVIDER-148",
    "#org+name+reporting": "New York Life",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -2850,7 +2820,7 @@
    "#value+total": 150000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-150",
+   "#org+id+reporting": "CBi-PROVIDER-149",
    "#org+name+reporting": "Norton Rose Fulbright",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -2865,7 +2835,7 @@
    "#value+total": 100000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-150",
+   "#org+id+reporting": "CBi-PROVIDER-149",
    "#org+name+reporting": "Norton Rose Fulbright",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -2880,7 +2850,7 @@
    "#value+total": 200000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-151",
+   "#org+id+reporting": "CBi-PROVIDER-150",
    "#org+name+reporting": "Novelis Corporation",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -2895,7 +2865,7 @@
    "#value+total": 300000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-152",
+   "#org+id+reporting": "CBi-PROVIDER-151",
    "#org+name+reporting": "Novo Nordisk Foundation",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -2910,7 +2880,7 @@
    "#value+total": 3695117
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-152",
+   "#org+id+reporting": "CBi-PROVIDER-151",
    "#org+name+reporting": "Novo Nordisk Foundation",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -2925,7 +2895,7 @@
    "#value+total": 1478047
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-152",
+   "#org+id+reporting": "CBi-PROVIDER-151",
    "#org+name+reporting": "Novo Nordisk Foundation",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -2940,7 +2910,7 @@
    "#value+total": 147804
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-152",
+   "#org+id+reporting": "CBi-PROVIDER-151",
    "#org+name+reporting": "Novo Nordisk Foundation",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -2955,7 +2925,7 @@
    "#value+total": 591218
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-152",
+   "#org+id+reporting": "CBi-PROVIDER-151",
    "#org+name+reporting": "Novo Nordisk Foundation",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -2970,7 +2940,7 @@
    "#value+total": 1478047
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-153",
+   "#org+id+reporting": "CBi-PROVIDER-152",
    "#org+name+reporting": "Olam International",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -2985,7 +2955,7 @@
    "#value+total": 1000000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-154",
+   "#org+id+reporting": "CBi-PROVIDER-153",
    "#org+name+reporting": "Old Navy",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -3000,7 +2970,7 @@
    "#value+total": 1000000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-155",
+   "#org+id+reporting": "CBi-PROVIDER-154",
    "#org+name+reporting": "OpenText",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -3015,7 +2985,7 @@
    "#value+total": 100000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-156",
+   "#org+id+reporting": "CBi-PROVIDER-155",
    "#org+name+reporting": "Orrick, Herrington & Sutcliffe",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -3030,7 +3000,7 @@
    "#value+total": 12500
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-156",
+   "#org+id+reporting": "CBi-PROVIDER-155",
    "#org+name+reporting": "Orrick, Herrington & Sutcliffe",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -3045,7 +3015,7 @@
    "#value+total": 12500
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-157",
+   "#org+id+reporting": "CBi-PROVIDER-156",
    "#org+name+reporting": "Pacific Life Foundation",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -3060,7 +3030,7 @@
    "#value+total": 250000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-158",
+   "#org+id+reporting": "CBi-PROVIDER-157",
    "#org+name+reporting": "Pandora",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -3075,7 +3045,7 @@
    "#value+total": 1000000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-159",
+   "#org+id+reporting": "CBi-PROVIDER-158",
    "#org+name+reporting": "Pepsico Foundation, Inc.",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -3090,7 +3060,7 @@
    "#value+total": 1000000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-160",
+   "#org+id+reporting": "CBi-PROVIDER-159",
    "#org+name+reporting": "Phillips Auctioneers, LLC",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -3105,7 +3075,7 @@
    "#value+total": 7656000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-161",
+   "#org+id+reporting": "CBi-PROVIDER-160",
    "#org+name+reporting": "Plarium",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -3120,8 +3090,8 @@
    "#value+total": 500000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-162",
-   "#org+name+reporting": "Pokémon Company",
+   "#org+id+reporting": "CBi-PROVIDER-161",
+   "#org+name+reporting": "Pokémon Company",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
    "#org+name+provider": "",
@@ -3135,7 +3105,7 @@
    "#value+total": 200000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-163",
+   "#org+id+reporting": "CBi-PROVIDER-162",
    "#org+name+reporting": "Popular, Inc.",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -3150,7 +3120,7 @@
    "#value+total": 50000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-164",
+   "#org+id+reporting": "CBi-PROVIDER-163",
    "#org+name+reporting": "Porsche AG",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -3165,7 +3135,7 @@
    "#value+total": 272500
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-164",
+   "#org+id+reporting": "CBi-PROVIDER-163",
    "#org+name+reporting": "Porsche AG",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -3180,7 +3150,7 @@
    "#value+total": 817500
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-165",
+   "#org+id+reporting": "CBi-PROVIDER-164",
    "#org+name+reporting": "PricewaterhouseCoopers",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -3195,7 +3165,7 @@
    "#value+total": 125000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-166",
+   "#org+id+reporting": "CBi-PROVIDER-165",
    "#org+name+reporting": "Procter & Gamble",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -3210,7 +3180,7 @@
    "#value+total": 755436
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-167",
+   "#org+id+reporting": "CBi-PROVIDER-166",
    "#org+name+reporting": "Punto Fa, S.L.",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -3225,7 +3195,7 @@
    "#value+total": 111595
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-168",
+   "#org+id+reporting": "CBi-PROVIDER-167",
    "#org+name+reporting": "Revolut",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -3240,7 +3210,7 @@
    "#value+total": 1500000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-169",
+   "#org+id+reporting": "CBi-PROVIDER-168",
    "#org+name+reporting": "Riverview Community Bank",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -3255,7 +3225,7 @@
    "#value+total": 10000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-170",
+   "#org+id+reporting": "CBi-PROVIDER-169",
    "#org+name+reporting": "Rockwell Automation",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -3270,7 +3240,7 @@
    "#value+total": 100000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-170",
+   "#org+id+reporting": "CBi-PROVIDER-169",
    "#org+name+reporting": "Rockwell Automation",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -3285,7 +3255,7 @@
    "#value+total": 100000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-170",
+   "#org+id+reporting": "CBi-PROVIDER-169",
    "#org+name+reporting": "Rockwell Automation",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -3300,7 +3270,7 @@
    "#value+total": 100000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-170",
+   "#org+id+reporting": "CBi-PROVIDER-169",
    "#org+name+reporting": "Rockwell Automation",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -3315,7 +3285,7 @@
    "#value+total": 100000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-170",
+   "#org+id+reporting": "CBi-PROVIDER-169",
    "#org+name+reporting": "Rockwell Automation",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -3330,7 +3300,7 @@
    "#value+total": 100000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-171",
+   "#org+id+reporting": "CBi-PROVIDER-170",
    "#org+name+reporting": "Royal Bank of Canada",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -3345,8 +3315,8 @@
    "#value+total": 158000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-172",
-   "#org+name+reporting": "Russel Metals Inc. ",
+   "#org+id+reporting": "CBi-PROVIDER-171",
+   "#org+name+reporting": "Russel Metals Inc. ",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
    "#org+name+provider": "",
@@ -3360,7 +3330,7 @@
    "#value+total": 79000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-173",
+   "#org+id+reporting": "CBi-PROVIDER-172",
    "#org+name+reporting": "S&P Global Foundation",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -3375,7 +3345,7 @@
    "#value+total": 150000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-173",
+   "#org+id+reporting": "CBi-PROVIDER-172",
    "#org+name+reporting": "S&P Global Foundation",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -3390,7 +3360,7 @@
    "#value+total": 150000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-174",
+   "#org+id+reporting": "CBi-PROVIDER-173",
    "#org+name+reporting": "Sainsbury's",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -3405,7 +3375,7 @@
    "#value+total": 2640000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-175",
+   "#org+id+reporting": "CBi-PROVIDER-174",
    "#org+name+reporting": "Salvatore Ferragamo S.p.A.",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -3420,7 +3390,7 @@
    "#value+total": 337079
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-176",
+   "#org+id+reporting": "CBi-PROVIDER-175",
    "#org+name+reporting": "SentinelOne",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -3435,7 +3405,7 @@
    "#value+total": 25000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-177",
+   "#org+id+reporting": "CBi-PROVIDER-176",
    "#org+name+reporting": "Shiseido Group",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -3450,7 +3420,7 @@
    "#value+total": 1101820
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-178",
+   "#org+id+reporting": "CBi-PROVIDER-177",
    "#org+name+reporting": "Sidney E. Frank Foundation",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -3465,7 +3435,7 @@
    "#value+total": 20000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-179",
+   "#org+id+reporting": "CBi-PROVIDER-178",
    "#org+name+reporting": "Siemens Caring Hands",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -3480,7 +3450,7 @@
    "#value+total": 1112483
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-180",
+   "#org+id+reporting": "CBi-PROVIDER-179",
    "#org+name+reporting": "Signet Love Inspires Foundation",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -3495,7 +3465,7 @@
    "#value+total": 1000000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-181",
+   "#org+id+reporting": "CBi-PROVIDER-180",
    "#org+name+reporting": "Skoda",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -3510,7 +3480,7 @@
    "#value+total": 443240
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-182",
+   "#org+id+reporting": "CBi-PROVIDER-181",
    "#org+name+reporting": "Smithfield Foods, Inc.",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -3525,7 +3495,7 @@
    "#value+total": 250000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-182",
+   "#org+id+reporting": "CBi-PROVIDER-181",
    "#org+name+reporting": "Smithfield Foods, Inc.",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -3540,7 +3510,7 @@
    "#value+total": 250000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-182",
+   "#org+id+reporting": "CBi-PROVIDER-181",
    "#org+name+reporting": "Smithfield Foods, Inc.",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -3555,7 +3525,7 @@
    "#value+total": 250000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-183",
+   "#org+id+reporting": "CBi-PROVIDER-182",
    "#org+name+reporting": "Snap, Inc.",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -3570,7 +3540,7 @@
    "#value+total": 15000000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-183",
+   "#org+id+reporting": "CBi-PROVIDER-182",
    "#org+name+reporting": "Snap, Inc.",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -3585,7 +3555,7 @@
    "#value+total": 500000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-184",
+   "#org+id+reporting": "CBi-PROVIDER-183",
    "#org+name+reporting": "Sologenic Development Foundation",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -3600,7 +3570,7 @@
    "#value+total": 10000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-185",
+   "#org+id+reporting": "CBi-PROVIDER-184",
    "#org+name+reporting": "Sonoco Products Company",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -3615,7 +3585,7 @@
    "#value+total": 50594
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-186",
+   "#org+id+reporting": "CBi-PROVIDER-185",
    "#org+name+reporting": "Southeastern Grocers, Inc.",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -3630,7 +3600,7 @@
    "#value+total": 250000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-186",
+   "#org+id+reporting": "CBi-PROVIDER-185",
    "#org+name+reporting": "Southeastern Grocers, Inc.",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -3645,7 +3615,7 @@
    "#value+total": 1100000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-187",
+   "#org+id+reporting": "CBi-PROVIDER-186",
    "#org+name+reporting": "Spiegel Family Fund",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -3660,7 +3630,7 @@
    "#value+total": 1000000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-188",
+   "#org+id+reporting": "CBi-PROVIDER-187",
    "#org+name+reporting": "Square Enix",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -3675,7 +3645,7 @@
    "#value+total": 500000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-189",
+   "#org+id+reporting": "CBi-PROVIDER-188",
    "#org+name+reporting": "Sun Life Financial Inc.",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -3690,7 +3660,7 @@
    "#value+total": 158000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-190",
+   "#org+id+reporting": "CBi-PROVIDER-189",
    "#org+name+reporting": "Supercell Oy",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -3705,7 +3675,7 @@
    "#value+total": 1000000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-191",
+   "#org+id+reporting": "CBi-PROVIDER-190",
    "#org+name+reporting": "Taiwan Sporting Goods Manufacturers Association",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -3720,7 +3690,7 @@
    "#value+total": 20000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-192",
+   "#org+id+reporting": "CBi-PROVIDER-191",
    "#org+name+reporting": "Takeda Pharmaceutical Company Ltd",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -3735,7 +3705,7 @@
    "#value+total": 5055975
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-193",
+   "#org+id+reporting": "CBi-PROVIDER-192",
    "#org+name+reporting": "Techland S.A.",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -3750,7 +3720,7 @@
    "#value+total": 230890
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-194",
+   "#org+id+reporting": "CBi-PROVIDER-193",
    "#org+name+reporting": "Telus Corporation",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -3765,7 +3735,7 @@
    "#value+total": 79000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-195",
+   "#org+id+reporting": "CBi-PROVIDER-194",
    "#org+name+reporting": "TELUS Friendly Future Foundation",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -3780,14 +3750,14 @@
    "#value+total": 118500
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-196",
+   "#org+id+reporting": "CBi-PROVIDER-195",
    "#org+name+reporting": "Tesco PLC",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
    "#org+name+provider": "",
    "#org+type+provider": "",
    "#org+id+receiver": "CBi-RECEIVER-9",
-   "#org+name+receiver": "British Red Cross Society ",
+   "#org+name+receiver": "British Red Cross Society ",
    "#org+type+receiver": "",
    "#indicator+bool+humanitarian": 1,
    "#indicator+bool+strict": 1,
@@ -3795,7 +3765,7 @@
    "#value+total": 1320000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-197",
+   "#org+id+reporting": "CBi-PROVIDER-196",
    "#org+name+reporting": "Teva Pharmaceutical Industries Ltd.",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -3810,7 +3780,7 @@
    "#value+total": 10800000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-197",
+   "#org+id+reporting": "CBi-PROVIDER-196",
    "#org+name+reporting": "Teva Pharmaceutical Industries Ltd.",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -3825,7 +3795,7 @@
    "#value+total": 180000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-197",
+   "#org+id+reporting": "CBi-PROVIDER-196",
    "#org+name+reporting": "Teva Pharmaceutical Industries Ltd.",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -3840,7 +3810,7 @@
    "#value+total": 180000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-198",
+   "#org+id+reporting": "CBi-PROVIDER-197",
    "#org+name+reporting": "Texas Instruments Foundation",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -3855,7 +3825,7 @@
    "#value+total": 25000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-199",
+   "#org+id+reporting": "CBi-PROVIDER-198",
    "#org+name+reporting": "The Body Shop International Limited",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -3870,7 +3840,7 @@
    "#value+total": 50000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-200",
+   "#org+id+reporting": "CBi-PROVIDER-199",
    "#org+name+reporting": "TJ Morris Ltd",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -3885,7 +3855,7 @@
    "#value+total": 132000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-201",
+   "#org+id+reporting": "CBi-PROVIDER-200",
    "#org+name+reporting": "Toyota Motor Corporation",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -3900,7 +3870,7 @@
    "#value+total": 551120
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-202",
+   "#org+id+reporting": "CBi-PROVIDER-201",
    "#org+name+reporting": "Tripadvisor Foundation",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -3915,7 +3885,7 @@
    "#value+total": 250000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-203",
+   "#org+id+reporting": "CBi-PROVIDER-202",
    "#org+name+reporting": "Uber Technologies Inc.",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -3930,7 +3900,7 @@
    "#value+total": 252106
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-203",
+   "#org+id+reporting": "CBi-PROVIDER-202",
    "#org+name+reporting": "Uber Technologies Inc.",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -3945,8 +3915,8 @@
    "#value+total": 1000000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-204",
-   "#org+name+reporting": "Ukrainian Credit Union ",
+   "#org+id+reporting": "CBi-PROVIDER-203",
+   "#org+name+reporting": "Ukrainian Credit Union ",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
    "#org+name+provider": "",
@@ -3960,7 +3930,7 @@
    "#value+total": 79000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-205",
+   "#org+id+reporting": "CBi-PROVIDER-204",
    "#org+name+reporting": "Union Pacific Railroad",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -3975,7 +3945,7 @@
    "#value+total": 250000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-205",
+   "#org+id+reporting": "CBi-PROVIDER-204",
    "#org+name+reporting": "Union Pacific Railroad",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -3990,7 +3960,7 @@
    "#value+total": 250000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-206",
+   "#org+id+reporting": "CBi-PROVIDER-205",
    "#org+name+reporting": "United Health Foundation",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -4005,7 +3975,7 @@
    "#value+total": 500000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-206",
+   "#org+id+reporting": "CBi-PROVIDER-205",
    "#org+name+reporting": "United Health Foundation",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -4020,7 +3990,7 @@
    "#value+total": 500000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-207",
+   "#org+id+reporting": "CBi-PROVIDER-206",
    "#org+name+reporting": "Valentino",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -4035,7 +4005,7 @@
    "#value+total": 557975
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-208",
+   "#org+id+reporting": "CBi-PROVIDER-207",
    "#org+name+reporting": "Vantage Towers",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -4050,7 +4020,7 @@
    "#value+total": 13747
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-208",
+   "#org+id+reporting": "CBi-PROVIDER-207",
    "#org+name+reporting": "Vantage Towers",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -4065,7 +4035,7 @@
    "#value+total": 13747
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-208",
+   "#org+id+reporting": "CBi-PROVIDER-207",
    "#org+name+reporting": "Vantage Towers",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -4080,8 +4050,8 @@
    "#value+total": 27494
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-209",
-   "#org+name+reporting": "Verizon Communications Inc. ",
+   "#org+id+reporting": "CBi-PROVIDER-208",
+   "#org+name+reporting": "Verizon Communications Inc. ",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
    "#org+name+provider": "",
@@ -4095,8 +4065,8 @@
    "#value+total": 250000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-209",
-   "#org+name+reporting": "Verizon Communications Inc. ",
+   "#org+id+reporting": "CBi-PROVIDER-208",
+   "#org+name+reporting": "Verizon Communications Inc. ",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
    "#org+name+provider": "",
@@ -4110,8 +4080,8 @@
    "#value+total": 250000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-209",
-   "#org+name+reporting": "Verizon Communications Inc. ",
+   "#org+id+reporting": "CBi-PROVIDER-208",
+   "#org+name+reporting": "Verizon Communications Inc. ",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
    "#org+name+provider": "",
@@ -4125,7 +4095,7 @@
    "#value+total": 250000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-210",
+   "#org+id+reporting": "CBi-PROVIDER-209",
    "#org+name+reporting": "VF Foundation",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -4140,7 +4110,7 @@
    "#value+total": 250000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-211",
+   "#org+id+reporting": "CBi-PROVIDER-210",
    "#org+name+reporting": "Visa Foundation",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -4155,7 +4125,7 @@
    "#value+total": 2000000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-212",
+   "#org+id+reporting": "CBi-PROVIDER-211",
    "#org+name+reporting": "Vodafone",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -4170,7 +4140,7 @@
    "#value+total": 112360
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-213",
+   "#org+id+reporting": "CBi-PROVIDER-212",
    "#org+name+reporting": "Vodafone Czech Republic a.s.",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -4185,7 +4155,7 @@
    "#value+total": 85781
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-214",
+   "#org+id+reporting": "CBi-PROVIDER-213",
    "#org+name+reporting": "Vodafone Germany",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -4200,7 +4170,7 @@
    "#value+total": 219932
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-215",
+   "#org+id+reporting": "CBi-PROVIDER-214",
    "#org+name+reporting": "Vodafone Group Foundation",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -4215,7 +4185,7 @@
    "#value+total": 549875
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-216",
+   "#org+id+reporting": "CBi-PROVIDER-215",
    "#org+name+reporting": "Vodafone Hungary",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -4230,7 +4200,7 @@
    "#value+total": 54988
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-216",
+   "#org+id+reporting": "CBi-PROVIDER-215",
    "#org+name+reporting": "Vodafone Hungary",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -4245,7 +4215,7 @@
    "#value+total": 54988
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-217",
+   "#org+id+reporting": "CBi-PROVIDER-216",
    "#org+name+reporting": "Vodafone Italy Foundation",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -4260,7 +4230,7 @@
    "#value+total": 109976
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-217",
+   "#org+id+reporting": "CBi-PROVIDER-216",
    "#org+name+reporting": "Vodafone Italy Foundation",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -4275,7 +4245,7 @@
    "#value+total": 109976
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-218",
+   "#org+id+reporting": "CBi-PROVIDER-217",
    "#org+name+reporting": "Vodafone Luxembourg Foundation",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -4290,7 +4260,7 @@
    "#value+total": 6817
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-219",
+   "#org+id+reporting": "CBi-PROVIDER-218",
    "#org+name+reporting": "Vodafone Romania",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -4305,7 +4275,7 @@
    "#value+total": 43990
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-219",
+   "#org+id+reporting": "CBi-PROVIDER-218",
    "#org+name+reporting": "Vodafone Romania",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -4320,7 +4290,7 @@
    "#value+total": 16496
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-219",
+   "#org+id+reporting": "CBi-PROVIDER-218",
    "#org+name+reporting": "Vodafone Romania",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -4335,7 +4305,7 @@
    "#value+total": 32993
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-219",
+   "#org+id+reporting": "CBi-PROVIDER-218",
    "#org+name+reporting": "Vodafone Romania",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -4350,7 +4320,7 @@
    "#value+total": 10998
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-220",
+   "#org+id+reporting": "CBi-PROVIDER-219",
    "#org+name+reporting": "Vodafone Spain Foundation",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -4365,14 +4335,14 @@
    "#value+total": 27492
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-221",
+   "#org+id+reporting": "CBi-PROVIDER-220",
    "#org+name+reporting": "Vodafone UK",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
    "#org+name+provider": "",
    "#org+type+provider": "",
    "#org+id+receiver": "CBi-RECEIVER-9",
-   "#org+name+receiver": "British Red Cross Society ",
+   "#org+name+receiver": "British Red Cross Society ",
    "#org+type+receiver": "",
    "#indicator+bool+humanitarian": 1,
    "#indicator+bool+strict": 1,
@@ -4380,7 +4350,7 @@
    "#value+total": 329700
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-222",
+   "#org+id+reporting": "CBi-PROVIDER-221",
    "#org+name+reporting": "Volkswagen AG",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -4395,7 +4365,7 @@
    "#value+total": 1108400
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-223",
+   "#org+id+reporting": "CBi-PROVIDER-222",
    "#org+name+reporting": "Volvo",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -4410,7 +4380,7 @@
    "#value+total": 205570
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-224",
+   "#org+id+reporting": "CBi-PROVIDER-223",
    "#org+name+reporting": "Wabtec Foundation",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -4425,7 +4395,7 @@
    "#value+total": 50000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-224",
+   "#org+id+reporting": "CBi-PROVIDER-223",
    "#org+name+reporting": "Wabtec Foundation",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -4440,7 +4410,7 @@
    "#value+total": 50000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-225",
+   "#org+id+reporting": "CBi-PROVIDER-224",
    "#org+name+reporting": "WELL Health Technologies",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -4455,7 +4425,7 @@
    "#value+total": 79000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-226",
+   "#org+id+reporting": "CBi-PROVIDER-225",
    "#org+name+reporting": "Western Union Foundation",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -4470,7 +4440,7 @@
    "#value+total": 100000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-226",
+   "#org+id+reporting": "CBi-PROVIDER-225",
    "#org+name+reporting": "Western Union Foundation",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -4485,7 +4455,7 @@
    "#value+total": 22097
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-227",
+   "#org+id+reporting": "CBi-PROVIDER-226",
    "#org+name+reporting": "White & Case",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -4500,7 +4470,7 @@
    "#value+total": 1000000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-228",
+   "#org+id+reporting": "CBi-PROVIDER-227",
    "#org+name+reporting": "William Demant Foundation",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -4515,7 +4485,7 @@
    "#value+total": 1050000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-229",
+   "#org+id+reporting": "CBi-PROVIDER-228",
    "#org+name+reporting": "World Federation of the Sporting Goods Industry",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -4530,7 +4500,7 @@
    "#value+total": 53294
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-230",
+   "#org+id+reporting": "CBi-PROVIDER-229",
    "#org+name+reporting": "WP Engine",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -4545,8 +4515,8 @@
    "#value+total": 15000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-231",
-   "#org+name+reporting": "Wyndham Hotels & Resorts, Inc.",
+   "#org+id+reporting": "CBi-PROVIDER-230",
+   "#org+name+reporting": "Wyndham Hotels & Resorts, Inc.",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
    "#org+name+provider": "",
@@ -4560,7 +4530,7 @@
    "#value+total": 100000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-232",
+   "#org+id+reporting": "CBi-PROVIDER-231",
    "#org+name+reporting": "XTX Markets",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -4575,7 +4545,7 @@
    "#value+total": 13187200
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-233",
+   "#org+id+reporting": "CBi-PROVIDER-232",
    "#org+name+reporting": "Yum! Brands Foundation",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -4590,7 +4560,7 @@
    "#value+total": 1000000
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-234",
+   "#org+id+reporting": "CBi-PROVIDER-233",
    "#org+name+reporting": "Z Zurich Foundation",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -4605,7 +4575,7 @@
    "#value+total": 269397
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-235",
+   "#org+id+reporting": "CBi-PROVIDER-234",
    "#org+name+reporting": "Zegna N.V.",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -4620,7 +4590,7 @@
    "#value+total": 1123595
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-236",
+   "#org+id+reporting": "CBi-PROVIDER-235",
    "#org+name+reporting": "Zound Industries",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
@@ -4635,7 +4605,7 @@
    "#value+total": 27017
  },
  {
-   "#org+id+reporting": "CBi-PROVIDER-236",
+   "#org+id+reporting": "CBi-PROVIDER-235",
    "#org+name+reporting": "Zound Industries",
    "#org+reporting+type": 70,
    "#org+id+provider": "",
