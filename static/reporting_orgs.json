@@ -1,4 +1,8 @@
-{"metadata":{"#date+run":"2022-04-04T15:16:22.513500","#meta+orgs+num":235},"data":[
+{"metadata":{"#date+run":"2022-04-04T15:16:22.513500","#meta+orgs+num":237},"data":[
+ {
+   "#org+id+reporting": "#org+id+reporting",
+   "#org+name+reporting": "#org+name+reporting"
+ },
  {
    "#org+id+reporting": "CBi-PROVIDER-1",
    "#org+name+reporting": "AccelByte Inc."
@@ -261,682 +265,686 @@
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-66",
-   "#org+name+reporting": "Esmark, Inc."
+   "#org+name+reporting": "Epic Games"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-67",
-   "#org+name+reporting": "Eurofins Scientific Foundation"
+   "#org+name+reporting": "Esmark, Inc."
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-68",
-   "#org+name+reporting": "Eurol Foundation"
+   "#org+name+reporting": "Eurofins Scientific Foundation"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-69",
-   "#org+name+reporting": "ExxonMobil"
+   "#org+name+reporting": "Eurol Foundation"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-70",
-   "#org+name+reporting": "Fashion Institute of Design & Merchandising"
+   "#org+name+reporting": "ExxonMobil"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-71",
-   "#org+name+reporting": "Fast Retailing Co., Ltd."
+   "#org+name+reporting": "Fashion Institute of Design & Merchandising"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-72",
-   "#org+name+reporting": "Fidelity Investments"
+   "#org+name+reporting": "Fast Retailing Co., Ltd."
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-73",
-   "#org+name+reporting": "Ford Motor Company Fund"
+   "#org+name+reporting": "Fidelity Investments"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-74",
-   "#org+name+reporting": "Fortum Oyj"
+   "#org+name+reporting": "Ford Motor Company Fund"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-75",
-   "#org+name+reporting": "FOX Corporation"
+   "#org+name+reporting": "Fortum Oyj"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-76",
-   "#org+name+reporting": "FreeWill Co."
+   "#org+name+reporting": "FOX Corporation"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-77",
-   "#org+name+reporting": "Fujitsu Group"
+   "#org+name+reporting": "FreeWill Co."
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-78",
-   "#org+name+reporting": "Fuller Giving Foundation"
+   "#org+name+reporting": "Fujitsu Group"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-79",
-   "#org+name+reporting": "Fundación \"la Caixa\""
+   "#org+name+reporting": "Fuller Giving Foundation"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-80",
-   "#org+name+reporting": "Fundación A.M.A."
+   "#org+name+reporting": "Fundación \"la Caixa\""
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-81",
-   "#org+name+reporting": "Fundación Aon España"
+   "#org+name+reporting": "Fundación A.M.A."
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-82",
-   "#org+name+reporting": "Fundacion MAPFRE"
+   "#org+name+reporting": "Fundación Aon España"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-83",
-   "#org+name+reporting": "Ganni"
+   "#org+name+reporting": "Fundacion MAPFRE"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-84",
-   "#org+name+reporting": "GE Foundation"
+   "#org+name+reporting": "Ganni"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-85",
-   "#org+name+reporting": "General Motors"
+   "#org+name+reporting": "GE Foundation"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-86",
-   "#org+name+reporting": "GlaxoSmithKline plc"
+   "#org+name+reporting": "General Motors"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-87",
-   "#org+name+reporting": "Google.org"
+   "#org+name+reporting": "GlaxoSmithKline plc"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-88",
-   "#org+name+reporting": "Group 1001 Resources"
+   "#org+name+reporting": "Google.org"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-89",
-   "#org+name+reporting": "Gucci"
+   "#org+name+reporting": "Group 1001 Resources"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-90",
-   "#org+name+reporting": "H. Lundbeck A/S"
+   "#org+name+reporting": "Gucci"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-91",
-   "#org+name+reporting": "H&M Hennes & Mauritz AB"
+   "#org+name+reporting": "H. Lundbeck A/S"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-92",
-   "#org+name+reporting": "Heartland"
+   "#org+name+reporting": "H&M Hennes & Mauritz AB"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-93",
-   "#org+name+reporting": "Helly Hansen"
+   "#org+name+reporting": "Heartland"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-94",
-   "#org+name+reporting": "HELP Logistics"
+   "#org+name+reporting": "Helly Hansen"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-95",
-   "#org+name+reporting": "Hendrick Automotive"
+   "#org+name+reporting": "HELP Logistics"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-96",
-   "#org+name+reporting": "Hilco Global"
+   "#org+name+reporting": "Hendrick Automotive"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-97",
-   "#org+name+reporting": "Home Capital Group"
+   "#org+name+reporting": "Hilco Global"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-98",
-   "#org+name+reporting": "Hotel Engine"
+   "#org+name+reporting": "Home Capital Group"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-99",
-   "#org+name+reporting": "Hyundai Motor Company"
+   "#org+name+reporting": "Hotel Engine"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-100",
-   "#org+name+reporting": "IBM"
+   "#org+name+reporting": "Hyundai Motor Company"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-101",
-   "#org+name+reporting": "Iceland Foods Charitable Foundation"
+   "#org+name+reporting": "IBM"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-102",
-   "#org+name+reporting": "ICR Touch"
+   "#org+name+reporting": "Iceland Foods Charitable Foundation"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-103",
-   "#org+name+reporting": "Ikea Foundation"
+   "#org+name+reporting": "ICR Touch"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-104",
-   "#org+name+reporting": "INFICON Holding AG"
+   "#org+name+reporting": "Ikea Foundation"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-105",
-   "#org+name+reporting": "James M. Cox Foundation"
+   "#org+name+reporting": "INFICON Holding AG"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-106",
-   "#org+name+reporting": "Japan Sporting Goods Industries Association"
+   "#org+name+reporting": "James M. Cox Foundation"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-107",
-   "#org+name+reporting": "John Legere Family Foundation"
+   "#org+name+reporting": "Japan Sporting Goods Industries Association"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-108",
-   "#org+name+reporting": "John Lewis Partnership"
+   "#org+name+reporting": "John Legere Family Foundation"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-109",
-   "#org+name+reporting": "Jonathan Molot and Hattie Ruttenberg Foundation"
+   "#org+name+reporting": "John Lewis Partnership"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-110",
-   "#org+name+reporting": "JPMorgan Chase & Co."
+   "#org+name+reporting": "Jonathan Molot and Hattie Ruttenberg Foundation"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-111",
-   "#org+name+reporting": "JYSK"
+   "#org+name+reporting": "JPMorgan Chase & Co."
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-112",
-   "#org+name+reporting": "Kansas City Southern Charitable Fund"
+   "#org+name+reporting": "JYSK"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-113",
-   "#org+name+reporting": "Kerry Group plc"
+   "#org+name+reporting": "Kansas City Southern Charitable Fund"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-114",
-   "#org+name+reporting": "KeyBank Foundation"
+   "#org+name+reporting": "Kerry Group plc"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-115",
-   "#org+name+reporting": "Kikkoman"
+   "#org+name+reporting": "KeyBank Foundation"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-116",
-   "#org+name+reporting": "Knockward Ltd"
+   "#org+name+reporting": "Kikkoman"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-117",
-   "#org+name+reporting": "KOEI TECMO"
+   "#org+name+reporting": "Knockward Ltd"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-118",
-   "#org+name+reporting": "KPMG LLP"
+   "#org+name+reporting": "KOEI TECMO"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-119",
-   "#org+name+reporting": "Kroger Co. Zero Hunger Zero Waste Foundation"
+   "#org+name+reporting": "KPMG LLP"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-120",
-   "#org+name+reporting": "Kurt Geiger"
+   "#org+name+reporting": "Kroger Co. Zero Hunger Zero Waste Foundation"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-121",
-   "#org+name+reporting": "LEGO Foundation"
+   "#org+name+reporting": "Kurt Geiger"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-122",
-   "#org+name+reporting": "Liebherr Foundation"
+   "#org+name+reporting": "LEGO Foundation"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-123",
-   "#org+name+reporting": "Lincoln Electric Holdings, Inc."
+   "#org+name+reporting": "Liebherr Foundation"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-124",
-   "#org+name+reporting": "Lindt & Sprüngli AG"
+   "#org+name+reporting": "Lincoln Electric Holdings, Inc."
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-125",
-   "#org+name+reporting": "Louis Vuitton"
+   "#org+name+reporting": "Lindt & Sprüngli AG"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-126",
-   "#org+name+reporting": "LVMH Group"
+   "#org+name+reporting": "Louis Vuitton"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-127",
-   "#org+name+reporting": "Magna International"
+   "#org+name+reporting": "LVMH Group"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-128",
-   "#org+name+reporting": "Marks & Spencer"
+   "#org+name+reporting": "Magna International"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-129",
-   "#org+name+reporting": "Mars, Inc."
+   "#org+name+reporting": "Marks & Spencer"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-130",
-   "#org+name+reporting": "Mercedes-Benz"
+   "#org+name+reporting": "Mars, Inc."
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-131",
-   "#org+name+reporting": "Merck KGaA"
+   "#org+name+reporting": "Mercedes-Benz"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-132",
-   "#org+name+reporting": "Meta"
+   "#org+name+reporting": "Merck KGaA"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-133",
-   "#org+name+reporting": "Meta Platforms, Inc."
+   "#org+name+reporting": "Meta"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-134",
-   "#org+name+reporting": "Metro AG"
+   "#org+name+reporting": "Meta Platforms, Inc."
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-135",
-   "#org+name+reporting": "Metro Supply Chain"
+   "#org+name+reporting": "Metro AG"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-136",
-   "#org+name+reporting": "Micys Company S.p.A."
+   "#org+name+reporting": "Metro Supply Chain"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-137",
-   "#org+name+reporting": "Mitsubishi Electric"
+   "#org+name+reporting": "Micys Company S.p.A."
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-138",
-   "#org+name+reporting": "Mondi plc"
+   "#org+name+reporting": "Mitsubishi Electric"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-139",
-   "#org+name+reporting": "Mondou"
+   "#org+name+reporting": "Mondi plc"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-140",
-   "#org+name+reporting": "Moody's Foundation"
+   "#org+name+reporting": "Mondou"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-141",
-   "#org+name+reporting": "Moose Toys"
+   "#org+name+reporting": "Moody's Foundation"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-142",
-   "#org+name+reporting": "Morrison & Foerster Foundation"
+   "#org+name+reporting": "Moose Toys"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-143",
-   "#org+name+reporting": "Morrison Supermarkets"
+   "#org+name+reporting": "Morrison & Foerster Foundation"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-144",
-   "#org+name+reporting": "MSA Safety"
+   "#org+name+reporting": "Morrison Supermarkets"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-145",
-   "#org+name+reporting": "NanoTemper Technologies"
+   "#org+name+reporting": "MSA Safety"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-146",
-   "#org+name+reporting": "NCR Foundation"
+   "#org+name+reporting": "NanoTemper Technologies"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-147",
-   "#org+name+reporting": "Neptune Energy"
+   "#org+name+reporting": "NCR Foundation"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-148",
-   "#org+name+reporting": "New York Life"
+   "#org+name+reporting": "Neptune Energy"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-149",
-   "#org+name+reporting": "Norton Rose Fulbright"
+   "#org+name+reporting": "New York Life"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-150",
-   "#org+name+reporting": "Novelis Corporation"
+   "#org+name+reporting": "Norton Rose Fulbright"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-151",
-   "#org+name+reporting": "Novo Nordisk Foundation"
+   "#org+name+reporting": "Novelis Corporation"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-152",
-   "#org+name+reporting": "Olam International"
+   "#org+name+reporting": "Novo Nordisk Foundation"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-153",
-   "#org+name+reporting": "Old Navy"
+   "#org+name+reporting": "Olam International"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-154",
-   "#org+name+reporting": "OpenText"
+   "#org+name+reporting": "Old Navy"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-155",
-   "#org+name+reporting": "Orrick, Herrington & Sutcliffe"
+   "#org+name+reporting": "OpenText"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-156",
-   "#org+name+reporting": "Pacific Life Foundation"
+   "#org+name+reporting": "Orrick, Herrington & Sutcliffe"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-157",
-   "#org+name+reporting": "Pandora"
+   "#org+name+reporting": "Pacific Life Foundation"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-158",
-   "#org+name+reporting": "Pepsico Foundation, Inc."
+   "#org+name+reporting": "Pandora"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-159",
-   "#org+name+reporting": "Phillips Auctioneers, LLC"
+   "#org+name+reporting": "Pepsico Foundation, Inc."
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-160",
-   "#org+name+reporting": "Plarium"
+   "#org+name+reporting": "Phillips Auctioneers, LLC"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-161",
-   "#org+name+reporting": "Pokémon Company"
+   "#org+name+reporting": "Plarium"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-162",
-   "#org+name+reporting": "Popular, Inc."
+   "#org+name+reporting": "Pokémon Company"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-163",
-   "#org+name+reporting": "Porsche AG"
+   "#org+name+reporting": "Popular, Inc."
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-164",
-   "#org+name+reporting": "PricewaterhouseCoopers"
+   "#org+name+reporting": "Porsche AG"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-165",
-   "#org+name+reporting": "Procter & Gamble"
+   "#org+name+reporting": "PricewaterhouseCoopers"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-166",
-   "#org+name+reporting": "Punto Fa, S.L."
+   "#org+name+reporting": "Procter & Gamble"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-167",
-   "#org+name+reporting": "Revolut"
+   "#org+name+reporting": "Punto Fa, S.L."
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-168",
-   "#org+name+reporting": "Riverview Community Bank"
+   "#org+name+reporting": "Revolut"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-169",
-   "#org+name+reporting": "Rockwell Automation"
+   "#org+name+reporting": "Riverview Community Bank"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-170",
-   "#org+name+reporting": "Royal Bank of Canada"
+   "#org+name+reporting": "Rockwell Automation"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-171",
-   "#org+name+reporting": "Russel Metals Inc. "
+   "#org+name+reporting": "Royal Bank of Canada"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-172",
-   "#org+name+reporting": "S&P Global Foundation"
+   "#org+name+reporting": "Russel Metals Inc. "
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-173",
-   "#org+name+reporting": "Sainsbury's"
+   "#org+name+reporting": "S&P Global Foundation"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-174",
-   "#org+name+reporting": "Salvatore Ferragamo S.p.A."
+   "#org+name+reporting": "Sainsbury's"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-175",
-   "#org+name+reporting": "SentinelOne"
+   "#org+name+reporting": "Salvatore Ferragamo S.p.A."
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-176",
-   "#org+name+reporting": "Shiseido Group"
+   "#org+name+reporting": "SentinelOne"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-177",
-   "#org+name+reporting": "Sidney E. Frank Foundation"
+   "#org+name+reporting": "Shiseido Group"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-178",
-   "#org+name+reporting": "Siemens Caring Hands"
+   "#org+name+reporting": "Sidney E. Frank Foundation"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-179",
-   "#org+name+reporting": "Signet Love Inspires Foundation"
+   "#org+name+reporting": "Siemens Caring Hands"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-180",
-   "#org+name+reporting": "Skoda"
+   "#org+name+reporting": "Signet Love Inspires Foundation"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-181",
-   "#org+name+reporting": "Smithfield Foods, Inc."
+   "#org+name+reporting": "Skoda"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-182",
-   "#org+name+reporting": "Snap, Inc."
+   "#org+name+reporting": "Smithfield Foods, Inc."
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-183",
-   "#org+name+reporting": "Sologenic Development Foundation"
+   "#org+name+reporting": "Snap, Inc."
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-184",
-   "#org+name+reporting": "Sonoco Products Company"
+   "#org+name+reporting": "Sologenic Development Foundation"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-185",
-   "#org+name+reporting": "Southeastern Grocers, Inc."
+   "#org+name+reporting": "Sonoco Products Company"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-186",
-   "#org+name+reporting": "Spiegel Family Fund"
+   "#org+name+reporting": "Southeastern Grocers, Inc."
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-187",
-   "#org+name+reporting": "Square Enix"
+   "#org+name+reporting": "Spiegel Family Fund"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-188",
-   "#org+name+reporting": "Sun Life Financial Inc."
+   "#org+name+reporting": "Square Enix"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-189",
-   "#org+name+reporting": "Supercell Oy"
+   "#org+name+reporting": "Sun Life Financial Inc."
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-190",
-   "#org+name+reporting": "Taiwan Sporting Goods Manufacturers Association"
+   "#org+name+reporting": "Supercell Oy"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-191",
-   "#org+name+reporting": "Takeda Pharmaceutical Company Ltd"
+   "#org+name+reporting": "Taiwan Sporting Goods Manufacturers Association"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-192",
-   "#org+name+reporting": "Techland S.A."
+   "#org+name+reporting": "Takeda Pharmaceutical Company Ltd"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-193",
-   "#org+name+reporting": "Telus Corporation"
+   "#org+name+reporting": "Techland S.A."
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-194",
-   "#org+name+reporting": "TELUS Friendly Future Foundation"
+   "#org+name+reporting": "Telus Corporation"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-195",
-   "#org+name+reporting": "Tesco PLC"
+   "#org+name+reporting": "TELUS Friendly Future Foundation"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-196",
-   "#org+name+reporting": "Teva Pharmaceutical Industries Ltd."
+   "#org+name+reporting": "Tesco PLC"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-197",
-   "#org+name+reporting": "Texas Instruments Foundation"
+   "#org+name+reporting": "Teva Pharmaceutical Industries Ltd."
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-198",
-   "#org+name+reporting": "The Body Shop International Limited"
+   "#org+name+reporting": "Texas Instruments Foundation"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-199",
-   "#org+name+reporting": "TJ Morris Ltd"
+   "#org+name+reporting": "The Body Shop International Limited"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-200",
-   "#org+name+reporting": "Toyota Motor Corporation"
+   "#org+name+reporting": "TJ Morris Ltd"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-201",
-   "#org+name+reporting": "Tripadvisor Foundation"
+   "#org+name+reporting": "Toyota Motor Corporation"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-202",
-   "#org+name+reporting": "Uber Technologies Inc."
+   "#org+name+reporting": "Tripadvisor Foundation"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-203",
-   "#org+name+reporting": "Ukrainian Credit Union "
+   "#org+name+reporting": "Uber Technologies Inc."
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-204",
-   "#org+name+reporting": "Union Pacific Railroad"
+   "#org+name+reporting": "Ukrainian Credit Union "
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-205",
-   "#org+name+reporting": "United Health Foundation"
+   "#org+name+reporting": "Union Pacific Railroad"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-206",
-   "#org+name+reporting": "Valentino"
+   "#org+name+reporting": "United Health Foundation"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-207",
-   "#org+name+reporting": "Vantage Towers"
+   "#org+name+reporting": "Valentino"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-208",
-   "#org+name+reporting": "Verizon Communications Inc. "
+   "#org+name+reporting": "Vantage Towers"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-209",
-   "#org+name+reporting": "VF Foundation"
+   "#org+name+reporting": "Verizon Communications Inc. "
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-210",
-   "#org+name+reporting": "Visa Foundation"
+   "#org+name+reporting": "VF Foundation"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-211",
-   "#org+name+reporting": "Vodafone"
+   "#org+name+reporting": "Visa Foundation"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-212",
-   "#org+name+reporting": "Vodafone Czech Republic a.s."
+   "#org+name+reporting": "Vodafone"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-213",
-   "#org+name+reporting": "Vodafone Germany"
+   "#org+name+reporting": "Vodafone Czech Republic a.s."
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-214",
-   "#org+name+reporting": "Vodafone Group Foundation"
+   "#org+name+reporting": "Vodafone Germany"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-215",
-   "#org+name+reporting": "Vodafone Hungary"
+   "#org+name+reporting": "Vodafone Group Foundation"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-216",
-   "#org+name+reporting": "Vodafone Italy Foundation"
+   "#org+name+reporting": "Vodafone Hungary"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-217",
-   "#org+name+reporting": "Vodafone Luxembourg Foundation"
+   "#org+name+reporting": "Vodafone Italy Foundation"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-218",
-   "#org+name+reporting": "Vodafone Romania"
+   "#org+name+reporting": "Vodafone Luxembourg Foundation"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-219",
-   "#org+name+reporting": "Vodafone Spain Foundation"
+   "#org+name+reporting": "Vodafone Romania"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-220",
-   "#org+name+reporting": "Vodafone UK"
+   "#org+name+reporting": "Vodafone Spain Foundation"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-221",
-   "#org+name+reporting": "Volkswagen AG"
+   "#org+name+reporting": "Vodafone UK"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-222",
-   "#org+name+reporting": "Volvo"
+   "#org+name+reporting": "Volkswagen AG"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-223",
-   "#org+name+reporting": "Wabtec Foundation"
+   "#org+name+reporting": "Volvo"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-224",
-   "#org+name+reporting": "WELL Health Technologies"
+   "#org+name+reporting": "Wabtec Foundation"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-225",
-   "#org+name+reporting": "Western Union Foundation"
+   "#org+name+reporting": "WELL Health Technologies"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-226",
-   "#org+name+reporting": "White & Case"
+   "#org+name+reporting": "Western Union Foundation"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-227",
-   "#org+name+reporting": "William Demant Foundation"
+   "#org+name+reporting": "White & Case"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-228",
-   "#org+name+reporting": "World Federation of the Sporting Goods Industry"
+   "#org+name+reporting": "William Demant Foundation"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-229",
-   "#org+name+reporting": "WP Engine"
+   "#org+name+reporting": "World Federation of the Sporting Goods Industry"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-230",
-   "#org+name+reporting": "Wyndham Hotels & Resorts, Inc."
+   "#org+name+reporting": "WP Engine"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-231",
-   "#org+name+reporting": "XTX Markets"
+   "#org+name+reporting": "Wyndham Hotels & Resorts, Inc."
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-232",
-   "#org+name+reporting": "Yum! Brands Foundation"
+   "#org+name+reporting": "XTX Markets"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-233",
-   "#org+name+reporting": "Z Zurich Foundation"
+   "#org+name+reporting": "Yum! Brands Foundation"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-234",
-   "#org+name+reporting": "Zegna N.V."
+   "#org+name+reporting": "Z Zurich Foundation"
  },
  {
    "#org+id+reporting": "CBi-PROVIDER-235",
+   "#org+name+reporting": "Zegna N.V."
+ },
+ {
+   "#org+id+reporting": "CBi-PROVIDER-236",
    "#org+name+reporting": "Zound Industries"
  }
 ]}
