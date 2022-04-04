@@ -365,8 +365,7 @@ export default {
     this.filterParams['#org+id'] = '*'
     this.filterParams['#sector'] = '*'
 
-    const filePath = (config.dev) ? '' : '/viz-ukraine-ps-tracker/'
-    const dataPath = filePath + 'reporting_orgs.json'
+    const dataPath = 'https://raw.githubusercontent.com/OCHA-DAP/cbi_data/master/reporting_orgs.json'
     axios.get(dataPath)
       .then((response) => {
         this.orgNameIndex = response.data.data
@@ -411,7 +410,7 @@ export default {
         })
 
       // get transaction data
-      await axios.get(filePath + 'transactions.json')
+      await axios.get('https://raw.githubusercontent.com/OCHA-DAP/cbi_data/master/transactions.json')
         .then((response) => {
           // process the metadata
           const metadata = response.data.metadata
@@ -425,7 +424,7 @@ export default {
         })
 
       // get flows data
-      await axios.get(filePath + 'flows.json')
+      await axios.get('https://raw.githubusercontent.com/OCHA-DAP/cbi_data/master/flows.json')
         .then((response) => {
           this.fullFlowsData = response.data.data
           this.updateFilteredFlowsData()
