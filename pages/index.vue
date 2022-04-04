@@ -188,7 +188,7 @@
           Donation Flows
         </h2>
         <div class="footnote text-muted">
-          Please note that flows are only filtered by private sector donor and may not show all donations to a given humanitarian recipient.
+          Please note that flows are only filtered by private sector donor and may not show all donations to a given humanitarian recipient. In addition, donation flows shows both paid and pledged transactions.
         </div>
 
         <SankeyChart :items="filteredFlowsData" :params="filterParams" />
