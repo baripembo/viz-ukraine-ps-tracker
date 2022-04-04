@@ -595,7 +595,7 @@ export default {
         itemList.push({ value: item.value, text: item.text })
         return itemList
       }, []).sort((a, b) =>
-        a.text < b.text ? -1 : 1
+        a.text.toLowerCase() < b.text.toLowerCase() ? -1 : 1
       )
       selectList.unshift({ value: '*', text: defaultValue })
       return selectList
