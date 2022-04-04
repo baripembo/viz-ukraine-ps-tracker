@@ -10,7 +10,7 @@
 
         <b-collapse id="nav-collapse" is-nav>
           <b-navbar-nav>
-            <b-nav-item :to="{name: 'index'}" exact-active-class="active" class="nav-index" no-prefetch @click="onClick('Dashboard')">
+            <b-nav-item :to="{ name: 'index'}" exact-active-class="active" class="nav-index" no-prefetch @click="onClick('Dashboard')">
               Dashboard
             </b-nav-item>
           </b-navbar-nav>
@@ -134,6 +134,9 @@ export default {
         this.$store.commit('setProd', isProd)
       }
       return (isProd) ? 'Ukraine Private Sector Donations Tracker' : '*STAGE* Ukraine Private Sector Donations Tracker'
+    },
+    query () {
+      return this.$route.query
     }
   },
   mounted () {
@@ -143,6 +146,7 @@ export default {
   },
   methods: {
     onClick (page) {
+      //console.log(this.$route.query)
       this.$mixpanelTrackAction('switch viz', config.head.title, page)
     }
   }

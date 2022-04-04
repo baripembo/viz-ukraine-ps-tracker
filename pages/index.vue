@@ -123,7 +123,7 @@
 
       <b-container>
         <h2 class="header">
-          Overview of Cash and In-Kind Donations
+          Overview of Donations
         </h2>
 
         <b-row>
@@ -146,7 +146,7 @@
               />
               <div class="key-figure-breakdown w-lg-100 ml-lg-4 mr-lg-5">
                 <h3>
-                  Total Cash Donations (USD)
+                  Total Pledged Donations (USD)
                 </h3>
                 <div class="key-figure-num">
                   {{ currencyFormatter(totalSpending) }}
@@ -168,7 +168,7 @@
               />
               <div class="key-figure-breakdown w-lg-100 mx-lg-4">
                 <h3>
-                  Total In-Kind Donations (USD)
+                  Total Paid Donations (USD)
                 </h3>
                 <div class="key-figure-num">
                   {{ currencyFormatter(totalCommitments) }}
@@ -435,6 +435,9 @@ export default {
       const _query = {}
       if (this.filterParams['#org+id'] !== '*') {
         _query.org = this.filterParams['#org+id']
+      }
+      if (this.filterParams['#country'] !== '*') {
+        _query.country = this.filterParams['#country']
       }
       if (this.filterParams['#sector'] !== '*') {
         _query.sector = this.filterParams['#sector']
