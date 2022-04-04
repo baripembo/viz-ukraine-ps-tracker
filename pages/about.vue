@@ -30,11 +30,31 @@
           <section class="mb-5">
             <h2>About this Dashboard</h2>
 
-            <p>The response of the global business community to the ongoing humanitarian emergency in Ukraine has been unprecedented. The purpose of this dashboard is to make it easier to visualize, explore, and understand the scope and scale of private sector donations being made for the benefit of affected people. For the purposes of this dashboard, “private sector” is defined as corporations and corporate-linked foundations, including individual and family foundations associated with prominent business leaders.</p>
+            <p>The response of the global business community to the ongoing humanitarian emergency in Ukraine has been unprecedented.</p>
 
-            <p>This dashboard was built by the <a href="https://centre.humdata.org" target="_blank">OCHA Centre for Humanitarian Data</a> based on data collected and maintained by the <a href="https://www.connectingbusiness.org" target="_blank">OCHA/UNDP Connecting Business initiative (CBi)</a>. CBi has made every effort to assure the accuracy of the data presented, but we cannot guarantee that each transaction has been verified by the donor and recipient. Data is sourced from <a href="https://www.unocha.org" target="_blank">United Nations Office for the Coordination of Humanitarian Affairs</a>; the <a href="https://fts.unocha.org" target="_blank">OCHA Financial Tracking Service</a>; the <a href="https://unfoundation.org" target="_blank">United Nations Foundation</a>; UN agencies, funds, and programmes; corporate press releases; public reporting; and academic and non-profit sources including <a href="https://candid.org" target="_blank">Candid</a>, the <a href="https://www.uschamberfoundation.org" target="_blank">U.S. Chamber of Commerce Foundation</a>, and the <a href="https://ccc.bc.edu/content/ccc.html" target="_blank">Boston College Centre for Corporate Citizenship</a>.</p></p>
+            <p>This dashboard has been launched to make it easier to visualize, explore, and understand the scope and scale of private sector donations being made for the benefit of affected people.</p>
+
+            <p>For the purposes of this dashboard, “private sector” is defined as corporations and corporate-linked foundations, including individual and family foundations associated with prominent business leaders. The dashboard does not include individual contributions.</p>
+
+            <p>This dashboard was built by the <a href="https://centre.humdata.org" target="_blank">OCHA Centre for Humanitarian Data</a> based on data collected and maintained by the <a href="https://www.connectingbusiness.org" target="_blank">OCHA/UNDP Connecting Business initiative (CBi)</a>. The CBi team has made every effort possible to ensure the accuracy of the data presented, and we are committed to updating the underlying data on a weekly basis through 30 September 2022.</p>
+
+            <p>Data is sourced from individual United Nations agencies, funds, and programmes; the OCHA-managed <a href="https://www.unocha.org/ukraine/about-uhf" target="_blank">Ukraine Humanitarian Fund</a>; the OCHA <a href="https://fts.unocha.org" target="_blank">Financial Tracking Service</a>; the <a href="https://unfoundation.org" target="_blank">United Nations Foundation</a>; public reporting; and academic/non-profit sources including <a href="https://candid.org" target="_blank">Candid</a>, the <a href="https://www.uschamberfoundation.org" target="_blank">U.S. Chamber of Commerce Foundation</a>, and the </a>, and the <a href="https://ccc.bc.edu/content/ccc.html" target="_blank">Boston College Centre for Corporate Citizenship</a>.</p>
 
             <p>This dashboard is made possible by the support of the American People through the <a href="https://www.usaid.gov/who-we-are/organization/bureaus/bureau-humanitarian-assistance" target="_blank">United States Agency for International Development (USAID) Bureau for Humanitarian Assistance</a>.</p>
+          </section>
+
+          <section class="mb-5">
+            <h2>
+              Why are different totals being reported by other sources?
+            </h2>
+
+            <p>In most cases, public announcements of donations are made weeks before contribution agreements are signed or funds are actually transferred. When funds are actually distributed, there are often changes to the values and/or recipients.</p>
+
+            <p>Many humanitarian organizations use different definitions of “private sector”. For example, many UN agencies, funds, and programmes include donations from individuals, corporations, and public fundraising campaigns in a single total. This tracker does not include individual donations.</p>
+
+            <p>In addition, many sources differentiate between funds intended to support projects within Ukraine versus donations to support Ukrainians outside of Ukraine. Some donors have made contributions that are unrestricted, meaning that the humanitarian organization can use its discretion to decide when, where, and how to spend the donation. In general, this tracker includes any donation that has been described as intended to support the humanitarian response to the Ukraine crisis, regardless of the specific conditions that may be agreed between the donor and the recipient.</p>
+
+            <p><b>Please note that the OCHA Financial Tracking Service is the only official United Nations source of information on humanitarian funding flows.</b></p>
           </section>
 
           <section class="mb-5">
@@ -42,9 +62,7 @@
               Questions? Want to report something missing or incorrect?
             </h2>
 
-            <p>This dashboard substantially undercounts the total cash and in-kind donations made by the private sector. In general, we are listing contributions that we can establish as actually paid (not just committed) and for which breakdowns by recipient are available.</p>
-
-            <p>CBi welcomes questions, comments, or reports of missing or incomplete information. Please reach out to our team by emailing <a href="mailto:connectingbusiness@un.org">connectingbusiness@un.org</a>.</p>
+            <p>CBi welcomes questions, comments, media inquiries, or reports of missing or incomplete information. Please reach out to our team by emailing <a href="mailto:connectingbusiness@un.org">connectingbusiness@un.org</a>.</p>
           </section>
 
           <section class="mb-5">
