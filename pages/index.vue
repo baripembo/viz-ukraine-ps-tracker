@@ -146,7 +146,7 @@
               />
               <div class="key-figure-breakdown w-lg-100 ml-lg-4 mr-lg-5">
                 <h3>
-                  Total Pledged Donations (USD)
+                  Total Paid Donations (USD)
                 </h3>
                 <div class="key-figure-num">
                   {{ currencyFormatter(totalSpending) }}
@@ -168,7 +168,7 @@
               />
               <div class="key-figure-breakdown w-lg-100 mx-lg-4">
                 <h3>
-                  Total Paid Donations (USD)
+                  Total Pledged Donations (USD)
                 </h3>
                 <div class="key-figure-num">
                   {{ currencyFormatter(totalCommitments) }}
