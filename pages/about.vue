@@ -32,11 +32,11 @@
 
             <p>The response of the global business community to the ongoing humanitarian emergency in Ukraine has been unprecedented.</p>
 
-            <p>This dashboard has been launched to make it easier to visualize, explore, and understand the scope and scale of private sector donations being made for the benefit of affected people.</p>
+            <p>This dashboard was created to make it easier to visualize, explore, and understand the scope and scale of private sector donations being made for the benefit of affected people.</p>
 
-            <p>For the purposes of this dashboard, “private sector” is defined as corporations and corporate-linked foundations, including individual and family foundations associated with prominent business leaders. The dashboard does not include individual contributions.</p>
+            <p>For the purposes of this dashboard, “private sector” is defined as corporations and corporate-linked foundations, including individual and family foundations associated with prominent business leaders. The dashboard does not include contributions from individuals.</p>
 
-            <p>This dashboard was built by the <a href="https://centre.humdata.org" target="_blank">OCHA Centre for Humanitarian Data</a> based on data collected and maintained by the <a href="https://www.connectingbusiness.org" target="_blank">OCHA/UNDP Connecting Business initiative (CBi)</a>. The CBi team has made every effort possible to ensure the accuracy of the data presented, and we are committed to updating the underlying data on a weekly basis through 30 September 2022.</p>
+            <p>This dashboard was built by the <a href="https://centre.humdata.org" target="_blank">OCHA Centre for Humanitarian Data</a> based on data collected and maintained by the <a href="https://www.connectingbusiness.org" target="_blank">OCHA/UNDP Connecting Business initiative (CBi)</a>. The CBi team has made every effort possible to ensure the accuracy of the data presented, and we are committed to updating the <a href="https://data.humdata.org/dataset/ukraine-private-sector-donations-tracker" target="_blank">underlying data</a> on a weekly basis through 30 September 2022.</p>
 
             <p>Data is sourced from individual United Nations agencies, funds, and programmes; the OCHA-managed <a href="https://www.unocha.org/ukraine/about-uhf" target="_blank">Ukraine Humanitarian Fund</a>; the OCHA <a href="https://fts.unocha.org" target="_blank">Financial Tracking Service</a>; the <a href="https://unfoundation.org" target="_blank">United Nations Foundation</a>; public reporting; and academic/non-profit sources including <a href="https://candid.org" target="_blank">Candid</a>, the <a href="https://www.uschamberfoundation.org" target="_blank">U.S. Chamber of Commerce Foundation</a>, and the <a href="https://ccc.bc.edu/content/ccc.html" target="_blank">Boston College Centre for Corporate Citizenship</a>.</p>
 
@@ -45,16 +45,69 @@
 
           <section class="mb-5">
             <h2>
-              Why are different totals being reported by other sources?
+              Frequently asked questions
             </h2>
 
-            <p>In most cases, public announcements of donations are made weeks before contribution agreements are signed or funds are actually transferred. When funds are actually distributed, there are often changes to the values and/or recipients.</p>
+            <div class="accordion" role="tablist">
+              <b-card no-body>
+                <b-card-header header-tag="header" role="tab">
+                  <b-button v-b-toggle.accordion-1 block squared>
+                    Why is the largest recipient of funds “[multiple or not specified]”?
+                  </b-button>
+                </b-card-header>
+                <b-collapse id="accordion-1" accordion="faq-accordion" role="tabpanel">
+                  <b-card-body>
+                    <b-card-text>
+                      <p>Many publicly announced pledges have not yet been disaggregated. For example, Epic Games <a href="https://www.epicgames.com/fortnite/en-US/news/support-humanitarian-relief-for-ukraine" target="_blank">announced a donation</a> of US $144 million to Direct Relief, UNICEF, UNHCR, WFP, and World Central Kitchen, but has not provided a clear breakdown of the distribution of funds across the five recipient organizations. The CBi team is reaching out to Epic Games as well as many other donors and recipients to clarify the distribution of funds. In the meantime, you can generally obtain a list of the intended recipient organizations by examining the <a href="https://data.humdata.org/dataset/ukraine-private-sector-donations-tracker" target="_blank">underlying dataset</a> that is visualized on this dashboard.</p>
+                    </b-card-text>
+                  </b-card-body>
+                </b-collapse>
+              </b-card>
 
-            <p>Many humanitarian organizations use different definitions of “private sector”. For example, many UN agencies, funds, and programmes include donations from individuals, corporations, and public fundraising campaigns in a single total. This tracker does not include individual donations.</p>
+              <b-card no-body>
+                <b-card-header header-tag="header" role="tab">
+                  <b-button v-b-toggle.accordion-2 block squared>
+                    Why is the “paid” total so much less than the “pledged” total?
+                  </b-button>
+                </b-card-header>
+                <b-collapse id="accordion-2" accordion="faq-accordion" role="tabpanel">
+                  <b-card-body>
+                    <b-card-text>
+                      <p>To be marked as “paid”, the CBi team requires written verification from the donor and/or recipient that funds were transferred. There can be significant time between the announcement of a donation and the actual transfer of funds; UN entities (like most humanitarian organizations) are subject to extensive due diligence requirements that must be completed before funds can be accepted. Very often, there is also a need to negotiate and sign a written contribution agreement; this can be a time-consuming process. The CBi team is committed to ongoing updates of this dashboard, and as we verify completion of transactions we will reclassify “pledged” donations as “paid”.</p>
+                    </b-card-text>
+                  </b-card-body>
+                </b-collapse>
+              </b-card>
 
-            <p>In addition, many sources differentiate between funds intended to support projects within Ukraine versus donations to support Ukrainians outside of Ukraine. Some donors have made contributions that are unrestricted, meaning that the humanitarian organization can use its discretion to decide when, where, and how to spend the donation. In general, this tracker includes any donation that has been described as intended to support the humanitarian response to the Ukraine crisis, regardless of the specific conditions that may be agreed between the donor and the recipient.</p>
+              <b-card no-body>
+                <b-card-header header-tag="header" role="tab">
+                  <b-button v-b-toggle.accordion-3 block squared>
+                    Why are different totals being reported by other sources?
+                  </b-button>
+                </b-card-header>
+                <b-collapse id="accordion-3" accordion="faq-accordion" role="tabpanel">
+                  <b-card-body>
+                    <b-card-text>
+                      <p>Many organizations use different definitions of the term “private sector”. For example, many UN agencies, funds, and programmes include donations from individuals and public fundraising campaigns in a single total. This tracker does not include individual donations.</p>
 
-            <p><b>Please note that the OCHA Financial Tracking Service is the only official United Nations source of information on humanitarian funding flows.</b></p>
+                      <p>In addition, many sources differentiate between funds intended to support projects within Ukraine versus donations to support Ukrainians outside of Ukraine. Some donors have made contributions that are unrestricted, meaning that the humanitarian organization can use its discretion to decide when, where, and how to spend the donation. In general, this tracker includes any donation that has been described as intended to support the humanitarian response to the Ukraine crisis, regardless of the specific conditions that may be agreed between the donor and the recipient.</p>
+
+                      <p>Finally, as noted above, public announcements of donations are often made weeks before contribution agreements are signed or funds are actually transferred. When funds are distributed, there are often changes to the values and/or recipients.</p>
+
+                      <p><b>Please note that the OCHA Financial Tracking Service is the only official source of information on humanitarian funding flows.</b></p>
+                    </b-card-text>
+                  </b-card-body>
+                </b-collapse>
+              </b-card>
+            </div>
+          </section>
+
+          <section class="mb-5">
+            <h2>
+              How can I make a donation?
+            </h2>
+
+            <p>Want to learn how you can donate to the humanitarian response in Ukraine? Businesses should refer to the <a href="https://www.connectingbusiness.org/publications/ocha-business-guide-ukraine-humanitarian-crisis" target="_blank">OCHA Business Guide to the Ukraine Crisis</a> for more information about how to help. Individuals can make contributions through <a href="https://crisisrelief.un.org/t/ukraine" target="_blank">OCHA</a> or <a href="https://donate.unhcr.org/int/en/ukraine-emergency" target="_blank">UNHCR</a>.</p>
           </section>
 
           <section class="mb-5">
@@ -63,14 +116,6 @@
             </h2>
 
             <p>CBi welcomes questions, comments, media inquiries, or reports of missing or incomplete information. Please reach out to our team by emailing <a href="mailto:connectingbusiness@un.org">connectingbusiness@un.org</a>.</p>
-          </section>
-
-          <section class="mb-5">
-            <h2>
-              Make a Donation
-            </h2>
-
-            <p>Want to learn how you can donate to the humanitarian response in Ukraine? Businesses should refer to the <a href="https://www.connectingbusiness.org/publications/ocha-business-guide-ukraine-humanitarian-crisis" target="_blank">OCHA Business Guide to the Ukraine Crisis</a> for more information about how to help. Individuals can make contributions through <a href="https://crisisrelief.un.org/t/ukraine" target="_blank">OCHA</a> or <a href="https://donate.unhcr.org/int/en/ukraine-emergency" target="_blank">UNHCR</a>.</p>
           </section>
 
           <section class="mb-5">

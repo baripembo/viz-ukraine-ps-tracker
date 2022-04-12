@@ -12,7 +12,7 @@
       <div class="header-sticky">
         <div class="container">
           <h2>
-            <b>{{ numberFormatter(activityCount) }}</b> <span v-if="activityCount > 1 || activityCount===0">donations</span><span v-else>donation</span> <span v-if="selectedFilterDimension==='#org+id'">by</span><span v-else>to</span> <b>{{ selectedFilterLabel }}</b>
+            <b>{{ numberFormatter(activityCount) }}</b> <span v-if="activityCount > 1 || activityCount===0">donations</span><span v-else>donation</span> <span v-if="selectedFilterDimension==='#org+id'">by</span><span v-else>to</span> <b>{{ selectedFilterLabel }}</b> totalling <b><span class="uppercase-format">{{ currencyFormatter(amountTotal) }}</span></b>
           </h2>
           <a class="anchor" @click="scrollTo('filters')">Customize filters</a>
         </div>
@@ -324,6 +324,10 @@ export default {
     donorCount () {
       const donors = [...new Set(this.fullData.map(item => item['#org+id']))]
       return donors.length
+    },
+    amountTotal () {
+      const total = this.filteredData.reduce((acc, item) => acc + item['#value+total'], 0)
+      return total
     },
     recipientCount () {
       const recipient = [...new Set(this.fullData.map(item => item['#country']))]
@@ -722,6 +726,9 @@ export default {
     font-family: 'Gotham Book', sans-serif;
     font-size: 42px;
     line-height: 49px;
+    text-transform: uppercase;
+  }
+  .uppercase-format {
     text-transform: uppercase;
   }
 
