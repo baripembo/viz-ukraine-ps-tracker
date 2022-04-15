@@ -369,7 +369,7 @@ export default {
     this.filterParams['#org+id'] = '*'
     this.filterParams['#sector'] = '*'
 
-    const dataPath = 'https://raw.githubusercontent.com/OCHA-DAP/cbi_data/master/reporting_orgs.json'
+    const dataPath = 'reporting_orgs.json'
     axios.get(dataPath)
       .then((response) => {
         this.orgNameIndex = response.data.data
@@ -414,7 +414,7 @@ export default {
         })
 
       // get transaction data
-      await axios.get('https://raw.githubusercontent.com/OCHA-DAP/cbi_data/master/transactions.json')
+      await axios.get('transactions.json')
         .then((response) => {
           // process the metadata
           const metadata = response.data.metadata
@@ -428,7 +428,7 @@ export default {
         })
 
       // get flows data
-      await axios.get('https://raw.githubusercontent.com/OCHA-DAP/cbi_data/master/flows.json')
+      await axios.get('flows.json')
         .then((response) => {
           this.fullFlowsData = response.data.data
           this.updateFilteredFlowsData()

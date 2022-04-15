@@ -17,6 +17,18 @@
         </b-badge>
       </div>
     </div>
+    <b-tooltip
+      id="descriptionTooltip"
+      :show.sync="show"
+      target="flowDetail"
+      placement="top"
+      delay="{
+      show:50,
+      hide:0
+      }"
+      noninteractive>
+      {{ linkDescription }}
+    </b-tooltip>
     <div id="sankeyChart" ref="sankeyChart">
       <svg :width="width" :height="height">
         <pattern
@@ -68,7 +80,7 @@
             />
           </g>
         </g>
-        <g font-family="sans-serif" font-size="12">
+        <g id="donorName" font-family="sans-serif" font-size="12">
           <text
             v-for="(node) in nodes"
             v-bind="nodes"
@@ -81,15 +93,13 @@
             <title>{{ node.name }}</title>
           </text>
         </g>
-        <g font-family="sans-serif" font-size="12">
+        <g id="flowDetail" font-family="sans-serif" font-size="12">
           <g
             v-for="(link) in links"
             v-bind="links"
             :key="`${link.index}-label`"
             :style="selectedLink == link.index ? 'display: block;' : 'display: none;'"
-            class="linkText"
-            @mouseover="mouseoverLink(link.index)"
-            @mouseleave="mouseleaveLink(link.index)">
+            class="linkText">
             <text
               :x="labelXPosition(link)"
               :y="isNaN(link.y0) || isNaN(link.y1) ? 0 : labelYPosition(link)"
@@ -108,6 +118,11 @@
 .badges {
   display: flex;
   justify-content: space-between;
+}
+.tooltip .tooltip-inner {
+  max-width: 400px;
+  padding: 15px 20px;
+  width: 400px;
 }
 #sankeyChart {
   height: 400px;
@@ -134,6 +149,15 @@
   fill: #000000;
   text-shadow: 1px 1px 3px #ffffff;
   cursor: default;
+  pointer-events: none;
+}
+
+@media only screen and (max-width: 400px) {
+  .tooltip .tooltip-inner {
+    max-width: 300px;
+    padding: 15px 20px;
+    width: 300px;
+  }
 }
 </style>
 <script>
@@ -145,6 +169,8 @@ export default {
   props: ['chartData'],
   data () {
     return {
+      show: false,
+      description: 'Testing',
       maximumVisibleItems: 10,
       chart: null,
       width: 10,
@@ -154,6 +180,9 @@ export default {
     }
   },
   computed: {
+    linkDescription () {
+      return this.description
+    },
     tooltips () {
       return this.$store.state.tooltips
     },
@@ -188,6 +217,16 @@ export default {
     this.makeChart()
     window.addEventListener('resize', this.onResize)
     this.onResize()
+
+    // this.$root.$on('bv::tooltip::show', (bvEvent) => {
+    //   console.log('bvEvent:', bvEvent)
+    // })
+    // this.$root.$on('bv::tooltip::show', (bvEvent) => {
+    //   console.log('!bvEvent:', bvEvent)
+    // })
+    // this.$root.$on('bv::tooltip::hidden', (bvEvent) => {
+    //   console.log('!bvEvent:', bvEvent)
+    // })
   },
   methods: {
     truncate (str) {
@@ -198,9 +237,13 @@ export default {
     },
     mouseoverLink (index) {
       this.selectedLink = index
+      this.description = this.sankey.links[index].description
+      this.show = true
     },
     mouseleaveLink (index) {
       this.selectedLink = null
+      this.description = ''
+      // this.show = false
     },
     sankeyLinkPath (d) {
       return this.sankeyLinkPaths(d)
