@@ -18,16 +18,13 @@
       </div>
     </div>
     <b-tooltip
-      id="descriptionTooltip"
-      :show.sync="show"
-      target="flowDetail"
-      placement="top"
-      delay="{
-      show:50,
-      hide:0
-      }"
+      v-for="(link) in links"
+      v-bind="links"
+      :id="`tooltip-${link.index}`"
+      :key="link.index"
+      :target="`link-${link.index}`"
       noninteractive>
-      {{ linkDescription }}
+      {{ links[link.index].description }}
     </b-tooltip>
     <div id="sankeyChart" ref="sankeyChart">
       <svg :width="width" :height="height">
@@ -119,6 +116,9 @@
   display: flex;
   justify-content: space-between;
 }
+.tooltip {
+  margin-bottom: 5px;
+}
 .tooltip .tooltip-inner {
   max-width: 400px;
   padding: 15px 20px;
@@ -169,7 +169,6 @@ export default {
   props: ['chartData'],
   data () {
     return {
-      show: false,
       description: 'Testing',
       maximumVisibleItems: 10,
       chart: null,
@@ -217,16 +216,6 @@ export default {
     this.makeChart()
     window.addEventListener('resize', this.onResize)
     this.onResize()
-
-    // this.$root.$on('bv::tooltip::show', (bvEvent) => {
-    //   console.log('bvEvent:', bvEvent)
-    // })
-    // this.$root.$on('bv::tooltip::show', (bvEvent) => {
-    //   console.log('!bvEvent:', bvEvent)
-    // })
-    // this.$root.$on('bv::tooltip::hidden', (bvEvent) => {
-    //   console.log('!bvEvent:', bvEvent)
-    // })
   },
   methods: {
     truncate (str) {
@@ -237,13 +226,9 @@ export default {
     },
     mouseoverLink (index) {
       this.selectedLink = index
-      this.description = this.sankey.links[index].description
-      this.show = true
     },
     mouseleaveLink (index) {
       this.selectedLink = null
-      this.description = ''
-      // this.show = false
     },
     sankeyLinkPath (d) {
       return this.sankeyLinkPaths(d)
