@@ -17,15 +17,6 @@
         </b-badge>
       </div>
     </div>
-    <b-tooltip
-      v-for="(link) in links"
-      v-bind="links"
-      :id="`tooltip-${link.index}`"
-      :key="link.index"
-      :target="`link-${link.index}`"
-      noninteractive>
-      {{ links[link.index].description }}
-    </b-tooltip>
     <div id="sankeyChart" ref="sankeyChart">
       <svg :width="width" :height="height">
         <pattern
@@ -48,6 +39,15 @@
             :fill="node.name=='» (unspecified org)' ? 'url(#diagonalHatch)': color(node)"
             class="node" />
         </g>
+        <b-tooltip
+          v-for="(link) in links"
+          v-bind="links"
+          :id="`tooltip-${link.index}`"
+          :key="link.index"
+          :target="`link-${link.index}`"
+          noninteractive>
+          {{ links[link.index].description }}
+        </b-tooltip>
         <g>
           <g
             v-for="(link) in links"
