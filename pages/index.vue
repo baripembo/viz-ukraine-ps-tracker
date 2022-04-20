@@ -544,21 +544,26 @@ export default {
     },
     filterFlowsData () {
       let result = this.fullFlowsData.map(i => ({ ...i }))
+      console.log(this.selectedFilterDimension)
+      console.log(result)
       const params = this.filterParams
       const filterDimension = '#org+id+reporting'// this.selectedFilterDimension
+
+      console.log('filterFlowsData', params[filterDimension], params[filterDimension])
 
       if (params[filterDimension] && params[filterDimension] !== '*') {
         result = result.filter(item => item[filterDimension] === params[filterDimension])
       }
-      if (params['humanitarian'] === 'on') {
-        result = result.filter(item => item['#indicator+bool+humanitarian'] === 1)
-      }
-      if (params['strict'] === 'on') {
-        result = result.filter(item => item['#indicator+bool+strict'] === 1)
-      }
+      // if (params['humanitarian'] === 'on') {
+      //   result = result.filter(item => item['#indicator+bool+humanitarian'] === 1)
+      // }
+      // if (params['strict'] === 'on') {
+      //   result = result.filter(item => item['#indicator+bool+strict'] === 1)
+      // }
       if (params['humanitarian'] === 'off' || params['strict'] === 'off') {
         result = this.aggregateFlows(result)
       }
+      console.log(result)
 
       // get total count before partioning data into incoming/outgoing
       this.flowsActivityCount = result.length
