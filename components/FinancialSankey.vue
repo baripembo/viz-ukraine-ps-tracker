@@ -84,7 +84,8 @@ export default {
         return {
           source: provider,
           target: receiver,
-          value: Math.round(item['#value+total'])
+          value: Math.round(item['#value+total']),
+          description: item['#description']
         }
       })
 

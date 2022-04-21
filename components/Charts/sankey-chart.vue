@@ -39,6 +39,15 @@
             :fill="node.name=='» (unspecified org)' ? 'url(#diagonalHatch)': color(node)"
             class="node" />
         </g>
+        <b-tooltip
+          v-for="(link) in links"
+          v-bind="links"
+          :id="`tooltip-${link.index}`"
+          :key="link.index"
+          :target="`link-${link.index}`"
+          noninteractive>
+          {{ links[link.index].description }}
+        </b-tooltip>
         <g>
           <g
             v-for="(link) in links"
@@ -68,7 +77,7 @@
             />
           </g>
         </g>
-        <g font-family="sans-serif" font-size="12">
+        <g id="donorName" font-family="sans-serif" font-size="12">
           <text
             v-for="(node) in nodes"
             v-bind="nodes"
@@ -81,15 +90,13 @@
             <title>{{ node.name }}</title>
           </text>
         </g>
-        <g font-family="sans-serif" font-size="12">
+        <g id="flowDetail" font-family="sans-serif" font-size="12">
           <g
             v-for="(link) in links"
             v-bind="links"
             :key="`${link.index}-label`"
             :style="selectedLink == link.index ? 'display: block;' : 'display: none;'"
-            class="linkText"
-            @mouseover="mouseoverLink(link.index)"
-            @mouseleave="mouseleaveLink(link.index)">
+            class="linkText">
             <text
               :x="labelXPosition(link)"
               :y="isNaN(link.y0) || isNaN(link.y1) ? 0 : labelYPosition(link)"
@@ -108,6 +115,14 @@
 .badges {
   display: flex;
   justify-content: space-between;
+}
+.tooltip {
+  margin-bottom: 5px;
+}
+.tooltip .tooltip-inner {
+  max-width: 400px;
+  padding: 15px 20px;
+  width: 400px;
 }
 #sankeyChart {
   height: 400px;
@@ -134,6 +149,15 @@
   fill: #000000;
   text-shadow: 1px 1px 3px #ffffff;
   cursor: default;
+  pointer-events: none;
+}
+
+@media only screen and (max-width: 400px) {
+  .tooltip .tooltip-inner {
+    max-width: 300px;
+    padding: 15px 20px;
+    width: 300px;
+  }
 }
 </style>
 <script>
@@ -145,6 +169,7 @@ export default {
   props: ['chartData'],
   data () {
     return {
+      description: 'Testing',
       maximumVisibleItems: 10,
       chart: null,
       width: 10,
@@ -154,6 +179,9 @@ export default {
     }
   },
   computed: {
+    linkDescription () {
+      return this.description
+    },
     tooltips () {
       return this.$store.state.tooltips
     },
