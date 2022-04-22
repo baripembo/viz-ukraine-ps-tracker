@@ -191,7 +191,7 @@ export default {
       fullData: [],
       filteredData: [],
       filterParams: {},
-      orgNameIndex: [],
+      reporterNameIndex: [],
       lastUpdatedDate: '',
       months: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
     }
@@ -238,8 +238,8 @@ export default {
     const dataPath = filePath + 'reporting_orgs.json'
     axios.get(dataPath)
       .then((response) => {
-        this.orgNameIndex = response.data.data
-        this.$store.commit('setorgNameIndex', response.data.data)
+        this.reporterNameIndex = response.data.data
+        this.$store.commit('setreporterNameIndex', response.data.data)
 
         this.$nextTick(() => {
           if ('org' in this.$route.query) {
@@ -382,11 +382,11 @@ export default {
       return selectList
     },
     getOrgName (id) {
-      const org = this.orgNameIndex.filter(org => org['#org+id+reporting'] === id)
+      const org = this.reporterNameIndex.filter(org => org['#org+id+reporting'] === id)
       return (org[0] !== undefined) ? org[0]['#org+name+reporting'] : ''
     },
     getOrgID (name) {
-      const org = this.orgNameIndex.filter(org => org['#org+name+reporting'] === name)
+      const org = this.reporterNameIndex.filter(org => org['#org+name+reporting'] === name)
       return org[0]['#org+id+reporting']
     },
     numberFormatter (value) {

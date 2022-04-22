@@ -3,7 +3,7 @@
     <div class="badges">
       <div>
         <b-badge variant="dark">
-          Donor
+          {{ leftLabel }}
         </b-badge>
       </div>
       <div>
@@ -13,7 +13,7 @@
       </div>
       <div>
         <b-badge variant="dark">
-          Recipient
+          {{ rightLabel }}
         </b-badge>
       </div>
     </div>
@@ -166,7 +166,7 @@ import { sankey as d3Sankey, sankeyLinkHorizontal as d3SsankeyLinkHorizontal } f
 import numeral from 'numeral'
 export default {
   name: 'SankeyChart',
-  props: ['chartData'],
+  props: ['chartData', 'params'],
   data () {
     return {
       description: 'Testing',
@@ -179,6 +179,12 @@ export default {
     }
   },
   computed: {
+    leftLabel () {
+      return (this.params.selectedFilter === '#country') ? 'Recipient' : 'Donor'
+    },
+    rightLabel () {
+      return (this.params.selectedFilter === '#country') ? 'Donor' : 'Recipient'
+    },
     linkDescription () {
       return this.description
     },

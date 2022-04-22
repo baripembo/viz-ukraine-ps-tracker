@@ -188,7 +188,7 @@
           Donation Flows
         </h2>
         <div class="footnote text-muted">
-          Please note that flows are only filtered by private sector donor and may not show all donations to a given humanitarian recipient. In addition, donation flows shows both paid and pledged transactions.
+          Please note that flows show both paid and pledged transactions and may not show all donations to a given humanitarian recipient.
         </div>
 
         <SankeyChart :items="filteredFlowsData" :params="filterParams" />
@@ -258,7 +258,8 @@ export default {
       fullFlowsData: [],
       filteredFlowsData: [],
       filterFlowsParams: {},
-      orgNameIndex: [],
+      reporterNameIndex: [],
+      receiverNameIndex: [],
       lastUpdatedDate: '',
       skippedTransactions: 0,
       loaded: false
@@ -364,23 +365,35 @@ export default {
 
     this.filterParams = {
       humanitarian: 'off',
-      strict: 'off'
+      strict: 'off',
+      selectedFilter: this.selectedFilterDimension
     }
     this.filterParams['#org+id'] = '*'
     this.filterParams['#sector'] = '*'
+    this.filterParams['#country'] = '*'
+    this.filterParams['#org+id+reporting'] = '*'
+    this.filterParams['#org+name+receiver'] = '*'
 
-    const dataPath = 'https://raw.githubusercontent.com/OCHA-DAP/cbi_data/master/reporting_orgs.json'
-    axios.get(dataPath)
-      .then((response) => {
-        this.orgNameIndex = response.data.data
-        this.$store.commit('setorgNameIndex', response.data.data)
+    const reportingDataPath = 'https://raw.githubusercontent.com/OCHA-DAP/cbi_data/master/reporting_orgs.json'
+    const receiverDataPath = 'https://raw.githubusercontent.com/OCHA-DAP/cbi_data/master/receiver_orgs.json'
+    axios.all([axios.get(reportingDataPath), axios.get(receiverDataPath)])
+      .then(axios.spread((...responses) => {
+        const reportingData = responses[0]
+        const receiverData = responses[1]
+        this.reporterNameIndex = reportingData.data.data
+        this.receiverNameIndex = receiverData.data.data
+        this.$store.commit('setReporterNameIndex', reportingData.data.data)
 
-        this.selectedFilterLabel = this.orgNameIndex.length + ' private sector donors'
+        this.selectedFilterLabel = this.reporterNameIndex.length + ' private sector donors'
 
         this.$nextTick(() => {
           if ('org' in this.$route.query) {
             this.filterParams['#org+id'] = this.$route.query.org
             this.querySetup('#org+id')
+          }
+          if ('country' in this.$route.query) {
+            this.filterParams['#country'] = this.$route.query.country
+            this.querySetup('#country')
           }
           if ('sector' in this.$route.query) {
             this.filterParams['#sector'] = this.$route.query.sector
@@ -395,7 +408,7 @@ export default {
 
           this.loadData()
         })
-      })
+      }))
   },
   updated () {
     this.createStickyHeader()
@@ -478,6 +491,8 @@ export default {
       const filterArray = this.rankingFilter[this.getFilterID(selected)]
       this.selectedRankingFilter = filterArray[0].value
 
+      this.filterParams.selectedFilter = this.selectedFilterDimension // param for sankey
+
       this.resetParams()
       this.setDefaultFilterLabel(selected)
       this.updateFilteredData()
@@ -488,6 +503,7 @@ export default {
       this.selectedFilter = value
       this.filterParams[this.selectedFilterDimension] = value
       this.filterParams['#org+id+reporting'] = (this.selectedFilterDimension === '#org+id') ? value : '*' // param for sankey
+      this.filterParams['#org+name+receiver'] = (this.selectedFilterDimension === '#country') ? value : '*' // param for sankey
       if (value !== '*') {
         this.selectedFilterLabel = (this.selectedFilterDimension === '#org+id') ? this.getOrgName(value) : value
       } else {
@@ -530,12 +546,12 @@ export default {
       if (params[filterDimension] && params[filterDimension] !== '*') {
         result = result.filter(item => item[filterDimension] === params[filterDimension])
       }
-      if (params['humanitarian'] === 'on') {
-        result = result.filter(item => item['#indicator+bool+humanitarian'] === 1)
-      }
-      if (params['strict'] === 'on') {
-        result = result.filter(item => item['#indicator+bool+strict'] === 1)
-      }
+      // if (params['humanitarian'] === 'on') {
+      //   result = result.filter(item => item['#indicator+bool+humanitarian'] === 1)
+      // }
+      // if (params['strict'] === 'on') {
+      //   result = result.filter(item => item['#indicator+bool+strict'] === 1)
+      // }
       return result
     },
     updateFilteredFlowsData () {
@@ -545,30 +561,32 @@ export default {
     filterFlowsData () {
       let result = this.fullFlowsData.map(i => ({ ...i }))
       const params = this.filterParams
-      const filterDimension = '#org+id+reporting'// this.selectedFilterDimension
+      const filterDimension = (this.selectedFilterDimension === '#org+id') ? '#org+id+reporting' : '#org+name+receiver'// this.selectedFilterDimension
 
-      if (params[filterDimension] && params[filterDimension] !== '*') {
+      if (params[filterDimension] !== '*') {
         result = result.filter(item => item[filterDimension] === params[filterDimension])
       }
-      if (params['humanitarian'] === 'on') {
-        result = result.filter(item => item['#indicator+bool+humanitarian'] === 1)
-      }
-      if (params['strict'] === 'on') {
-        result = result.filter(item => item['#indicator+bool+strict'] === 1)
-      }
+      // if (params['humanitarian'] === 'on') {
+      //   result = result.filter(item => item['#indicator+bool+humanitarian'] === 1)
+      // }
+      // if (params['strict'] === 'on') {
+      //   result = result.filter(item => item['#indicator+bool+strict'] === 1)
+      // }
       if (params['humanitarian'] === 'off' || params['strict'] === 'off') {
-        result = this.aggregateFlows(result)
+        result = this.aggregateFlows(result, filterDimension)
       }
 
       // get total count before partioning data into incoming/outgoing
       this.flowsActivityCount = result.length
-      result = this.partitionData(result)
+      // result = this.partitionData(result)
+      result = this.formatData(result)
       return result
     },
-    aggregateFlows (data) {
+    aggregateFlows (data, dimension) {
       const aggregated = data.reduce((acc, item) => {
-        const pattern = (item['#x_transaction_direction'] === 'incoming') ? '#org+name+provider' : '#org+name+receiver'
-        const match = acc.find(a => a[pattern] !== '' && a['#org+id+reporting'] === item['#org+id+reporting'] && a[pattern] === item[pattern])
+        // const pattern = (item['#x_transaction_direction'] === 'incoming') ? '#org+name+provider' : '#org+name+receiver'
+        const pattern = (dimension === '#org+id+reporting') ? '#org+name+receiver' : '#org+name+reporting'
+        const match = acc.find(a => a[dimension] === item[dimension] && a[pattern] === item[pattern])
 
         if (!match) {
           acc.push(item)
@@ -627,11 +645,11 @@ export default {
       return { values: ratios, labels }
     },
     getOrgName (id) {
-      const org = this.orgNameIndex.filter(org => org['#org+id+reporting'] === id)
+      const org = this.reporterNameIndex.filter(org => org['#org+id+reporting'] === id)
       return org[0]['#org+name+reporting']
     },
     getOrgID (name) {
-      const org = this.orgNameIndex.filter(org => org['#org+name+reporting'] === name)
+      const org = this.reporterNameIndex.filter(org => org['#org+name+reporting'] === name)
       return org[0]['#org+id+reporting']
     },
     getCumulativeSeries (data) {
@@ -676,6 +694,7 @@ export default {
     },
     resetParams () {
       this.filterParams['#org+id+reporting'] = '*' // param for sankey
+      this.filterParams['#org+name+receiver'] = '*' // param for sankey
       this.filterParams['#org+id'] = '*'
       this.filterParams['#country'] = '*'
       this.filterParams['#sector'] = '*'

@@ -3,7 +3,7 @@
     <template v-if="chartData.links.length>0">
       <div class="chart">
         <client-only>
-          <sankey-chart :chart-data="chartData" />
+          <sankey-chart :chart-data="chartData" :params="params" />
         </client-only>
       </div>
     </template>
@@ -36,8 +36,8 @@ export default {
     }
   },
   computed: {
-    orgNameIndex () {
-      return this.$store.state.orgNameIndex
+    reporterNameIndex () {
+      return this.$store.state.reporterNameIndex
     },
     chartData () {
       const trimName = (value) => {
@@ -49,14 +49,14 @@ export default {
       }
       const getProvider = (item, transactionType) => {
         if (('outgoing').includes(transactionType)) {
-          return `${trimName(item['#org+name+provider']) || trimName(this.getOrgName(item['#org+id+reporting'])) || 'UNKNOWN'} »`
+          return (this.params.selectedFilter === '#country') ? `» ${trimName(item['#org+name+provider']) || trimName(this.getOrgName(item['#org+id+reporting'])) || 'UNKNOWN'}` : `${trimName(item['#org+name+provider']) || trimName(this.getOrgName(item['#org+id+reporting'])) || 'UNKNOWN'} »`
         } else {
           return `${trimName(item['#org+name+provider'])}`
         }
       }
       const getReceiver = (item, transactionType) => {
         if (('outgoing').includes(transactionType)) {
-          return `» ${trimName(item['#org+name+receiver'])}`
+          return (this.params.selectedFilter === '#country') ? `${trimName(item['#org+name+receiver'])} »` : `» ${trimName(item['#org+name+receiver'])}`
         } else {
           return `${trimName(this.getOrgName(item['#org+id+reporting']))} »`
         }
@@ -78,8 +78,8 @@ export default {
         return { name: item }
       })
       const links = items.map((item) => {
-        const provider = getProvider(item, item['#x_transaction_direction'])
-        const receiver = getReceiver(item, item['#x_transaction_direction'])
+        const provider = (this.params.selectedFilter === '#country') ? getReceiver(item, item['#x_transaction_direction']) : getProvider(item, item['#x_transaction_direction'])
+        const receiver = (this.params.selectedFilter === '#country') ? getProvider(item, item['#x_transaction_direction']) : getReceiver(item, item['#x_transaction_direction'])
         return {
           source: provider,
           target: receiver,
@@ -97,7 +97,7 @@ export default {
   },
   methods: {
     getOrgName (id) {
-      const org = this.orgNameIndex.filter(org => org['#org+id+reporting'] === id)
+      const org = this.reporterNameIndex.filter(org => org['#org+id+reporting'] === id)
       return (org[0] !== undefined) ? org[0]['#org+name+reporting'] : ''
     }
   }
