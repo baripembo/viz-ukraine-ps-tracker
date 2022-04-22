@@ -188,7 +188,7 @@
           Donation Flows
         </h2>
         <div class="footnote text-muted">
-          Please note that flows are only filtered by private sector donor and may not show all donations to a given humanitarian recipient. In addition, donation flows shows both paid and pledged transactions.
+          Please note that flows show both paid and pledged transactions and may not show all donations to a given humanitarian recipient.
         </div>
 
         <SankeyChart :items="filteredFlowsData" :params="filterParams" />
@@ -365,13 +365,14 @@ export default {
 
     this.filterParams = {
       humanitarian: 'off',
-      strict: 'off'
+      strict: 'off',
+      selectedFilter: this.selectedFilterDimension
     }
     this.filterParams['#org+id'] = '*'
     this.filterParams['#sector'] = '*'
     this.filterParams['#country'] = '*'
     this.filterParams['#org+id+reporting'] = '*'
-    this.filterParams['#org+id+receiver'] = '*'
+    this.filterParams['#org+name+receiver'] = '*'
 
     const reportingDataPath = 'https://raw.githubusercontent.com/OCHA-DAP/cbi_data/master/reporting_orgs.json'
     const receiverDataPath = 'https://raw.githubusercontent.com/OCHA-DAP/cbi_data/master/receiver_orgs.json'
@@ -490,6 +491,8 @@ export default {
       const filterArray = this.rankingFilter[this.getFilterID(selected)]
       this.selectedRankingFilter = filterArray[0].value
 
+      this.filterParams.selectedFilter = this.selectedFilterDimension // param for sankey
+
       this.resetParams()
       this.setDefaultFilterLabel(selected)
       this.updateFilteredData()
@@ -500,7 +503,7 @@ export default {
       this.selectedFilter = value
       this.filterParams[this.selectedFilterDimension] = value
       this.filterParams['#org+id+reporting'] = (this.selectedFilterDimension === '#org+id') ? value : '*' // param for sankey
-      this.filterParams['#org+id+receiver'] = (this.selectedFilterDimension === '#country') ? value : '*' // param for sankey
+      this.filterParams['#org+name+receiver'] = (this.selectedFilterDimension === '#country') ? value : '*' // param for sankey
       if (value !== '*') {
         this.selectedFilterLabel = (this.selectedFilterDimension === '#org+id') ? this.getOrgName(value) : value
       } else {
@@ -558,9 +561,7 @@ export default {
     filterFlowsData () {
       let result = this.fullFlowsData.map(i => ({ ...i }))
       const params = this.filterParams
-      const filterDimension = (this.selectedFilterDimension === '#org+id') ? '#org+id+reporting' : '#org+id+receiver'// this.selectedFilterDimension
-
-      console.log('selectedFilterDimension', this.selectedFilterDimension, filterDimension, params[filterDimension])
+      const filterDimension = (this.selectedFilterDimension === '#org+id') ? '#org+id+reporting' : '#org+name+receiver'// this.selectedFilterDimension
 
       if (params[filterDimension] !== '*') {
         result = result.filter(item => item[filterDimension] === params[filterDimension])
@@ -577,16 +578,15 @@ export default {
 
       // get total count before partioning data into incoming/outgoing
       this.flowsActivityCount = result.length
-      result = this.partitionData(result)
+      // result = this.partitionData(result)
+      result = this.formatData(result)
       return result
     },
     aggregateFlows (data, dimension) {
-      console.log('aggregated 1', data)
       const aggregated = data.reduce((acc, item) => {
-        const pattern = (item['#x_transaction_direction'] === 'incoming') ? '#org+name+provider' : '#org+name+receiver'
-        // const pattern = (dimension === '#org+id+reporting') ? '#org+name+receiver' : '#org+name+reporting'
-        console.log(pattern, dimension)
-        const match = acc.find(a => a[pattern] !== '' && a[dimension] === item[dimension] && a[pattern] === item[pattern])
+        // const pattern = (item['#x_transaction_direction'] === 'incoming') ? '#org+name+provider' : '#org+name+receiver'
+        const pattern = (dimension === '#org+id+reporting') ? '#org+name+receiver' : '#org+name+reporting'
+        const match = acc.find(a => a[dimension] === item[dimension] && a[pattern] === item[pattern])
 
         if (!match) {
           acc.push(item)
@@ -595,7 +595,6 @@ export default {
         }
         return acc
       }, [])
-      console.log('aggregated 2', aggregated)
       return aggregated
     },
     partitionData (data) {
@@ -695,7 +694,7 @@ export default {
     },
     resetParams () {
       this.filterParams['#org+id+reporting'] = '*' // param for sankey
-      this.filterParams['#org+id+receiver'] = '*' // param for sankey
+      this.filterParams['#org+name+receiver'] = '*' // param for sankey
       this.filterParams['#org+id'] = '*'
       this.filterParams['#country'] = '*'
       this.filterParams['#sector'] = '*'
