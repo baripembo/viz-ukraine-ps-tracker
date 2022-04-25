@@ -3,7 +3,7 @@
     <div class="badges">
       <div>
         <b-badge variant="dark">
-          {{ leftLabel }}
+          Donor
         </b-badge>
       </div>
       <div>
@@ -13,10 +13,17 @@
       </div>
       <div>
         <b-badge variant="dark">
-          {{ rightLabel }}
+          Recipient
         </b-badge>
       </div>
     </div>
+    <b-tooltip
+      :custom-class="`${tooltipStatus}`"
+      :show.sync="show"
+      target="flowDetail"
+      noninteractive>
+      {{ links[selectedLink].description }}
+    </b-tooltip>
     <div id="sankeyChart" ref="sankeyChart">
       <svg :width="width" :height="height">
         <pattern
@@ -39,7 +46,7 @@
             :fill="node.name=='» (unspecified org)' ? 'url(#diagonalHatch)': color(node)"
             class="node" />
         </g>
-        <b-tooltip
+        <!--         <b-tooltip
           v-for="(link) in links"
           v-bind="links"
           :id="`tooltip-${link.index}`"
@@ -47,7 +54,7 @@
           :target="`link-${link.index}`"
           noninteractive>
           {{ links[link.index].description }}
-        </b-tooltip>
+        </b-tooltip> -->
         <g>
           <g
             v-for="(link) in links"
@@ -118,6 +125,10 @@
 }
 .tooltip {
   margin-bottom: 5px;
+  opacity: 0.9;
+  &.hidden {
+    opacity: 0 !important;
+  }
 }
 .tooltip .tooltip-inner {
   max-width: 400px;
@@ -169,22 +180,18 @@ export default {
   props: ['chartData', 'params'],
   data () {
     return {
-      description: 'Testing',
+      tooltipStatus: '',
+      show: false,
+      description: '',
       maximumVisibleItems: 10,
       chart: null,
       width: 10,
       height: 10,
-      selectedLink: null,
+      selectedLink: 0,
       colors: ['#418FDE', '#E56A54', '#ECA154', '#E2E868', '#A4D65E', '#71DBD4', '#9063CD', '#D3BC8D', '#82B5E9', '#EFA497', '#F4C799', '#C6E69B', '#AEEAE6', '#418FDE', '#E56A54', '#ECA154', '#E2E868', '#A4D65E', '#71DBD4', '#9063CD', '#D3BC8D', '#82B5E9', '#EFA497', '#F4C799']
     }
   },
   computed: {
-    leftLabel () {
-      return (this.params.selectedFilter === '#country') ? 'Recipient' : 'Donor'
-    },
-    rightLabel () {
-      return (this.params.selectedFilter === '#country') ? 'Donor' : 'Recipient'
-    },
     linkDescription () {
       return this.description
     },
@@ -232,9 +239,14 @@ export default {
     },
     mouseoverLink (index) {
       this.selectedLink = index
+      if (this.links[index].description !== '' && this.links[index].description !== '[No description]') {
+        this.show = true
+        this.tooltipStatus = ''
+      }
     },
     mouseleaveLink (index) {
-      this.selectedLink = null
+      this.tooltipStatus = 'hidden'
+      this.selectedLink = 0
     },
     sankeyLinkPath (d) {
       return this.sankeyLinkPaths(d)
