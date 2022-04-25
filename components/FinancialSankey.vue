@@ -3,7 +3,7 @@
     <template v-if="chartData.links.length>0">
       <div class="chart">
         <client-only>
-          <sankey-chart :chart-data="chartData" />
+          <sankey-chart :chart-data="chartData" :params="params" />
         </client-only>
       </div>
     </template>
@@ -36,8 +36,8 @@ export default {
     }
   },
   computed: {
-    orgNameIndex () {
-      return this.$store.state.orgNameIndex
+    reporterNameIndex () {
+      return this.$store.state.reporterNameIndex
     },
     chartData () {
       const trimName = (value) => {
@@ -97,7 +97,7 @@ export default {
   },
   methods: {
     getOrgName (id) {
-      const org = this.orgNameIndex.filter(org => org['#org+id+reporting'] === id)
+      const org = this.reporterNameIndex.filter(org => org['#org+id+reporting'] === id)
       return (org[0] !== undefined) ? org[0]['#org+name+reporting'] : ''
     }
   }

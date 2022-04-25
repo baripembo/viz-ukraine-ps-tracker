@@ -1,6 +1,6 @@
 export const state = () => ({
   tooltips: {},
-  orgNameIndex: [],
+  reporterNameIndex: [],
   isProd: true
 })
 
@@ -11,8 +11,8 @@ export const mutations = {
       return summary
     }, {})
   },
-  setorgNameIndex (state, orgNameIndex) {
-    state.orgNameIndex = orgNameIndex
+  setReporterNameIndex (state, reporterNameIndex) {
+    state.reporterNameIndex = reporterNameIndex
   },
   setProd (state, isProd) {
     state.isProd = isProd

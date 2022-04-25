@@ -17,12 +17,6 @@
         </b-badge>
       </div>
     </div>
-    <b-tooltip
-      :show.sync="show"
-      :target="`link-${selectedLink}`"
-      noninteractive>
-      {{ linkDescription }}
-    </b-tooltip>
     <div id="sankeyChart" ref="sankeyChart">
       <svg :width="width" :height="height">
         <pattern
@@ -45,16 +39,15 @@
             :fill="node.name=='» (unspecified org)' ? 'url(#diagonalHatch)': color(node)"
             class="node" />
         </g>
-        <!--         <b-tooltip
+        <b-tooltip
           v-for="(link) in links"
           v-bind="links"
           :id="`tooltip-${link.index}`"
           :key="link.index"
-          :show.sync="show"
           :target="`link-${link.index}`"
           noninteractive>
           {{ links[link.index].description }}
-        </b-tooltip> -->
+        </b-tooltip>
         <g>
           <g
             v-for="(link) in links"
@@ -173,11 +166,10 @@ import { sankey as d3Sankey, sankeyLinkHorizontal as d3SsankeyLinkHorizontal } f
 import numeral from 'numeral'
 export default {
   name: 'SankeyChart',
-  props: ['chartData'],
+  props: ['chartData', 'params'],
   data () {
     return {
-      show: false,
-      description: 'Testing',
+      description: '',
       maximumVisibleItems: 10,
       chart: null,
       width: 10,
@@ -234,8 +226,6 @@ export default {
     },
     mouseoverLink (index) {
       this.selectedLink = index
-      this.show = true
-      this.linkDescription = this.links[index].description
     },
     mouseleaveLink (index) {
       this.selectedLink = null
