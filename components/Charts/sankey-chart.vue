@@ -3,7 +3,7 @@
     <div class="badges">
       <div>
         <b-badge variant="dark">
-          {{ leftLabel }}
+          Donor
         </b-badge>
       </div>
       <div>
@@ -13,7 +13,7 @@
       </div>
       <div>
         <b-badge variant="dark">
-          {{ rightLabel }}
+          Recipient
         </b-badge>
       </div>
     </div>
@@ -169,7 +169,7 @@ export default {
   props: ['chartData', 'params'],
   data () {
     return {
-      description: 'Testing',
+      description: '',
       maximumVisibleItems: 10,
       chart: null,
       width: 10,
@@ -179,12 +179,6 @@ export default {
     }
   },
   computed: {
-    leftLabel () {
-      return (this.params.selectedFilter === '#country') ? 'Recipient' : 'Donor'
-    },
-    rightLabel () {
-      return (this.params.selectedFilter === '#country') ? 'Donor' : 'Recipient'
-    },
     linkDescription () {
       return this.description
     },
