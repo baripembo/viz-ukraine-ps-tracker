@@ -146,7 +146,7 @@ export default {
   },
   methods: {
     onClick (page) {
-      //console.log(this.$route.query)
+      // console.log(this.$route.query)
       this.$mixpanelTrackAction('switch viz', config.head.title, page)
     }
   }
