@@ -49,14 +49,14 @@ export default {
       }
       const getProvider = (item, transactionType) => {
         if (('outgoing').includes(transactionType)) {
-          return (this.params.selectedFilter === '#country') ? `» ${trimName(item['#org+name+provider']) || trimName(this.getOrgName(item['#org+id+reporting'])) || 'UNKNOWN'}` : `${trimName(item['#org+name+provider']) || trimName(this.getOrgName(item['#org+id+reporting'])) || 'UNKNOWN'} »`
+          return `${trimName(item['#org+name+provider']) || trimName(this.getOrgName(item['#org+id+reporting'])) || 'UNKNOWN'} »`
         } else {
           return `${trimName(item['#org+name+provider'])}`
         }
       }
       const getReceiver = (item, transactionType) => {
         if (('outgoing').includes(transactionType)) {
-          return (this.params.selectedFilter === '#country') ? `${trimName(item['#org+name+receiver'])} »` : `» ${trimName(item['#org+name+receiver'])}`
+          return `» ${trimName(item['#org+name+receiver'])}`
         } else {
           return `${trimName(this.getOrgName(item['#org+id+reporting']))} »`
         }
@@ -78,8 +78,8 @@ export default {
         return { name: item }
       })
       const links = items.map((item) => {
-        const provider = (this.params.selectedFilter === '#country') ? getReceiver(item, item['#x_transaction_direction']) : getProvider(item, item['#x_transaction_direction'])
-        const receiver = (this.params.selectedFilter === '#country') ? getProvider(item, item['#x_transaction_direction']) : getReceiver(item, item['#x_transaction_direction'])
+        const provider = getProvider(item, item['#x_transaction_direction'])
+        const receiver = getReceiver(item, item['#x_transaction_direction'])
         return {
           source: provider,
           target: receiver,
