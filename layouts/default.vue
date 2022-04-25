@@ -2,9 +2,9 @@
   <div class="iati-viz mb-4">
     <OchaHeader class="mb-4" />
     <b-container>
-      <b-navbar-brand :to="'/'">
+      <a href="/"><b-navbar-brand>
         <span v-html="pageTitle" />
-      </b-navbar-brand>
+      </b-navbar-brand></a>
       <b-navbar toggleable="lg" type="light" variant="bg-white" class="navbar-iati">
         <b-navbar-toggle target="nav-collapse" />
 
