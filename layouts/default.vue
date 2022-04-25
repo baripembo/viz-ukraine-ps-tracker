@@ -2,7 +2,7 @@
   <div class="iati-viz mb-4">
     <OchaHeader class="mb-4" />
     <b-container>
-      <a href="/"><b-navbar-brand>
+      <a href="/viz-ukraine-ps-tracker/"><b-navbar-brand>
         <span v-html="pageTitle" />
       </b-navbar-brand></a>
       <b-navbar toggleable="lg" type="light" variant="bg-white" class="navbar-iati">
