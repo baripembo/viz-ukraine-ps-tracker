@@ -66,10 +66,10 @@
             </v-select>
 
             <v-select
-              v-if="selectedFilterDimension==='#country'"
+              v-if="selectedFilterDimension==='#org+name+receiver'"
               :value="selectedFilter"
-              class="filter-select filter-select-country mb-3"
-              :options="countries"
+              class="filter-select filter-select-receiver mb-3"
+              :options="receivers"
               :get-option-key="option => option.value"
               :get-option-label="option => option.text"
               :reduce="option => option.value"
@@ -227,24 +227,24 @@ export default {
       selectedFilterLabel: '',
       filterOptions: [
         { text: 'By Private Sector Donor', value: '#org+id', label: ' private sector donors' },
-        { text: 'By Humanitarian Recipient', value: '#country', label: ' humanitarian recipients' }
+        { text: 'By Humanitarian Recipient', value: '#org+name+receiver', label: ' humanitarian recipients' }
         // { text: 'By Sector', value: '#sector', label: 'all sectors' }
       ],
-      selectedRankingFilter: '#country',
+      selectedRankingFilter: '#org+name+receiver',
       rankingFilter: [
         [
-          { text: 'By Humanitarian Recipient', value: '#country' },
+          { text: 'By Humanitarian Recipient', value: '#org+name+receiver' },
           { text: 'By Private Sector Donor', value: '#org+id' }
           // { text: 'By Sector', value: '#sector' }
         ],
         [
           { text: 'By Private Sector Donor', value: '#org+id' },
-          { text: 'By Humanitarian Recipient', value: '#country' }
+          { text: 'By Humanitarian Recipient', value: '#org+name+receiver' }
           // { text: 'By Sector', value: '#sector' }
         ],
         [
           // { text: 'By Sector', value: '#sector' },
-          { text: 'By Humanitarian Recipient', value: '#country' },
+          { text: 'By Humanitarian Recipient', value: '#org+name+receiver' },
           { text: 'By Publishing Org', value: '#org+id' }
         ]
       ],
@@ -290,15 +290,15 @@ export default {
       })
       return this.populateSelect(orgList, 'All private sector donors')
     },
-    countries () {
-      let countryList = [...new Set(this.fullData.map(item => item['#country']))]
-      countryList = countryList.map((item) => {
-        const country = {}
-        country.value = item
-        country.text = item
-        return country
+    receivers () {
+      let receiverList = [...new Set(this.fullData.map(item => item['#org+name+receiver']))]
+      receiverList = receiverList.map((item) => {
+        const receiver = {}
+        receiver.value = item
+        receiver.text = item
+        return receiver
       })
-      return this.populateSelect(countryList, 'All humanitarian recipients')
+      return this.populateSelect(receiverList, 'All humanitarian recipients')
     },
     sectors () {
       let sectorList = [...new Set(this.fullData.map(item => item['#sector']))]
@@ -331,7 +331,7 @@ export default {
       return total
     },
     recipientCount () {
-      const recipient = [...new Set(this.fullData.map(item => item['#country']))]
+      const recipient = [...new Set(this.fullData.map(item => item['#org+name+receiver']))]
       return recipient.length
     },
     activityCount () {
@@ -370,7 +370,7 @@ export default {
     }
     this.filterParams['#org+id'] = '*'
     this.filterParams['#sector'] = '*'
-    this.filterParams['#country'] = '*'
+    this.filterParams['#org+name+receiver'] = '*'
     this.filterParams['#org+id+reporting'] = '*'
     this.filterParams['#org+name+receiver'] = '*'
 
@@ -391,9 +391,9 @@ export default {
             this.filterParams['#org+id'] = this.$route.query.org
             this.querySetup('#org+id')
           }
-          if ('country' in this.$route.query) {
-            this.filterParams['#country'] = this.$route.query.country
-            this.querySetup('#country')
+          if ('receiver' in this.$route.query) {
+            this.filterParams['#org+name+receiver'] = this.$route.query.receiver
+            this.querySetup('#org+name+receiver')
           }
           if ('sector' in this.$route.query) {
             this.filterParams['#sector'] = this.$route.query.sector
@@ -452,8 +452,8 @@ export default {
       if (this.filterParams['#org+id'] !== '*') {
         _query.org = this.filterParams['#org+id']
       }
-      if (this.filterParams['#country'] !== '*') {
-        _query.country = this.filterParams['#country']
+      if (this.filterParams['#org+name+receiver'] !== '*') {
+        _query.receiver = this.filterParams['#org+name+receiver']
       }
       if (this.filterParams['#sector'] !== '*') {
         _query.sector = this.filterParams['#sector']
@@ -503,7 +503,7 @@ export default {
       this.selectedFilter = value
       this.filterParams[this.selectedFilterDimension] = value
       this.filterParams['#org+id+reporting'] = (this.selectedFilterDimension === '#org+id') ? value : '*' // param for sankey
-      this.filterParams['#org+name+receiver'] = (this.selectedFilterDimension === '#country') ? value : '*' // param for sankey
+      this.filterParams['#org+name+receiver'] = (this.selectedFilterDimension === '#org+name+receiver') ? value : '*' // param for sankey
       if (value !== '*') {
         this.selectedFilterLabel = (this.selectedFilterDimension === '#org+id') ? this.getOrgName(value) : value
       } else {
@@ -690,13 +690,13 @@ export default {
       return ranked
     },
     getFilterID () {
-      if (this.selectedFilterDimension === '#sector') { return 2 } else if (this.selectedFilterDimension === '#country') { return 1 } else { return 0 }
+      if (this.selectedFilterDimension === '#sector') { return 2 } else if (this.selectedFilterDimension === '#org+name+receiver') { return 1 } else { return 0 }
     },
     resetParams () {
       this.filterParams['#org+id+reporting'] = '*' // param for sankey
       this.filterParams['#org+name+receiver'] = '*' // param for sankey
       this.filterParams['#org+id'] = '*'
-      this.filterParams['#country'] = '*'
+      this.filterParams['#org+name+receiver'] = '*'
       this.filterParams['#sector'] = '*'
       this.selectedFilter = '*'
     },

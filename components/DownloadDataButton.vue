@@ -79,7 +79,7 @@ export default {
      *
      * Params:
      *   selectionValue - the primary value selected, based on selectionType (e.g. a sector name or an org id); use null for all
-     *   selectionType - type of primary selection: "org+id", "sector", or "country" (ignored if selectionValue is null)
+     *   selectionType - type of primary selection: "org+id", "sector", or "org+name+receiver" (ignored if selectionValue is null)
      *   isHumanitarian (optional) - if truthy, include only humanitarian transactions
      *   isStrict (optional) - if truthy, include only strict transactions
      */
@@ -89,9 +89,9 @@ export default {
         url: 'https://ocha-dap.github.io/hdx-scraper-iati-viz/transactions.csv'
       }
 
-      // filter rows by the primary selector (a single org, sector, or country)
+      // filter rows by the primary selector (a single org, sector, or receiver)
       if (selectionValue !== null) {
-        this.checkToken(selectionType, ['org+id', 'country', 'sector'], 'selection type')
+        this.checkToken(selectionType, ['org+id', 'org+name+receiver', 'sector'], 'selection type')
         params['filter01'] = 'select'
         params['select-query01-01'] = selectionType + '=' + selectionValue
       }
@@ -110,7 +110,7 @@ export default {
 
       // aggregate the data
       params['filter04'] = 'count'
-      params['count-tags04'] = 'date+month,org+id,org+name,org+type,sector,country,activity+code,x_transaction_type'
+      params['count-tags04'] = 'date+month,org+id,org+name,org+type,sector,org+name+receiver,activity+code,x_transaction_type'
 
       params['count-header04-01'] = 'Net money (USD)'
       params['count-type04-01'] = 'sum'
