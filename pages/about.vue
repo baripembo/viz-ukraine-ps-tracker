@@ -177,23 +177,37 @@
                   </b-card-body>
                 </b-collapse>
               </b-card>
+
+              <b-card no-body>
+                <b-card-header header-tag="header" role="tab">
+                  <b-button v-b-toggle.accordion-9 block squared>
+                    How can I make a donation to support the humanitarian response in Ukraine?
+                  </b-button>
+                </b-card-header>
+                <b-collapse id="accordion-9" accordion="faq-accordion" role="tabpanel">
+                  <b-card-body>
+                    <b-card-text>
+                      <p>Financial contributions to reputable aid agencies and coordinated response funds are one of the most valuable and effective forms of response in humanitarian emergencies. Businesses and individuals should consider contributing to any of the organizations or projects the <a href="https://reliefweb.int/report/ukraine/ukraine-flash-appeal-march-august-2022-enuk" target="_blank">Ukraine Flash Appeal</a> and the inter-agency <a href="https://data2.unhcr.org/en/documents/details/91114" target="_blank">Regional Refugee Response Plan</a>. Refer to the <a href="https://www.connectingbusiness.org/publications/ocha-business-guide-ukraine-humanitarian-crisis" target="_blank">OCHA Business Guide to the Ukraine Crisis</a> for more information about how to help.</p>
+                    </b-card-text>
+                  </b-card-body>
+                </b-collapse>
+              </b-card>
+
+              <b-card no-body>
+                <b-card-header header-tag="header" role="tab">
+                  <b-button v-b-toggle.accordion-10 block squared>
+                    I want to report missing data / I have a different question, comment, or media inquiry.
+                  </b-button>
+                </b-card-header>
+                <b-collapse id="accordion-10" accordion="faq-accordion" role="tabpanel">
+                  <b-card-body>
+                    <b-card-text>
+                      <p>CBi welcomes questions, comments, media inquiries, and reports of missing or incomplete information. Please reach out to our team by emailing <a href="mailto:connectingbusiness@un.org">connectingbusiness@un.org</a>.</p>
+                    </b-card-text>
+                  </b-card-body>
+                </b-collapse>
+              </b-card>
             </div>
-          </section>
-
-          <section class="mb-5">
-            <h2>
-              How can I make a donation to support the humanitarian response in Ukraine?
-            </h2>
-
-            <p>Financial contributions to reputable aid agencies and coordinated response funds are one of the most valuable and effective forms of response in humanitarian emergencies. Businesses and individuals should consider contributing to any of the organizations or projects the <a href="https://reliefweb.int/report/ukraine/ukraine-flash-appeal-march-august-2022-enuk" target="_blank">Ukraine Flash Appeal</a> and the inter-agency <a href="https://data2.unhcr.org/en/documents/details/91114" target="_blank">Regional Refugee Response Plan</a>. Refer to the <a href="https://www.connectingbusiness.org/publications/ocha-business-guide-ukraine-humanitarian-crisis" target="_blank">OCHA Business Guide to the Ukraine Crisis</a> for more information about how to help.</p>
-          </section>
-
-          <section class="mb-5">
-            <h2>
-              I want to report missing data / I have a different question, comment, or media inquiry.
-            </h2>
-
-            <p>CBi welcomes questions, comments, media inquiries, and reports of missing or incomplete information. Please reach out to our team by emailing <a href="mailto:connectingbusiness@un.org">connectingbusiness@un.org</a>.</p>
           </section>
 
           <section class="mb-5">
