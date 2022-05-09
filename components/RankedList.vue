@@ -2,7 +2,7 @@
   <div>
     <div class="scroll-list-container">
       <div class="scroll-list mt-3">
-        <b-table borderless small class="summary-table mr-5 mb-0" :fields="tableFields" :items="items">
+        <b-table borderless small class="summary-table mb-0" :fields="tableFields" :items="items">
           <template #cell(color)="data">
             <div class="color-key" :style="data.index<5 ? 'background-color: ' + colors[data.index] : 'background-color: ' + colors[5]" />
           </template>
@@ -43,7 +43,7 @@
   }
   .scroll-list {
     height: 170px;
-    max-width: 273px;
+    width: 273px;
     overflow-y: scroll;
     .list-breakdown {
       color: #888;
