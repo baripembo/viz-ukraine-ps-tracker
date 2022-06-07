@@ -374,12 +374,9 @@ export default {
     this.filterParams['#org+id+reporting'] = '*'
     this.filterParams['#org+name+receiver'] = '*'
 
-    // const reportingDataPath = 'https://raw.githubusercontent.com/OCHA-DAP/cbi_data/master/reporting_orgs.json'
-    // const receiverDataPath = 'https://raw.githubusercontent.com/OCHA-DAP/cbi_data/master/receiver_orgs.json'
+    const reportingDataPath = 'https://raw.githubusercontent.com/OCHA-DAP/hdx-scraper-cbi-viz/gh-pages/cbi/reporting_orgs.json'
+    const receiverDataPath = 'https://raw.githubusercontent.com/OCHA-DAP/hdx-scraper-cbi-viz/gh-pages/cbi/receiver_orgs.json'
 
-    const filePath = (config.dev) ? '' : '/viz-ukraine-ps-tracker/'
-    const reportingDataPath = filePath + 'reporting_orgs.json'
-    const receiverDataPath = filePath + 'receiver_orgs.json'
     axios.all([axios.get(reportingDataPath), axios.get(receiverDataPath)])
       .then(axios.spread((...responses) => {
         const reportingData = responses[0]
@@ -431,7 +428,7 @@ export default {
         })
 
       // get transaction data
-      await axios.get(filePath + 'transactions.json')// https://raw.githubusercontent.com/OCHA-DAP/cbi_data/master/transactions.json'
+      await axios.get('https://raw.githubusercontent.com/OCHA-DAP/hdx-scraper-cbi-viz/gh-pages/cbi/transactions.json')
         .then((response) => {
           // process the metadata
           const metadata = response.data.metadata
@@ -445,7 +442,7 @@ export default {
         })
 
       // get flows data
-      await axios.get(filePath + 'flows.json')// https://raw.githubusercontent.com/OCHA-DAP/cbi_data/master/flows.json
+      await axios.get('https://raw.githubusercontent.com/OCHA-DAP/hdx-scraper-cbi-viz/gh-pages/cbi/flows.json')
         .then((response) => {
           this.fullFlowsData = response.data.data
           this.updateFilteredFlowsData()
