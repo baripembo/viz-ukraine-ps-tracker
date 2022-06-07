@@ -376,6 +376,7 @@ export default {
 
     const reportingDataPath = 'https://raw.githubusercontent.com/OCHA-DAP/hdx-scraper-cbi-viz/gh-pages/cbi/reporting_orgs.json'
     const receiverDataPath = 'https://raw.githubusercontent.com/OCHA-DAP/hdx-scraper-cbi-viz/gh-pages/cbi/receiver_orgs.json'
+
     axios.all([axios.get(reportingDataPath), axios.get(receiverDataPath)])
       .then(axios.spread((...responses) => {
         const reportingData = responses[0]
