@@ -66,7 +66,7 @@
             </v-select>
 
             <v-select
-              v-if="selectedFilterDimension==='#org+name+receiver'"
+              v-if="selectedFilterDimension==='#org+id+receiver'"
               :value="selectedFilter"
               class="filter-select filter-select-receiver mb-3"
               :options="receivers"
@@ -227,24 +227,24 @@ export default {
       selectedFilterLabel: '',
       filterOptions: [
         { text: 'By Private Sector Donor', value: '#org+id', label: ' private sector donors' },
-        { text: 'By Humanitarian Recipient', value: '#org+name+receiver', label: ' humanitarian recipients' }
+        { text: 'By Humanitarian Recipient', value: '#org+id+receiver', label: ' humanitarian recipients' }
         // { text: 'By Sector', value: '#sector', label: 'all sectors' }
       ],
-      selectedRankingFilter: '#org+name+receiver',
+      selectedRankingFilter: '#org+id+receiver',
       rankingFilter: [
         [
-          { text: 'By Humanitarian Recipient', value: '#org+name+receiver' },
+          { text: 'By Humanitarian Recipient', value: '#org+id+receiver' },
           { text: 'By Private Sector Donor', value: '#org+id' }
           // { text: 'By Sector', value: '#sector' }
         ],
         [
           { text: 'By Private Sector Donor', value: '#org+id' },
-          { text: 'By Humanitarian Recipient', value: '#org+name+receiver' }
+          { text: 'By Humanitarian Recipient', value: '#org+id+receiver' }
           // { text: 'By Sector', value: '#sector' }
         ],
         [
           // { text: 'By Sector', value: '#sector' },
-          { text: 'By Humanitarian Recipient', value: '#org+name+receiver' },
+          { text: 'By Humanitarian Recipient', value: '#org+id+receiver' },
           { text: 'By Publishing Org', value: '#org+id' }
         ]
       ],
@@ -291,11 +291,11 @@ export default {
       return this.populateSelect(orgList, 'All private sector donors')
     },
     receivers () {
-      let receiverList = [...new Set(this.fullData.map(item => item['#org+name+receiver']))]
+      let receiverList = [...new Set(this.fullData.map(item => item['#org+id+receiver']))]
       receiverList = receiverList.map((item) => {
         const receiver = {}
         receiver.value = item
-        receiver.text = item
+        receiver.text = this.getReceiverName(item)
         return receiver
       })
       return this.populateSelect(receiverList, 'All humanitarian recipients')
@@ -331,7 +331,7 @@ export default {
       return total
     },
     recipientCount () {
-      const recipient = [...new Set(this.fullData.map(item => item['#org+name+receiver']))]
+      const recipient = [...new Set(this.fullData.map(item => item['#org+id+receiver']))]
       return recipient.length
     },
     activityCount () {
@@ -370,9 +370,8 @@ export default {
     }
     this.filterParams['#org+id'] = '*'
     this.filterParams['#sector'] = '*'
-    this.filterParams['#org+name+receiver'] = '*'
+    this.filterParams['#org+id+receiver'] = '*'
     this.filterParams['#org+id+reporting'] = '*'
-    this.filterParams['#org+name+receiver'] = '*'
 
     const reportingDataPath = 'https://raw.githubusercontent.com/OCHA-DAP/hdx-scraper-cbi-viz/gh-pages/cbi/reporting_orgs.json'
     const receiverDataPath = 'https://raw.githubusercontent.com/OCHA-DAP/hdx-scraper-cbi-viz/gh-pages/cbi/receiver_orgs.json'
@@ -383,6 +382,7 @@ export default {
         this.reporterNameIndex = reportingData.data.data
         this.receiverNameIndex = receiverData.data.data
         this.$store.commit('setReporterNameIndex', reportingData.data.data)
+        this.$store.commit('setReceiverNameIndex', receiverData.data.data)
 
         this.selectedFilterLabel = this.reporterNameIndex.length + ' private sector donors'
 
@@ -392,8 +392,8 @@ export default {
             this.querySetup('#org+id')
           }
           if ('receiver' in this.$route.query) {
-            this.filterParams['#org+name+receiver'] = this.$route.query.receiver
-            this.querySetup('#org+name+receiver')
+            this.filterParams['#org+id+receiver'] = this.$route.query.receiver
+            this.querySetup('#org+id+receiver')
           }
           if ('sector' in this.$route.query) {
             this.filterParams['#sector'] = this.$route.query.sector
@@ -452,8 +452,8 @@ export default {
       if (this.filterParams['#org+id'] !== '*') {
         _query.org = this.filterParams['#org+id']
       }
-      if (this.filterParams['#org+name+receiver'] !== '*') {
-        _query.receiver = this.filterParams['#org+name+receiver']
+      if (this.filterParams['#org+id+receiver'] !== '*') {
+        _query.receiver = this.filterParams['#org+id+receiver']
       }
       if (this.filterParams['#sector'] !== '*') {
         _query.sector = this.filterParams['#sector']
@@ -473,7 +473,7 @@ export default {
       this.initFilterOption = dimension
       this.selectedFilterDimension = dimension
       this.selectedFilter = this.filterParams[dimension]
-      this.selectedFilterLabel = (dimension === '#org+id') ? this.getOrgName(this.selectedFilter) : this.selectedFilter
+      this.selectedFilterLabel = (dimension === '#org+id') ? this.getOrgName(this.selectedFilter) : this.getReceiverName(this.selectedFilter)
       const filterArray = this.rankingFilter[this.getFilterID(dimension)]
       this.selectedRankingFilter = filterArray[0].value
     },
@@ -503,9 +503,9 @@ export default {
       this.selectedFilter = value
       this.filterParams[this.selectedFilterDimension] = value
       this.filterParams['#org+id+reporting'] = (this.selectedFilterDimension === '#org+id') ? value : '*' // param for sankey
-      this.filterParams['#org+name+receiver'] = (this.selectedFilterDimension === '#org+name+receiver') ? value : '*' // param for sankey
+      this.filterParams['#org+id+receiver'] = (this.selectedFilterDimension === '#org+id+receiver') ? value : '*' // param for sankey
       if (value !== '*') {
-        this.selectedFilterLabel = (this.selectedFilterDimension === '#org+id') ? this.getOrgName(value) : value
+        this.selectedFilterLabel = (this.selectedFilterDimension === '#org+id') ? this.getOrgName(value) : this.getReceiverName(value)
       } else {
         this.setDefaultFilterLabel(this.selectedFilterDimension)
       }
@@ -561,7 +561,7 @@ export default {
     filterFlowsData () {
       let result = this.fullFlowsData.map(i => ({ ...i }))
       const params = this.filterParams
-      const filterDimension = (this.selectedFilterDimension === '#org+id') ? '#org+id+reporting' : '#org+name+receiver'// this.selectedFilterDimension
+      const filterDimension = (this.selectedFilterDimension === '#org+id') ? '#org+id+reporting' : '#org+id+receiver'// this.selectedFilterDimension
 
       if (params[filterDimension] !== '*') {
         result = result.filter(item => item[filterDimension] === params[filterDimension])
@@ -652,6 +652,14 @@ export default {
       const org = this.reporterNameIndex.filter(org => org['#org+name+reporting'] === name)
       return org[0]['#org+id+reporting']
     },
+    getReceiverName (id) {
+      const org = this.receiverNameIndex.filter(org => org['#org+id+receiver'] === id)
+      return org[0]['#org+name+receiver']
+    },
+    getReceiverID (name) {
+      const org = this.receiverNameIndex.filter(org => org['#org+name+receiver'] === name)
+      return org[0]['#org+id+receiver']
+    },
     getCumulativeSeries (data) {
       let total = 0
       return data.reduce((cumulativeValues, value) => {
@@ -669,7 +677,7 @@ export default {
       const unspecifiedObject = {}
       const ranked = Object.entries(data.reduce((list, item, index) => {
         const value = Number(item[this.tagPattern])
-        const key = (dimension === '#org+id') ? this.getOrgName(item[dimension]) : item[dimension]
+        const key = (dimension === '#org+id') ? this.getOrgName(item[dimension]) : this.getReceiverName(item[dimension])
         if (item[dimension].includes('Unspecified')) {
           unspecifiedObject[key] = unspecifiedObject[key] + value || value
         } else {
@@ -690,13 +698,12 @@ export default {
       return ranked
     },
     getFilterID () {
-      if (this.selectedFilterDimension === '#sector') { return 2 } else if (this.selectedFilterDimension === '#org+name+receiver') { return 1 } else { return 0 }
+      if (this.selectedFilterDimension === '#sector') { return 2 } else if (this.selectedFilterDimension === '#org+id+receiver') { return 1 } else { return 0 }
     },
     resetParams () {
       this.filterParams['#org+id+reporting'] = '*' // param for sankey
-      this.filterParams['#org+name+receiver'] = '*' // param for sankey
+      this.filterParams['#org+id+receiver'] = '*' // param for sankey
       this.filterParams['#org+id'] = '*'
-      this.filterParams['#org+name+receiver'] = '*'
       this.filterParams['#sector'] = '*'
       this.selectedFilter = '*'
     },
