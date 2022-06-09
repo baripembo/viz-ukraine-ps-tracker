@@ -1,6 +1,7 @@
 export const state = () => ({
   tooltips: {},
   reporterNameIndex: [],
+  receiverNameIndex: [],
   isProd: true
 })
 
@@ -13,6 +14,9 @@ export const mutations = {
   },
   setReporterNameIndex (state, reporterNameIndex) {
     state.reporterNameIndex = reporterNameIndex
+  },
+  setReceiverNameIndex (state, receiverNameIndex) {
+    state.receiverNameIndex = receiverNameIndex
   },
   setProd (state, isProd) {
     state.isProd = isProd
