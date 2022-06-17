@@ -390,6 +390,7 @@ export default {
         this.$nextTick(() => {
           if ('org' in this.$route.query) {
             this.filterParams['#org+id'] = this.$route.query.org
+            this.filterParams['#org+id+reporting'] = this.$route.query.org
             this.querySetup('#org+id')
           }
           if ('receiver' in this.$route.query) {
@@ -501,6 +502,7 @@ export default {
       this.$mixpanelTrackAction('change content', 'Dashboard Breakdown radio filter', selected)
     },
     onSelect (value) {
+      console.log('on select', value)
       this.selectedFilter = value
       this.filterParams[this.selectedFilterDimension] = value
       this.filterParams['#org+id+reporting'] = (this.selectedFilterDimension === '#org+id') ? value : '*' // param for sankey
