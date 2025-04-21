@@ -212,10 +212,12 @@
 
           <section class="mb-5">
             <h2>
-              Resources for Developers
+              Technical Details / Resources for Developers
             </h2>
 
-            <p>This code that powers this dashboard has been shared as open-source software. Learn more and access GitHub repositories <a href="https://data.humdata.org/viz-iati-c19-dashboard/about#developers" target="_blank">here</a>.</p>
+            <p>This dashboard is based on code originally developed for the <a href="https://data.humdata.org/viz-iati-c19-dashboard/" target="_blank">IATI COVID-19 Funding Dashboard</a>. Everything developed for both dashboards is shared as open source software.</p>
+            <p>Data powering this dashboard is extracted from the <a href="https://data.humdata.org/dataset/ukraine-private-sector-donations-tracker" target="_blank">Humanitarian Data Exchange</a> and is transformed every 8 hours.</p>
+            <p>For more information, view our <a href="https://github.com/OCHA-DAP/hdx-scraper-cbi-viz" target="_blank">GitHub repositories</a>.</p>
           </section>
 
           <section class="mb-5">
